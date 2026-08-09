@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T16:13:12.587Z",
-  "songCount": 135,
+  "generatedAt": "2026-08-09T16:35:21.131Z",
+  "songCount": 157,
   "questions": [
     {
       "songId": "teresa-yueliang",
@@ -1074,6 +1074,676 @@
       "difficulty": 2
     },
     {
+      "songId": "chiyu-ganlanshu",
+      "title": "橄欖樹",
+      "artist": "齊豫",
+      "year": 1979,
+      "line": "不要問我從哪裡來",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "chiyu-ganlanshu:0:title",
+      "mode": "title",
+      "answer": "橄欖樹",
+      "accept": [
+        "橄欖樹"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "chiyu-ganlanshu",
+      "title": "橄欖樹",
+      "artist": "齊豫",
+      "year": 1979,
+      "line": "不要問我從哪裡來",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "chiyu-ganlanshu:0:lyric",
+      "mode": "lyric",
+      "answer": "不要問我從哪裡來",
+      "accept": [
+        "不要問我從哪裡來"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "chiyu-ganlanshu",
+      "title": "橄欖樹",
+      "artist": "齊豫",
+      "year": 1979,
+      "line": "我的故鄉在遠方",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        }
+      ],
+      "id": "chiyu-ganlanshu:1:title",
+      "mode": "title",
+      "answer": "橄欖樹",
+      "accept": [
+        "橄欖樹"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "chiyu-ganlanshu",
+      "title": "橄欖樹",
+      "artist": "齊豫",
+      "year": 1979,
+      "line": "我的故鄉在遠方",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        }
+      ],
+      "id": "chiyu-ganlanshu:1:lyric",
+      "mode": "lyric",
+      "answer": "我的故鄉在遠方",
+      "accept": [
+        "我的故鄉在遠方"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "chiyu-ganlanshu",
+      "title": "橄欖樹",
+      "artist": "齊豫",
+      "year": 1979,
+      "line": "為什麼流浪 流浪遠方",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        }
+      ],
+      "id": "chiyu-ganlanshu:2:title",
+      "mode": "title",
+      "answer": "橄欖樹",
+      "accept": [
+        "橄欖樹"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "chiyu-ganlanshu",
+      "title": "橄欖樹",
+      "artist": "齊豫",
+      "year": 1979,
+      "line": "為什麼流浪 流浪遠方",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        }
+      ],
+      "id": "chiyu-ganlanshu:2:lyric",
+      "mode": "lyric",
+      "answer": "為什麼流浪 流浪遠方",
+      "accept": [
+        "為什麼流浪 流浪遠方"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "luodayou-tongnian",
+      "title": "童年",
+      "artist": "羅大佑",
+      "year": 1982,
+      "line": "池塘邊的榕樹上",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        }
+      ],
+      "id": "luodayou-tongnian:0:title",
+      "mode": "title",
+      "answer": "童年",
+      "accept": [
+        "童年"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "luodayou-tongnian",
+      "title": "童年",
+      "artist": "羅大佑",
+      "year": 1982,
+      "line": "池塘邊的榕樹上",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        }
+      ],
+      "id": "luodayou-tongnian:0:lyric",
+      "mode": "lyric",
+      "answer": "池塘邊的榕樹上",
+      "accept": [
+        "池塘邊的榕樹上"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "luodayou-tongnian",
+      "title": "童年",
+      "artist": "羅大佑",
+      "year": 1982,
+      "line": "知了在聲聲叫著夏天",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        }
+      ],
+      "id": "luodayou-tongnian:1:title",
+      "mode": "title",
+      "answer": "童年",
+      "accept": [
+        "童年"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "luodayou-tongnian",
+      "title": "童年",
+      "artist": "羅大佑",
+      "year": 1982,
+      "line": "知了在聲聲叫著夏天",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        }
+      ],
+      "id": "luodayou-tongnian:1:lyric",
+      "mode": "lyric",
+      "answer": "知了在聲聲叫著夏天",
+      "accept": [
+        "知了在聲聲叫著夏天"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "luodayou-tongnian",
+      "title": "童年",
+      "artist": "羅大佑",
+      "year": 1982,
+      "line": "操場邊的鞦韆上",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        }
+      ],
+      "id": "luodayou-tongnian:2:title",
+      "mode": "title",
+      "answer": "童年",
+      "accept": [
+        "童年"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "luodayou-tongnian",
+      "title": "童年",
+      "artist": "羅大佑",
+      "year": 1982,
+      "line": "操場邊的鞦韆上",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        }
+      ],
+      "id": "luodayou-tongnian:2:lyric",
+      "mode": "lyric",
+      "answer": "操場邊的鞦韆上",
+      "accept": [
+        "操場邊的鞦韆上"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "luodayou-tongnian",
+      "title": "童年",
+      "artist": "羅大佑",
+      "year": 1982,
+      "line": "只有蝴蝶停在上面",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "luodayou-tongnian:3:title",
+      "mode": "title",
+      "answer": "童年",
+      "accept": [
+        "童年"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "luodayou-tongnian",
+      "title": "童年",
+      "artist": "羅大佑",
+      "year": 1982,
+      "line": "只有蝴蝶停在上面",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "luodayou-tongnian:3:lyric",
+      "mode": "lyric",
+      "answer": "只有蝴蝶停在上面",
+      "accept": [
+        "只有蝴蝶停在上面"
+      ],
+      "difficulty": 3
+    },
+    {
       "songId": "wangjie-yichangyouxi",
       "title": "一場遊戲一場夢",
       "artist": "王傑",
@@ -2130,6 +2800,468 @@
       "answer": "親愛的你別為我哭泣",
       "accept": [
         "親愛的你別為我哭泣"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "luodayou-lianqu1990",
+      "title": "戀曲1990",
+      "artist": "羅大佑",
+      "year": 1988,
+      "line": "烏溜溜的黑眼珠和你的笑臉",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "luodayou-lianqu1990:0:title",
+      "mode": "title",
+      "answer": "戀曲1990",
+      "accept": [
+        "戀曲1990"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "luodayou-lianqu1990",
+      "title": "戀曲1990",
+      "artist": "羅大佑",
+      "year": 1988,
+      "line": "烏溜溜的黑眼珠和你的笑臉",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "luodayou-lianqu1990:0:lyric",
+      "mode": "lyric",
+      "answer": "烏溜溜的黑眼珠和你的笑臉",
+      "accept": [
+        "烏溜溜的黑眼珠和你的笑臉"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "luodayou-lianqu1990",
+      "title": "戀曲1990",
+      "artist": "羅大佑",
+      "year": 1988,
+      "line": "蒼茫茫的天涯路是你的漂泊",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        }
+      ],
+      "id": "luodayou-lianqu1990:1:title",
+      "mode": "title",
+      "answer": "戀曲1990",
+      "accept": [
+        "戀曲1990"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "luodayou-lianqu1990",
+      "title": "戀曲1990",
+      "artist": "羅大佑",
+      "year": 1988,
+      "line": "蒼茫茫的天涯路是你的漂泊",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        }
+      ],
+      "id": "luodayou-lianqu1990:1:lyric",
+      "mode": "lyric",
+      "answer": "蒼茫茫的天涯路是你的漂泊",
+      "accept": [
+        "蒼茫茫的天涯路是你的漂泊"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "chensheng-bahbeishang",
+      "title": "把悲傷留給自己",
+      "artist": "陳昇",
+      "year": 1989,
+      "line": "能不能讓我 陪著你走",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        }
+      ],
+      "id": "chensheng-bahbeishang:0:title",
+      "mode": "title",
+      "answer": "把悲傷留給自己",
+      "accept": [
+        "把悲傷留給自己"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "chensheng-bahbeishang",
+      "title": "把悲傷留給自己",
+      "artist": "陳昇",
+      "year": 1989,
+      "line": "能不能讓我 陪著你走",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        }
+      ],
+      "id": "chensheng-bahbeishang:0:lyric",
+      "mode": "lyric",
+      "answer": "能不能讓我 陪著你走",
+      "accept": [
+        "能不能讓我 陪著你走"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "chensheng-bahbeishang",
+      "title": "把悲傷留給自己",
+      "artist": "陳昇",
+      "year": 1989,
+      "line": "既然你說留不住你",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        }
+      ],
+      "id": "chensheng-bahbeishang:1:title",
+      "mode": "title",
+      "answer": "把悲傷留給自己",
+      "accept": [
+        "把悲傷留給自己"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "chensheng-bahbeishang",
+      "title": "把悲傷留給自己",
+      "artist": "陳昇",
+      "year": 1989,
+      "line": "既然你說留不住你",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        }
+      ],
+      "id": "chensheng-bahbeishang:1:lyric",
+      "mode": "lyric",
+      "answer": "既然你說留不住你",
+      "accept": [
+        "既然你說留不住你"
       ],
       "difficulty": 3
     },
@@ -4464,6 +5596,476 @@
       "difficulty": 3
     },
     {
+      "songId": "zhengzhihua-shuishou",
+      "title": "水手",
+      "artist": "鄭智化",
+      "year": 1992,
+      "line": "他說風雨中這點痛算什麼",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "zhengzhihua-shuishou:0:title",
+      "mode": "title",
+      "answer": "水手",
+      "accept": [
+        "水手"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "zhengzhihua-shuishou",
+      "title": "水手",
+      "artist": "鄭智化",
+      "year": 1992,
+      "line": "他說風雨中這點痛算什麼",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "zhengzhihua-shuishou:0:lyric",
+      "mode": "lyric",
+      "answer": "他說風雨中這點痛算什麼",
+      "accept": [
+        "他說風雨中這點痛算什麼"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "zhengzhihua-shuishou",
+      "title": "水手",
+      "artist": "鄭智化",
+      "year": 1992,
+      "line": "擦乾淚 不要怕",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        }
+      ],
+      "id": "zhengzhihua-shuishou:1:title",
+      "mode": "title",
+      "answer": "水手",
+      "accept": [
+        "水手"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "zhengzhihua-shuishou",
+      "title": "水手",
+      "artist": "鄭智化",
+      "year": 1992,
+      "line": "擦乾淚 不要怕",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        }
+      ],
+      "id": "zhengzhihua-shuishou:1:lyric",
+      "mode": "lyric",
+      "answer": "擦乾淚 不要怕",
+      "accept": [
+        "擦乾淚 不要怕"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "zhengzhihua-shuishou",
+      "title": "水手",
+      "artist": "鄭智化",
+      "year": 1992,
+      "line": "至少我們還有夢",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "zhengzhihua-shuishou:2:title",
+      "mode": "title",
+      "answer": "水手",
+      "accept": [
+        "水手"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "zhengzhihua-shuishou",
+      "title": "水手",
+      "artist": "鄭智化",
+      "year": 1992,
+      "line": "至少我們還有夢",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "zhengzhihua-shuishou:2:lyric",
+      "mode": "lyric",
+      "answer": "至少我們還有夢",
+      "accept": [
+        "至少我們還有夢"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "mengtingwei-dongjidaotaibei",
+      "title": "冬季到台北來看雨",
+      "artist": "孟庭葦",
+      "year": 1992,
+      "line": "冬季到台北來看雨",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        }
+      ],
+      "id": "mengtingwei-dongjidaotaibei:0:title",
+      "mode": "title",
+      "answer": "冬季到台北來看雨",
+      "accept": [
+        "冬季到台北來看雨"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "mengtingwei-dongjidaotaibei",
+      "title": "冬季到台北來看雨",
+      "artist": "孟庭葦",
+      "year": 1992,
+      "line": "冬季到台北來看雨",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        }
+      ],
+      "id": "mengtingwei-dongjidaotaibei:0:lyric",
+      "mode": "lyric",
+      "answer": "冬季到台北來看雨",
+      "accept": [
+        "冬季到台北來看雨"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "mengtingwei-dongjidaotaibei",
+      "title": "冬季到台北來看雨",
+      "artist": "孟庭葦",
+      "year": 1992,
+      "line": "別在異鄉哭泣",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        }
+      ],
+      "id": "mengtingwei-dongjidaotaibei:1:title",
+      "mode": "title",
+      "answer": "冬季到台北來看雨",
+      "accept": [
+        "冬季到台北來看雨"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "mengtingwei-dongjidaotaibei",
+      "title": "冬季到台北來看雨",
+      "artist": "孟庭葦",
+      "year": 1992,
+      "line": "別在異鄉哭泣",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        }
+      ],
+      "id": "mengtingwei-dongjidaotaibei:1:lyric",
+      "mode": "lyric",
+      "answer": "別在異鄉哭泣",
+      "accept": [
+        "別在異鄉哭泣"
+      ],
+      "difficulty": 2
+    },
+    {
       "songId": "jacky-wenbie",
       "title": "吻別",
       "artist": "張學友",
@@ -6100,6 +7702,562 @@
         "所有真心真意 換一句 謝謝你"
       ],
       "difficulty": 4
+    },
+    {
+      "songId": "tom-woqidai",
+      "title": "我期待",
+      "artist": "張雨生",
+      "year": 1994,
+      "line": "我期待有一天我會回來",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "tom-woqidai:0:title",
+      "mode": "title",
+      "answer": "我期待",
+      "accept": [
+        "我期待"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "tom-woqidai",
+      "title": "我期待",
+      "artist": "張雨生",
+      "year": 1994,
+      "line": "我期待有一天我會回來",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "tom-woqidai:0:lyric",
+      "mode": "lyric",
+      "answer": "我期待有一天我會回來",
+      "accept": [
+        "我期待有一天我會回來"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "tom-woqidai",
+      "title": "我期待",
+      "artist": "張雨生",
+      "year": 1994,
+      "line": "回到我最初的愛",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        }
+      ],
+      "id": "tom-woqidai:1:title",
+      "mode": "title",
+      "answer": "我期待",
+      "accept": [
+        "我期待"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "tom-woqidai",
+      "title": "我期待",
+      "artist": "張雨生",
+      "year": 1994,
+      "line": "回到我最初的愛",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        }
+      ],
+      "id": "tom-woqidai:1:lyric",
+      "mode": "lyric",
+      "answer": "回到我最初的愛",
+      "accept": [
+        "回到我最初的愛"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "faye-woyuanyi",
+      "title": "我願意",
+      "artist": "王菲",
+      "year": 1994,
+      "line": "我願意為你 忘記我姓名",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "faye-woyuanyi:0:title",
+      "mode": "title",
+      "answer": "我願意",
+      "accept": [
+        "我願意"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "faye-woyuanyi",
+      "title": "我願意",
+      "artist": "王菲",
+      "year": 1994,
+      "line": "我願意為你 忘記我姓名",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "faye-woyuanyi:0:lyric",
+      "mode": "lyric",
+      "answer": "我願意為你 忘記我姓名",
+      "accept": [
+        "我願意為你 忘記我姓名"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "faye-woyuanyi",
+      "title": "我願意",
+      "artist": "王菲",
+      "year": 1994,
+      "line": "只要你真心 拿愛與我回應",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "faye-woyuanyi:1:title",
+      "mode": "title",
+      "answer": "我願意",
+      "accept": [
+        "我願意"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "faye-woyuanyi",
+      "title": "我願意",
+      "artist": "王菲",
+      "year": 1994,
+      "line": "只要你真心 拿愛與我回應",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "faye-woyuanyi:1:lyric",
+      "mode": "lyric",
+      "answer": "只要你真心 拿愛與我回應",
+      "accept": [
+        "只要你真心 拿愛與我回應"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "faye-woyuanyi",
+      "title": "我願意",
+      "artist": "王菲",
+      "year": 1994,
+      "line": "思念是一種很玄的東西",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "faye-woyuanyi:2:title",
+      "mode": "title",
+      "answer": "我願意",
+      "accept": [
+        "我願意"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "faye-woyuanyi",
+      "title": "我願意",
+      "artist": "王菲",
+      "year": 1994,
+      "line": "思念是一種很玄的東西",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "faye-woyuanyi:2:lyric",
+      "mode": "lyric",
+      "answer": "思念是一種很玄的東西",
+      "accept": [
+        "思念是一種很玄的東西"
+      ],
+      "difficulty": 3
     },
     {
       "songId": "wubai-langrenqingge",
@@ -9188,6 +11346,238 @@
       "difficulty": 4
     },
     {
+      "songId": "ayue-aiwobiezou",
+      "title": "愛我別走",
+      "artist": "張震嶽",
+      "year": 1997,
+      "line": "愛我別走",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        }
+      ],
+      "id": "ayue-aiwobiezou:0:title",
+      "mode": "title",
+      "answer": "愛我別走",
+      "accept": [
+        "愛我別走"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "ayue-aiwobiezou",
+      "title": "愛我別走",
+      "artist": "張震嶽",
+      "year": 1997,
+      "line": "愛我別走",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        }
+      ],
+      "id": "ayue-aiwobiezou:0:lyric",
+      "mode": "lyric",
+      "answer": "愛我別走",
+      "accept": [
+        "愛我別走"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "ayue-aiwobiezou",
+      "title": "愛我別走",
+      "artist": "張震嶽",
+      "year": 1997,
+      "line": "如果你說不出口",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        }
+      ],
+      "id": "ayue-aiwobiezou:1:title",
+      "mode": "title",
+      "answer": "愛我別走",
+      "accept": [
+        "愛我別走"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "ayue-aiwobiezou",
+      "title": "愛我別走",
+      "artist": "張震嶽",
+      "year": 1997,
+      "line": "如果你說不出口",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        }
+      ],
+      "id": "ayue-aiwobiezou:1:lyric",
+      "mode": "lyric",
+      "answer": "如果你說不出口",
+      "accept": [
+        "如果你說不出口"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "ayue-aiwobiezou",
+      "title": "愛我別走",
+      "artist": "張震嶽",
+      "year": 1997,
+      "line": "就這樣忘了我",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        }
+      ],
+      "id": "ayue-aiwobiezou:2:title",
+      "mode": "title",
+      "answer": "愛我別走",
+      "accept": [
+        "愛我別走"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "ayue-aiwobiezou",
+      "title": "愛我別走",
+      "artist": "張震嶽",
+      "year": 1997,
+      "line": "就這樣忘了我",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        }
+      ],
+      "id": "ayue-aiwobiezou:2:lyric",
+      "mode": "lyric",
+      "answer": "就這樣忘了我",
+      "accept": [
+        "就這樣忘了我"
+      ],
+      "difficulty": 2
+    },
+    {
       "songId": "amei-tinghai",
       "title": "聽海",
       "artist": "張惠妹",
@@ -12140,6 +14530,678 @@
       "difficulty": 3
     },
     {
+      "songId": "donli-dang",
+      "title": "當",
+      "artist": "動力火車",
+      "year": 1998,
+      "line": "當山峰沒有稜角的時候",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "donli-dang:0:title",
+      "mode": "title",
+      "answer": "當",
+      "accept": [
+        "當"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "donli-dang",
+      "title": "當",
+      "artist": "動力火車",
+      "year": 1998,
+      "line": "當山峰沒有稜角的時候",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "donli-dang:0:lyric",
+      "mode": "lyric",
+      "answer": "當山峰沒有稜角的時候",
+      "accept": [
+        "當山峰沒有稜角的時候"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "donli-dang",
+      "title": "當",
+      "artist": "動力火車",
+      "year": 1998,
+      "line": "當河水不再流",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "donli-dang:1:title",
+      "mode": "title",
+      "answer": "當",
+      "accept": [
+        "當"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "donli-dang",
+      "title": "當",
+      "artist": "動力火車",
+      "year": 1998,
+      "line": "當河水不再流",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "donli-dang:1:lyric",
+      "mode": "lyric",
+      "answer": "當河水不再流",
+      "accept": [
+        "當河水不再流"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "richie-duimiandenvhai",
+      "title": "對面的女孩看過來",
+      "artist": "任賢齊",
+      "year": 1998,
+      "line": "對面的女孩看過來",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "richie-duimiandenvhai:0:title",
+      "mode": "title",
+      "answer": "對面的女孩看過來",
+      "accept": [
+        "對面的女孩看過來"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "richie-duimiandenvhai",
+      "title": "對面的女孩看過來",
+      "artist": "任賢齊",
+      "year": 1998,
+      "line": "對面的女孩看過來",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "richie-duimiandenvhai:0:lyric",
+      "mode": "lyric",
+      "answer": "對面的女孩看過來",
+      "accept": [
+        "對面的女孩看過來"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "richie-duimiandenvhai",
+      "title": "對面的女孩看過來",
+      "artist": "任賢齊",
+      "year": 1998,
+      "line": "這裡的表演很精彩",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        }
+      ],
+      "id": "richie-duimiandenvhai:1:title",
+      "mode": "title",
+      "answer": "對面的女孩看過來",
+      "accept": [
+        "對面的女孩看過來"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "richie-duimiandenvhai",
+      "title": "對面的女孩看過來",
+      "artist": "任賢齊",
+      "year": 1998,
+      "line": "這裡的表演很精彩",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        }
+      ],
+      "id": "richie-duimiandenvhai:1:lyric",
+      "mode": "lyric",
+      "answer": "這裡的表演很精彩",
+      "accept": [
+        "這裡的表演很精彩"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "richie-duimiandenvhai",
+      "title": "對面的女孩看過來",
+      "artist": "任賢齊",
+      "year": 1998,
+      "line": "寂寞男孩的悲哀",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        }
+      ],
+      "id": "richie-duimiandenvhai:2:title",
+      "mode": "title",
+      "answer": "對面的女孩看過來",
+      "accept": [
+        "對面的女孩看過來"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "richie-duimiandenvhai",
+      "title": "對面的女孩看過來",
+      "artist": "任賢齊",
+      "year": 1998,
+      "line": "寂寞男孩的悲哀",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        }
+      ],
+      "id": "richie-duimiandenvhai:2:lyric",
+      "mode": "lyric",
+      "answer": "寂寞男孩的悲哀",
+      "accept": [
+        "寂寞男孩的悲哀"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "huangpinyuan-xiaowei",
+      "title": "小薇",
+      "artist": "黃品源",
+      "year": 1999,
+      "line": "有一個美麗的小女孩",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "huangpinyuan-xiaowei:0:title",
+      "mode": "title",
+      "answer": "小薇",
+      "accept": [
+        "小薇"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "huangpinyuan-xiaowei",
+      "title": "小薇",
+      "artist": "黃品源",
+      "year": 1999,
+      "line": "有一個美麗的小女孩",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "huangpinyuan-xiaowei:0:lyric",
+      "mode": "lyric",
+      "answer": "有一個美麗的小女孩",
+      "accept": [
+        "有一個美麗的小女孩"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "huangpinyuan-xiaowei",
+      "title": "小薇",
+      "artist": "黃品源",
+      "year": 1999,
+      "line": "她的名字叫做小薇",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        }
+      ],
+      "id": "huangpinyuan-xiaowei:1:title",
+      "mode": "title",
+      "answer": "小薇",
+      "accept": [
+        "小薇"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "huangpinyuan-xiaowei",
+      "title": "小薇",
+      "artist": "黃品源",
+      "year": 1999,
+      "line": "她的名字叫做小薇",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        }
+      ],
+      "id": "huangpinyuan-xiaowei:1:lyric",
+      "mode": "lyric",
+      "answer": "她的名字叫做小薇",
+      "accept": [
+        "她的名字叫做小薇"
+      ],
+      "difficulty": 3
+    },
+    {
       "songId": "amei-wokeyibaonima",
       "title": "我可以抱你嗎",
       "artist": "張惠妹",
@@ -12334,6 +15396,284 @@
       "answer": "讓我在你肩膀哭泣",
       "accept": [
         "讓我在你肩膀哭泣"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "pushu-naxiehuaer",
+      "title": "那些花兒",
+      "artist": "朴樹",
+      "year": 1999,
+      "line": "她們都老了吧",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        }
+      ],
+      "id": "pushu-naxiehuaer:0:title",
+      "mode": "title",
+      "answer": "那些花兒",
+      "accept": [
+        "那些花兒"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "pushu-naxiehuaer",
+      "title": "那些花兒",
+      "artist": "朴樹",
+      "year": 1999,
+      "line": "她們都老了吧",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        }
+      ],
+      "id": "pushu-naxiehuaer:0:lyric",
+      "mode": "lyric",
+      "answer": "她們都老了吧",
+      "accept": [
+        "她們都老了吧"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "pushu-naxiehuaer",
+      "title": "那些花兒",
+      "artist": "朴樹",
+      "year": 1999,
+      "line": "她們在哪裡呀",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "pushu-naxiehuaer:1:title",
+      "mode": "title",
+      "answer": "那些花兒",
+      "accept": [
+        "那些花兒"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "pushu-naxiehuaer",
+      "title": "那些花兒",
+      "artist": "朴樹",
+      "year": 1999,
+      "line": "她們在哪裡呀",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "pushu-naxiehuaer:1:lyric",
+      "mode": "lyric",
+      "answer": "她們在哪裡呀",
+      "accept": [
+        "她們在哪裡呀"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "pushu-naxiehuaer",
+      "title": "那些花兒",
+      "artist": "朴樹",
+      "year": 1999,
+      "line": "我們就這樣 各自奔天涯",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "pushu-naxiehuaer:2:title",
+      "mode": "title",
+      "answer": "那些花兒",
+      "accept": [
+        "那些花兒"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "pushu-naxiehuaer",
+      "title": "那些花兒",
+      "artist": "朴樹",
+      "year": 1999,
+      "line": "我們就這樣 各自奔天涯",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "pushu-naxiehuaer:2:lyric",
+      "mode": "lyric",
+      "answer": "我們就這樣 各自奔天涯",
+      "accept": [
+        "我們就這樣 各自奔天涯"
       ],
       "difficulty": 3
     },
@@ -12990,6 +16330,432 @@
       "answer": "梔子花白花瓣 落在我藍色百褶裙上",
       "accept": [
         "梔子花白花瓣 落在我藍色百褶裙上"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "rene-houlai",
+      "title": "後來",
+      "artist": "劉若英",
+      "year": 1999,
+      "line": "永遠不會再重來 有一個男孩 愛著那個女孩",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "rene-houlai:5:title",
+      "mode": "title",
+      "answer": "後來",
+      "accept": [
+        "後來"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "rene-houlai",
+      "title": "後來",
+      "artist": "劉若英",
+      "year": 1999,
+      "line": "永遠不會再重來 有一個男孩 愛著那個女孩",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "rene-houlai:5:lyric",
+      "mode": "lyric",
+      "answer": "永遠不會再重來 有一個男孩 愛著那個女孩",
+      "accept": [
+        "永遠不會再重來 有一個男孩 愛著那個女孩"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "karen-yintian",
+      "title": "陰天",
+      "artist": "莫文蔚",
+      "year": 1999,
+      "line": "陰天 在不開燈的房間",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "karen-yintian:0:title",
+      "mode": "title",
+      "answer": "陰天",
+      "accept": [
+        "陰天"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "karen-yintian",
+      "title": "陰天",
+      "artist": "莫文蔚",
+      "year": 1999,
+      "line": "陰天 在不開燈的房間",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "karen-yintian:0:lyric",
+      "mode": "lyric",
+      "answer": "陰天 在不開燈的房間",
+      "accept": [
+        "陰天 在不開燈的房間"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "karen-yintian",
+      "title": "陰天",
+      "artist": "莫文蔚",
+      "year": 1999,
+      "line": "當所有思緒都一點一點沉澱",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "karen-yintian:1:title",
+      "mode": "title",
+      "answer": "陰天",
+      "accept": [
+        "陰天"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "karen-yintian",
+      "title": "陰天",
+      "artist": "莫文蔚",
+      "year": 1999,
+      "line": "當所有思緒都一點一點沉澱",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "karen-yintian:1:lyric",
+      "mode": "lyric",
+      "answer": "當所有思緒都一點一點沉澱",
+      "accept": [
+        "當所有思緒都一點一點沉澱"
       ],
       "difficulty": 4
     },
@@ -14664,6 +18430,198 @@
       "answer": "終於做了這個決定",
       "accept": [
         "終於做了這個決定"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "fish-yongqi",
+      "title": "勇氣",
+      "artist": "梁靜茹",
+      "year": 2000,
+      "line": "如果我的堅強任性",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "fish-yongqi:7:title",
+      "mode": "title",
+      "answer": "勇氣",
+      "accept": [
+        "勇氣"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "fish-yongqi",
+      "title": "勇氣",
+      "artist": "梁靜茹",
+      "year": 2000,
+      "line": "如果我的堅強任性",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "fish-yongqi:7:lyric",
+      "mode": "lyric",
+      "answer": "如果我的堅強任性",
+      "accept": [
+        "如果我的堅強任性"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "fish-yongqi",
+      "title": "勇氣",
+      "artist": "梁靜茹",
+      "year": 2000,
+      "line": "會不小心傷害了你",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        }
+      ],
+      "id": "fish-yongqi:8:title",
+      "mode": "title",
+      "answer": "勇氣",
+      "accept": [
+        "勇氣"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "fish-yongqi",
+      "title": "勇氣",
+      "artist": "梁靜茹",
+      "year": 2000,
+      "line": "會不小心傷害了你",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        }
+      ],
+      "id": "fish-yongqi:8:lyric",
+      "mode": "lyric",
+      "answer": "會不小心傷害了你",
+      "accept": [
+        "會不小心傷害了你"
       ],
       "difficulty": 3
     },
@@ -19710,6 +23668,546 @@
       "difficulty": 3
     },
     {
+      "songId": "fish-fenshoukuaile",
+      "title": "分手快樂",
+      "artist": "梁靜茹",
+      "year": 2002,
+      "line": "揮別錯的才能和對的相逢",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        }
+      ],
+      "id": "fish-fenshoukuaile:2:title",
+      "mode": "title",
+      "answer": "分手快樂",
+      "accept": [
+        "分手快樂"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "fish-fenshoukuaile",
+      "title": "分手快樂",
+      "artist": "梁靜茹",
+      "year": 2002,
+      "line": "揮別錯的才能和對的相逢",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        }
+      ],
+      "id": "fish-fenshoukuaile:2:lyric",
+      "mode": "lyric",
+      "answer": "揮別錯的才能和對的相逢",
+      "accept": [
+        "揮別錯的才能和對的相逢"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "ayue-zaijian",
+      "title": "再見",
+      "artist": "張震嶽",
+      "year": 2002,
+      "line": "我會牢牢記住你的臉",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "ayue-zaijian:0:title",
+      "mode": "title",
+      "answer": "再見",
+      "accept": [
+        "再見"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "ayue-zaijian",
+      "title": "再見",
+      "artist": "張震嶽",
+      "year": 2002,
+      "line": "我會牢牢記住你的臉",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "ayue-zaijian:0:lyric",
+      "mode": "lyric",
+      "answer": "我會牢牢記住你的臉",
+      "accept": [
+        "我會牢牢記住你的臉"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "ayue-zaijian",
+      "title": "再見",
+      "artist": "張震嶽",
+      "year": 2002,
+      "line": "我會珍惜你給的思念",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        }
+      ],
+      "id": "ayue-zaijian:1:title",
+      "mode": "title",
+      "answer": "再見",
+      "accept": [
+        "再見"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "ayue-zaijian",
+      "title": "再見",
+      "artist": "張震嶽",
+      "year": 2002,
+      "line": "我會珍惜你給的思念",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        }
+      ],
+      "id": "ayue-zaijian:1:lyric",
+      "mode": "lyric",
+      "answer": "我會珍惜你給的思念",
+      "accept": [
+        "我會珍惜你給的思念"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "wubai-turandeziwo",
+      "title": "突然的自我",
+      "artist": "伍佰",
+      "year": 2002,
+      "line": "聽見你說 朝陽起又落",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "wubai-turandeziwo:0:title",
+      "mode": "title",
+      "answer": "突然的自我",
+      "accept": [
+        "突然的自我"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "wubai-turandeziwo",
+      "title": "突然的自我",
+      "artist": "伍佰",
+      "year": 2002,
+      "line": "聽見你說 朝陽起又落",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "wubai-turandeziwo:0:lyric",
+      "mode": "lyric",
+      "answer": "聽見你說 朝陽起又落",
+      "accept": [
+        "聽見你說 朝陽起又落"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "wubai-turandeziwo",
+      "title": "突然的自我",
+      "artist": "伍佰",
+      "year": 2002,
+      "line": "杯莫停 我要唱首歌",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        }
+      ],
+      "id": "wubai-turandeziwo:1:title",
+      "mode": "title",
+      "answer": "突然的自我",
+      "accept": [
+        "突然的自我"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "wubai-turandeziwo",
+      "title": "突然的自我",
+      "artist": "伍佰",
+      "year": 2002,
+      "line": "杯莫停 我要唱首歌",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        }
+      ],
+      "id": "wubai-turandeziwo:1:lyric",
+      "mode": "lyric",
+      "answer": "杯莫停 我要唱首歌",
+      "accept": [
+        "杯莫停 我要唱首歌"
+      ],
+      "difficulty": 3
+    },
+    {
       "songId": "cheer-yu",
       "title": "魚",
       "artist": "陳綺貞",
@@ -20330,6 +24828,268 @@
         "曾經狂奔 舞蹈 貪婪的說話"
       ],
       "difficulty": 4
+    },
+    {
+      "songId": "elva-zuishoudemoshengren",
+      "title": "最熟悉的陌生人",
+      "artist": "蕭亞軒",
+      "year": 2002,
+      "line": "我們變成了世上最熟悉的陌生人",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        }
+      ],
+      "id": "elva-zuishoudemoshengren:0:title",
+      "mode": "title",
+      "answer": "最熟悉的陌生人",
+      "accept": [
+        "最熟悉的陌生人"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "elva-zuishoudemoshengren",
+      "title": "最熟悉的陌生人",
+      "artist": "蕭亞軒",
+      "year": 2002,
+      "line": "我們變成了世上最熟悉的陌生人",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        }
+      ],
+      "id": "elva-zuishoudemoshengren:0:lyric",
+      "mode": "lyric",
+      "answer": "我們變成了世上最熟悉的陌生人",
+      "accept": [
+        "我們變成了世上最熟悉的陌生人"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "elva-zuishoudemoshengren",
+      "title": "最熟悉的陌生人",
+      "artist": "蕭亞軒",
+      "year": 2002,
+      "line": "今後各自曲折 各自悲哀",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        }
+      ],
+      "id": "elva-zuishoudemoshengren:1:title",
+      "mode": "title",
+      "answer": "最熟悉的陌生人",
+      "accept": [
+        "最熟悉的陌生人"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "elva-zuishoudemoshengren",
+      "title": "最熟悉的陌生人",
+      "artist": "蕭亞軒",
+      "year": 2002,
+      "line": "今後各自曲折 各自悲哀",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        }
+      ],
+      "id": "elva-zuishoudemoshengren:1:lyric",
+      "mode": "lyric",
+      "answer": "今後各自曲折 各自悲哀",
+      "accept": [
+        "今後各自曲折 各自悲哀"
+      ],
+      "difficulty": 3
     },
     {
       "songId": "sunyanzi-kaishidongle",
@@ -21184,6 +25944,284 @@
         "還可以問候"
       ],
       "difficulty": 2
+    },
+    {
+      "songId": "eason-shinian",
+      "title": "十年",
+      "artist": "陳奕迅",
+      "year": 2003,
+      "line": "情人最後難免淪為朋友",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "eason-shinian:8:title",
+      "mode": "title",
+      "answer": "十年",
+      "accept": [
+        "十年"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "eason-shinian",
+      "title": "十年",
+      "artist": "陳奕迅",
+      "year": 2003,
+      "line": "情人最後難免淪為朋友",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "eason-shinian:8:lyric",
+      "mode": "lyric",
+      "answer": "情人最後難免淪為朋友",
+      "accept": [
+        "情人最後難免淪為朋友"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "eason-shinian",
+      "title": "十年",
+      "artist": "陳奕迅",
+      "year": 2003,
+      "line": "懷抱既然不能逗留 何不在離開的時候",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "eason-shinian:9:title",
+      "mode": "title",
+      "answer": "十年",
+      "accept": [
+        "十年"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "eason-shinian",
+      "title": "十年",
+      "artist": "陳奕迅",
+      "year": 2003,
+      "line": "懷抱既然不能逗留 何不在離開的時候",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "eason-shinian:9:lyric",
+      "mode": "lyric",
+      "answer": "懷抱既然不能逗留 何不在離開的時候",
+      "accept": [
+        "懷抱既然不能逗留 何不在離開的時候"
+      ],
+      "difficulty": 4
     },
     {
       "songId": "shinee-siledouyaoai",
@@ -22574,6 +27612,268 @@
       "answer": "楓葉將故事染色 結局我看透",
       "accept": [
         "楓葉將故事染色 結局我看透"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "jay-dongfengpo",
+      "title": "東風破",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "歲月在牆上剝落 看見小時候",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "jay-dongfengpo:4:title",
+      "mode": "title",
+      "answer": "東風破",
+      "accept": [
+        "東風破"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-dongfengpo",
+      "title": "東風破",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "歲月在牆上剝落 看見小時候",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "jay-dongfengpo:4:lyric",
+      "mode": "lyric",
+      "answer": "歲月在牆上剝落 看見小時候",
+      "accept": [
+        "歲月在牆上剝落 看見小時候"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "jay-dongfengpo",
+      "title": "東風破",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "猶記得那年我們都還很年幼",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "jay-dongfengpo:5:title",
+      "mode": "title",
+      "answer": "東風破",
+      "accept": [
+        "東風破"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-dongfengpo",
+      "title": "東風破",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "猶記得那年我們都還很年幼",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "jay-dongfengpo:5:lyric",
+      "mode": "lyric",
+      "answer": "猶記得那年我們都還很年幼",
+      "accept": [
+        "猶記得那年我們都還很年幼"
       ],
       "difficulty": 4
     },
@@ -24138,6 +29438,400 @@
       "answer": "刮風這天 我試過握著你手",
       "accept": [
         "刮風這天 我試過握著你手"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "jay-qingtian",
+      "title": "晴天",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "從前從前 有個人愛你很久",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "jay-qingtian:7:title",
+      "mode": "title",
+      "answer": "晴天",
+      "accept": [
+        "晴天"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-qingtian",
+      "title": "晴天",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "從前從前 有個人愛你很久",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "jay-qingtian:7:lyric",
+      "mode": "lyric",
+      "answer": "從前從前 有個人愛你很久",
+      "accept": [
+        "從前從前 有個人愛你很久"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "jay-qingtian",
+      "title": "晴天",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "但偏偏 風漸漸 把距離吹得好遠",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        }
+      ],
+      "id": "jay-qingtian:8:title",
+      "mode": "title",
+      "answer": "晴天",
+      "accept": [
+        "晴天"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-qingtian",
+      "title": "晴天",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "但偏偏 風漸漸 把距離吹得好遠",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        }
+      ],
+      "id": "jay-qingtian:8:lyric",
+      "mode": "lyric",
+      "answer": "但偏偏 風漸漸 把距離吹得好遠",
+      "accept": [
+        "但偏偏 風漸漸 把距離吹得好遠"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "jay-qingtian",
+      "title": "晴天",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "好不容易又能再多愛一天",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        }
+      ],
+      "id": "jay-qingtian:9:title",
+      "mode": "title",
+      "answer": "晴天",
+      "accept": [
+        "晴天"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-qingtian",
+      "title": "晴天",
+      "artist": "周杰倫",
+      "year": 2003,
+      "line": "好不容易又能再多愛一天",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        }
+      ],
+      "id": "jay-qingtian:9:lyric",
+      "mode": "lyric",
+      "answer": "好不容易又能再多愛一天",
+      "accept": [
+        "好不容易又能再多愛一天"
       ],
       "difficulty": 4
     },
@@ -26660,6 +32354,502 @@
       "difficulty": 3
     },
     {
+      "songId": "mayday-juejiang",
+      "title": "倔強",
+      "artist": "五月天",
+      "year": 2004,
+      "line": "我和我最後的倔強",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "mayday-juejiang:7:title",
+      "mode": "title",
+      "answer": "倔強",
+      "accept": [
+        "倔強"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "mayday-juejiang",
+      "title": "倔強",
+      "artist": "五月天",
+      "year": 2004,
+      "line": "我和我最後的倔強",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "mayday-juejiang:7:lyric",
+      "mode": "lyric",
+      "answer": "我和我最後的倔強",
+      "accept": [
+        "我和我最後的倔強"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "mayday-juejiang",
+      "title": "倔強",
+      "artist": "五月天",
+      "year": 2004,
+      "line": "握緊雙手絕對不放",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        }
+      ],
+      "id": "mayday-juejiang:8:title",
+      "mode": "title",
+      "answer": "倔強",
+      "accept": [
+        "倔強"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "mayday-juejiang",
+      "title": "倔強",
+      "artist": "五月天",
+      "year": 2004,
+      "line": "握緊雙手絕對不放",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        }
+      ],
+      "id": "mayday-juejiang:8:lyric",
+      "mode": "lyric",
+      "answer": "握緊雙手絕對不放",
+      "accept": [
+        "握緊雙手絕對不放"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "cheer-lvxingdeyiyi",
+      "title": "旅行的意義",
+      "artist": "陳綺貞",
+      "year": 2004,
+      "line": "你品嚐了夜的巴黎",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "cheer-lvxingdeyiyi:0:title",
+      "mode": "title",
+      "answer": "旅行的意義",
+      "accept": [
+        "旅行的意義"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "cheer-lvxingdeyiyi",
+      "title": "旅行的意義",
+      "artist": "陳綺貞",
+      "year": 2004,
+      "line": "你品嚐了夜的巴黎",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "cheer-lvxingdeyiyi:0:lyric",
+      "mode": "lyric",
+      "answer": "你品嚐了夜的巴黎",
+      "accept": [
+        "你品嚐了夜的巴黎"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "cheer-lvxingdeyiyi",
+      "title": "旅行的意義",
+      "artist": "陳綺貞",
+      "year": 2004,
+      "line": "你踏過下雪的北京",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "cheer-lvxingdeyiyi:1:title",
+      "mode": "title",
+      "answer": "旅行的意義",
+      "accept": [
+        "旅行的意義"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "cheer-lvxingdeyiyi",
+      "title": "旅行的意義",
+      "artist": "陳綺貞",
+      "year": 2004,
+      "line": "你踏過下雪的北京",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "cheer-lvxingdeyiyi:1:lyric",
+      "mode": "lyric",
+      "answer": "你踏過下雪的北京",
+      "accept": [
+        "你踏過下雪的北京"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "cheer-lvxingdeyiyi",
+      "title": "旅行的意義",
+      "artist": "陳綺貞",
+      "year": 2004,
+      "line": "卻說不出你愛我的原因",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "cheer-lvxingdeyiyi:2:title",
+      "mode": "title",
+      "answer": "旅行的意義",
+      "accept": [
+        "旅行的意義"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "cheer-lvxingdeyiyi",
+      "title": "旅行的意義",
+      "artist": "陳綺貞",
+      "year": 2004,
+      "line": "卻說不出你愛我的原因",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "cheer-lvxingdeyiyi:2:lyric",
+      "mode": "lyric",
+      "answer": "卻說不出你愛我的原因",
+      "accept": [
+        "卻說不出你愛我的原因"
+      ],
+      "difficulty": 3
+    },
+    {
       "songId": "sunyanzi-yujian",
       "title": "遇見",
       "artist": "孫燕姿",
@@ -27448,6 +33638,102 @@
         "我遇見誰 會有怎樣的對白"
       ],
       "difficulty": 4
+    },
+    {
+      "songId": "sunyanzi-yujian",
+      "title": "遇見",
+      "artist": "孫燕姿",
+      "year": 2004,
+      "line": "愛要拐幾個彎才來",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "sunyanzi-yujian:8:title",
+      "mode": "title",
+      "answer": "遇見",
+      "accept": [
+        "遇見"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "sunyanzi-yujian",
+      "title": "遇見",
+      "artist": "孫燕姿",
+      "year": 2004,
+      "line": "愛要拐幾個彎才來",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "sunyanzi-yujian:8:lyric",
+      "mode": "lyric",
+      "answer": "愛要拐幾個彎才來",
+      "accept": [
+        "愛要拐幾個彎才來"
+      ],
+      "difficulty": 3
     },
     {
       "songId": "fish-ningxia",
@@ -31736,6 +38022,196 @@
       "difficulty": 3
     },
     {
+      "songId": "jay-fengruxue",
+      "title": "髮如雪",
+      "artist": "周杰倫",
+      "year": 2005,
+      "line": "邀明月 讓回憶皎潔",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "jay-fengruxue:4:title",
+      "mode": "title",
+      "answer": "髮如雪",
+      "accept": [
+        "髮如雪"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-fengruxue",
+      "title": "髮如雪",
+      "artist": "周杰倫",
+      "year": 2005,
+      "line": "邀明月 讓回憶皎潔",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "jay-fengruxue:4:lyric",
+      "mode": "lyric",
+      "answer": "邀明月 讓回憶皎潔",
+      "accept": [
+        "邀明月 讓回憶皎潔"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "jay-fengruxue",
+      "title": "髮如雪",
+      "artist": "周杰倫",
+      "year": 2005,
+      "line": "愛在月光下完美",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "jay-fengruxue:5:title",
+      "mode": "title",
+      "answer": "髮如雪",
+      "accept": [
+        "髮如雪"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-fengruxue",
+      "title": "髮如雪",
+      "artist": "周杰倫",
+      "year": 2005,
+      "line": "愛在月光下完美",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        }
+      ],
+      "id": "jay-fengruxue:5:lyric",
+      "mode": "lyric",
+      "answer": "愛在月光下完美",
+      "accept": [
+        "愛在月光下完美"
+      ],
+      "difficulty": 2
+    },
+    {
       "songId": "mayday-lianaiing",
       "title": "戀愛ING",
       "artist": "五月天",
@@ -32384,6 +38860,108 @@
         "你悄然走開"
       ],
       "difficulty": 2
+    },
+    {
+      "songId": "jay-qianlizhiwai",
+      "title": "千里之外",
+      "artist": "周杰倫",
+      "year": 2006,
+      "line": "夢醒來 是誰在窗台",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        }
+      ],
+      "id": "jay-qianlizhiwai:4:title",
+      "mode": "title",
+      "answer": "千里之外",
+      "accept": [
+        "千里之外"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-qianlizhiwai",
+      "title": "千里之外",
+      "artist": "周杰倫",
+      "year": 2006,
+      "line": "夢醒來 是誰在窗台",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        }
+      ],
+      "id": "jay-qianlizhiwai:4:lyric",
+      "mode": "lyric",
+      "answer": "夢醒來 是誰在窗台",
+      "accept": [
+        "夢醒來 是誰在窗台"
+      ],
+      "difficulty": 3
     },
     {
       "songId": "sodagreen-xiaoqingge",
@@ -33060,6 +39638,236 @@
         "我想我很適合 當一個歌頌者"
       ],
       "difficulty": 4
+    },
+    {
+      "songId": "sodagreen-xiaoqingge",
+      "title": "小情歌",
+      "artist": "蘇打綠",
+      "year": 2006,
+      "line": "你知道 就算大雨讓整座城市顛倒",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "sodagreen-xiaoqingge:6:title",
+      "mode": "title",
+      "answer": "小情歌",
+      "accept": [
+        "小情歌"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "sodagreen-xiaoqingge",
+      "title": "小情歌",
+      "artist": "蘇打綠",
+      "year": 2006,
+      "line": "你知道 就算大雨讓整座城市顛倒",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "sodagreen-xiaoqingge:6:lyric",
+      "mode": "lyric",
+      "answer": "你知道 就算大雨讓整座城市顛倒",
+      "accept": [
+        "你知道 就算大雨讓整座城市顛倒"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "sodagreen-xiaoqingge",
+      "title": "小情歌",
+      "artist": "蘇打綠",
+      "year": 2006,
+      "line": "我會給你懷抱",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        }
+      ],
+      "id": "sodagreen-xiaoqingge:7:title",
+      "mode": "title",
+      "answer": "小情歌",
+      "accept": [
+        "小情歌"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "sodagreen-xiaoqingge",
+      "title": "小情歌",
+      "artist": "蘇打綠",
+      "year": 2006,
+      "line": "我會給你懷抱",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        }
+      ],
+      "id": "sodagreen-xiaoqingge:7:lyric",
+      "mode": "lyric",
+      "answer": "我會給你懷抱",
+      "accept": [
+        "我會給你懷抱"
+      ],
+      "difficulty": 2
     },
     {
       "songId": "jj-caocao",
@@ -34074,6 +40882,310 @@
       "difficulty": 3
     },
     {
+      "songId": "rainie-aimei",
+      "title": "曖昧",
+      "artist": "楊丞琳",
+      "year": 2006,
+      "line": "曖昧讓人受盡委屈",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        }
+      ],
+      "id": "rainie-aimei:0:title",
+      "mode": "title",
+      "answer": "曖昧",
+      "accept": [
+        "曖昧"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "rainie-aimei",
+      "title": "曖昧",
+      "artist": "楊丞琳",
+      "year": 2006,
+      "line": "曖昧讓人受盡委屈",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        }
+      ],
+      "id": "rainie-aimei:0:lyric",
+      "mode": "lyric",
+      "answer": "曖昧讓人受盡委屈",
+      "accept": [
+        "曖昧讓人受盡委屈"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "rainie-aimei",
+      "title": "曖昧",
+      "artist": "楊丞琳",
+      "year": 2006,
+      "line": "找不到相愛的證據",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "rainie-aimei:1:title",
+      "mode": "title",
+      "answer": "曖昧",
+      "accept": [
+        "曖昧"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "rainie-aimei",
+      "title": "曖昧",
+      "artist": "楊丞琳",
+      "year": 2006,
+      "line": "找不到相愛的證據",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "rainie-aimei:1:lyric",
+      "mode": "lyric",
+      "answer": "找不到相愛的證據",
+      "accept": [
+        "找不到相愛的證據"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "rainie-aimei",
+      "title": "曖昧",
+      "artist": "楊丞琳",
+      "year": 2006,
+      "line": "何時該前進何時該放棄",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        }
+      ],
+      "id": "rainie-aimei:2:title",
+      "mode": "title",
+      "answer": "曖昧",
+      "accept": [
+        "曖昧"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "rainie-aimei",
+      "title": "曖昧",
+      "artist": "楊丞琳",
+      "year": 2006,
+      "line": "何時該前進何時該放棄",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        }
+      ],
+      "id": "rainie-aimei:2:lyric",
+      "mode": "lyric",
+      "answer": "何時該前進何時該放棄",
+      "accept": [
+        "何時該前進何時該放棄"
+      ],
+      "difficulty": 3
+    },
+    {
       "songId": "angela-yinxingdechibang",
       "title": "隱形的翅膀",
       "artist": "張韶涵",
@@ -34820,6 +41932,140 @@
       "answer": "不去想 他們擁有美麗的太陽",
       "accept": [
         "不去想 他們擁有美麗的太陽"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "angela-yinxingdechibang",
+      "title": "隱形的翅膀",
+      "artist": "張韶涵",
+      "year": 2006,
+      "line": "隱形的翅膀 讓夢恆久比天長",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        }
+      ],
+      "id": "angela-yinxingdechibang:6:title",
+      "mode": "title",
+      "answer": "隱形的翅膀",
+      "accept": [
+        "隱形的翅膀"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "angela-yinxingdechibang",
+      "title": "隱形的翅膀",
+      "artist": "張韶涵",
+      "year": 2006,
+      "line": "隱形的翅膀 讓夢恆久比天長",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        }
+      ],
+      "id": "angela-yinxingdechibang:6:lyric",
+      "mode": "lyric",
+      "answer": "隱形的翅膀 讓夢恆久比天長",
+      "accept": [
+        "隱形的翅膀 讓夢恆久比天長"
       ],
       "difficulty": 4
     },
@@ -35906,6 +43152,198 @@
       "answer": "你是怎樣的孤獨",
       "accept": [
         "你是怎樣的孤獨"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "eason-haojiubujian",
+      "title": "好久不見",
+      "artist": "陳奕迅",
+      "year": 2007,
+      "line": "你會不會忽然的出現",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "eason-haojiubujian:4:title",
+      "mode": "title",
+      "answer": "好久不見",
+      "accept": [
+        "好久不見"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "eason-haojiubujian",
+      "title": "好久不見",
+      "artist": "陳奕迅",
+      "year": 2007,
+      "line": "你會不會忽然的出現",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "eason-haojiubujian:4:lyric",
+      "mode": "lyric",
+      "answer": "你會不會忽然的出現",
+      "accept": [
+        "你會不會忽然的出現"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "eason-haojiubujian",
+      "title": "好久不見",
+      "artist": "陳奕迅",
+      "year": 2007,
+      "line": "在街角的咖啡店",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "eason-haojiubujian:5:title",
+      "mode": "title",
+      "answer": "好久不見",
+      "accept": [
+        "好久不見"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "eason-haojiubujian",
+      "title": "好久不見",
+      "artist": "陳奕迅",
+      "year": 2007,
+      "line": "在街角的咖啡店",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "eason-haojiubujian:5:lyric",
+      "mode": "lyric",
+      "answer": "在街角的咖啡店",
+      "accept": [
+        "在街角的咖啡店"
       ],
       "difficulty": 2
     },
@@ -37260,6 +44698,238 @@
         "簾外芭蕉惹驟雨"
       ],
       "difficulty": 2
+    },
+    {
+      "songId": "jay-qinghuaci",
+      "title": "青花瓷",
+      "artist": "周杰倫",
+      "year": 2007,
+      "line": "在瓶底書漢隸仿前朝的飄逸",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "jay-qinghuaci:7:title",
+      "mode": "title",
+      "answer": "青花瓷",
+      "accept": [
+        "青花瓷"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-qinghuaci",
+      "title": "青花瓷",
+      "artist": "周杰倫",
+      "year": 2007,
+      "line": "在瓶底書漢隸仿前朝的飄逸",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "jay-qinghuaci:7:lyric",
+      "mode": "lyric",
+      "answer": "在瓶底書漢隸仿前朝的飄逸",
+      "accept": [
+        "在瓶底書漢隸仿前朝的飄逸"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "jay-qinghuaci",
+      "title": "青花瓷",
+      "artist": "周杰倫",
+      "year": 2007,
+      "line": "就當我為遇見你伏筆",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        }
+      ],
+      "id": "jay-qinghuaci:8:title",
+      "mode": "title",
+      "answer": "青花瓷",
+      "accept": [
+        "青花瓷"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-qinghuaci",
+      "title": "青花瓷",
+      "artist": "周杰倫",
+      "year": 2007,
+      "line": "就當我為遇見你伏筆",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        }
+      ],
+      "id": "jay-qinghuaci:8:lyric",
+      "mode": "lyric",
+      "answer": "就當我為遇見你伏筆",
+      "accept": [
+        "就當我為遇見你伏筆"
+      ],
+      "difficulty": 3
     },
     {
       "songId": "sunyanzi-niguang",
@@ -39724,6 +47394,132 @@
       "difficulty": 4
     },
     {
+      "songId": "mayday-turan",
+      "title": "突然好想你",
+      "artist": "五月天",
+      "year": 2008,
+      "line": "最怕此生 已經決定自己過",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        }
+      ],
+      "id": "mayday-turan:6:title",
+      "mode": "title",
+      "answer": "突然好想你",
+      "accept": [
+        "突然好想你"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "mayday-turan",
+      "title": "突然好想你",
+      "artist": "五月天",
+      "year": 2008,
+      "line": "最怕此生 已經決定自己過",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        }
+      ],
+      "id": "mayday-turan:6:lyric",
+      "mode": "lyric",
+      "answer": "最怕此生 已經決定自己過",
+      "accept": [
+        "最怕此生 已經決定自己過"
+      ],
+      "difficulty": 4
+    },
+    {
       "songId": "jay-geiwoyishouge",
       "title": "給我一首歌的時間",
       "artist": "周杰倫",
@@ -40662,6 +48458,404 @@
         "回家吧 回到最初的美好"
       ],
       "difficulty": 3
+    },
+    {
+      "songId": "jay-daoxiang",
+      "title": "稻香",
+      "artist": "周杰倫",
+      "year": 2008,
+      "line": "對這個世界如果你有太多的抱怨",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        }
+      ],
+      "id": "jay-daoxiang:6:title",
+      "mode": "title",
+      "answer": "稻香",
+      "accept": [
+        "稻香"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-daoxiang",
+      "title": "稻香",
+      "artist": "周杰倫",
+      "year": 2008,
+      "line": "對這個世界如果你有太多的抱怨",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        }
+      ],
+      "id": "jay-daoxiang:6:lyric",
+      "mode": "lyric",
+      "answer": "對這個世界如果你有太多的抱怨",
+      "accept": [
+        "對這個世界如果你有太多的抱怨"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "jay-daoxiang",
+      "title": "稻香",
+      "artist": "周杰倫",
+      "year": 2008,
+      "line": "跌倒了就不敢繼續往前走",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        }
+      ],
+      "id": "jay-daoxiang:7:title",
+      "mode": "title",
+      "answer": "稻香",
+      "accept": [
+        "稻香"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-daoxiang",
+      "title": "稻香",
+      "artist": "周杰倫",
+      "year": 2008,
+      "line": "跌倒了就不敢繼續往前走",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        }
+      ],
+      "id": "jay-daoxiang:7:lyric",
+      "mode": "lyric",
+      "answer": "跌倒了就不敢繼續往前走",
+      "accept": [
+        "跌倒了就不敢繼續往前走"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "jay-daoxiang",
+      "title": "稻香",
+      "artist": "周杰倫",
+      "year": 2008,
+      "line": "為什麼人要這麼的脆弱 墮落",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "jay-daoxiang:8:title",
+      "mode": "title",
+      "answer": "稻香",
+      "accept": [
+        "稻香"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "jay-daoxiang",
+      "title": "稻香",
+      "artist": "周杰倫",
+      "year": 2008,
+      "line": "為什麼人要這麼的脆弱 墮落",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        }
+      ],
+      "id": "jay-daoxiang:8:lyric",
+      "mode": "lyric",
+      "answer": "為什麼人要這麼的脆弱 墮落",
+      "accept": [
+        "為什麼人要這麼的脆弱 墮落"
+      ],
+      "difficulty": 4
     },
     {
       "songId": "lala-shenqibaima",
@@ -42468,6 +50662,282 @@
         "對不起 我卻沒捉緊你"
       ],
       "difficulty": 3
+    },
+    {
+      "songId": "lizongsheng-geizijidege",
+      "title": "給自己的歌",
+      "artist": "李宗盛",
+      "year": 2010,
+      "line": "想得卻不可得 你奈人生何",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "lizongsheng-geizijidege:0:title",
+      "mode": "title",
+      "answer": "給自己的歌",
+      "accept": [
+        "給自己的歌"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "lizongsheng-geizijidege",
+      "title": "給自己的歌",
+      "artist": "李宗盛",
+      "year": 2010,
+      "line": "想得卻不可得 你奈人生何",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "lizongsheng-geizijidege:0:lyric",
+      "mode": "lyric",
+      "answer": "想得卻不可得 你奈人生何",
+      "accept": [
+        "想得卻不可得 你奈人生何"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "lizongsheng-geizijidege",
+      "title": "給自己的歌",
+      "artist": "李宗盛",
+      "year": 2010,
+      "line": "該捨的捨不得 只顧著跟往事瞎扯",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        }
+      ],
+      "id": "lizongsheng-geizijidege:1:title",
+      "mode": "title",
+      "answer": "給自己的歌",
+      "accept": [
+        "給自己的歌"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "lizongsheng-geizijidege",
+      "title": "給自己的歌",
+      "artist": "李宗盛",
+      "year": 2010,
+      "line": "該捨的捨不得 只顧著跟往事瞎扯",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        }
+      ],
+      "id": "lizongsheng-geizijidege:1:lyric",
+      "mode": "lyric",
+      "answer": "該捨的捨不得 只顧著跟往事瞎扯",
+      "accept": [
+        "該捨的捨不得 只顧著跟往事瞎扯"
+      ],
+      "difficulty": 4
     },
     {
       "songId": "jay-yanhuayileng",
@@ -47520,6 +55990,132 @@
       "difficulty": 4
     },
     {
+      "songId": "gem-paomo",
+      "title": "泡沫",
+      "artist": "鄧紫棋",
+      "year": 2012,
+      "line": "全都是泡沫 只一剎的花火",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "gem-paomo:7:title",
+      "mode": "title",
+      "answer": "泡沫",
+      "accept": [
+        "泡沫"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "gem-paomo",
+      "title": "泡沫",
+      "artist": "鄧紫棋",
+      "year": 2012,
+      "line": "全都是泡沫 只一剎的花火",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "gem-paomo:7:lyric",
+      "mode": "lyric",
+      "answer": "全都是泡沫 只一剎的花火",
+      "accept": [
+        "全都是泡沫 只一剎的花火"
+      ],
+      "difficulty": 4
+    },
+    {
       "songId": "anpu-shishenme",
       "title": "是什麼讓我遇見這樣的你",
       "artist": "白安",
@@ -47638,6 +56234,316 @@
         "是什麼讓我遇見這樣的你"
       ],
       "difficulty": 4
+    },
+    {
+      "songId": "lizongsheng-shanqiu",
+      "title": "山丘",
+      "artist": "李宗盛",
+      "year": 2013,
+      "line": "越過山丘 才發現無人等候",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "lizongsheng-shanqiu:0:title",
+      "mode": "title",
+      "answer": "山丘",
+      "accept": [
+        "山丘"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "lizongsheng-shanqiu",
+      "title": "山丘",
+      "artist": "李宗盛",
+      "year": 2013,
+      "line": "越過山丘 才發現無人等候",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "lizongsheng-shanqiu:0:lyric",
+      "mode": "lyric",
+      "answer": "越過山丘 才發現無人等候",
+      "accept": [
+        "越過山丘 才發現無人等候"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "lizongsheng-shanqiu",
+      "title": "山丘",
+      "artist": "李宗盛",
+      "year": 2013,
+      "line": "還未如願見著不朽",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "lizongsheng-shanqiu:1:title",
+      "mode": "title",
+      "answer": "山丘",
+      "accept": [
+        "山丘"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "lizongsheng-shanqiu",
+      "title": "山丘",
+      "artist": "李宗盛",
+      "year": 2013,
+      "line": "還未如願見著不朽",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "lizongsheng-shanqiu:1:lyric",
+      "mode": "lyric",
+      "answer": "還未如願見著不朽",
+      "accept": [
+        "還未如願見著不朽"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "lizongsheng-shanqiu",
+      "title": "山丘",
+      "artist": "李宗盛",
+      "year": 2013,
+      "line": "就把自己先搞丟",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "lizongsheng-shanqiu:2:title",
+      "mode": "title",
+      "answer": "山丘",
+      "accept": [
+        "山丘"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "lizongsheng-shanqiu",
+      "title": "山丘",
+      "artist": "李宗盛",
+      "year": 2013,
+      "line": "就把自己先搞丟",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄗ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "lizongsheng-shanqiu:2:lyric",
+      "mode": "lyric",
+      "answer": "就把自己先搞丟",
+      "accept": [
+        "就把自己先搞丟"
+      ],
+      "difficulty": 2
     },
     {
       "songId": "jj-xiulianaiqing",
@@ -49180,6 +58086,382 @@
       "difficulty": 4
     },
     {
+      "songId": "pushu-pingfanzhilu",
+      "title": "平凡之路",
+      "artist": "朴樹",
+      "year": 2014,
+      "line": "我曾經跨過山和大海",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "pushu-pingfanzhilu:0:title",
+      "mode": "title",
+      "answer": "平凡之路",
+      "accept": [
+        "平凡之路"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "pushu-pingfanzhilu",
+      "title": "平凡之路",
+      "artist": "朴樹",
+      "year": 2014,
+      "line": "我曾經跨過山和大海",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "pushu-pingfanzhilu:0:lyric",
+      "mode": "lyric",
+      "answer": "我曾經跨過山和大海",
+      "accept": [
+        "我曾經跨過山和大海"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "pushu-pingfanzhilu",
+      "title": "平凡之路",
+      "artist": "朴樹",
+      "year": 2014,
+      "line": "也穿過人山人海",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "pushu-pingfanzhilu:1:title",
+      "mode": "title",
+      "answer": "平凡之路",
+      "accept": [
+        "平凡之路"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "pushu-pingfanzhilu",
+      "title": "平凡之路",
+      "artist": "朴樹",
+      "year": 2014,
+      "line": "也穿過人山人海",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        }
+      ],
+      "id": "pushu-pingfanzhilu:1:lyric",
+      "mode": "lyric",
+      "answer": "也穿過人山人海",
+      "accept": [
+        "也穿過人山人海"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "pushu-pingfanzhilu",
+      "title": "平凡之路",
+      "artist": "朴樹",
+      "year": 2014,
+      "line": "我曾經擁有著一切",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        }
+      ],
+      "id": "pushu-pingfanzhilu:2:title",
+      "mode": "title",
+      "answer": "平凡之路",
+      "accept": [
+        "平凡之路"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "pushu-pingfanzhilu",
+      "title": "平凡之路",
+      "artist": "朴樹",
+      "year": 2014,
+      "line": "我曾經擁有著一切",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        }
+      ],
+      "id": "pushu-pingfanzhilu:2:lyric",
+      "mode": "lyric",
+      "answer": "我曾經擁有著一切",
+      "accept": [
+        "我曾經擁有著一切"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "pushu-pingfanzhilu",
+      "title": "平凡之路",
+      "artist": "朴樹",
+      "year": 2014,
+      "line": "轉眼都飄散如煙",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "pushu-pingfanzhilu:3:title",
+      "mode": "title",
+      "answer": "平凡之路",
+      "accept": [
+        "平凡之路"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "pushu-pingfanzhilu",
+      "title": "平凡之路",
+      "artist": "朴樹",
+      "year": 2014,
+      "line": "轉眼都飄散如煙",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄖ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        }
+      ],
+      "id": "pushu-pingfanzhilu:3:lyric",
+      "mode": "lyric",
+      "answer": "轉眼都飄散如煙",
+      "accept": [
+        "轉眼都飄散如煙"
+      ],
+      "difficulty": 2
+    },
+    {
       "songId": "gem-xihuanni",
       "title": "喜歡你",
       "artist": "鄧紫棋",
@@ -50226,6 +59508,348 @@
         "原來你是我最想留住的幸運"
       ],
       "difficulty": 4
+    },
+    {
+      "songId": "hebe-xiaoxingyun",
+      "title": "小幸運",
+      "artist": "田馥甄",
+      "year": 2015,
+      "line": "原來我們和愛情 曾經靠得那麼近",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "hebe-xiaoxingyun:7:title",
+      "mode": "title",
+      "answer": "小幸運",
+      "accept": [
+        "小幸運"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "hebe-xiaoxingyun",
+      "title": "小幸運",
+      "artist": "田馥甄",
+      "year": 2015,
+      "line": "原來我們和愛情 曾經靠得那麼近",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄏ"
+        },
+        {
+          "k": "han",
+          "t": "ㄞ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄘ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        }
+      ],
+      "id": "hebe-xiaoxingyun:7:lyric",
+      "mode": "lyric",
+      "answer": "原來我們和愛情 曾經靠得那麼近",
+      "accept": [
+        "原來我們和愛情 曾經靠得那麼近"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "hebe-xiaoxingyun",
+      "title": "小幸運",
+      "artist": "田馥甄",
+      "year": 2015,
+      "line": "那為我對抗世界的決定",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "hebe-xiaoxingyun:8:title",
+      "mode": "title",
+      "answer": "小幸運",
+      "accept": [
+        "小幸運"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "hebe-xiaoxingyun",
+      "title": "小幸運",
+      "artist": "田馥甄",
+      "year": 2015,
+      "line": "那為我對抗世界的決定",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄎ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄐ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        }
+      ],
+      "id": "hebe-xiaoxingyun:8:lyric",
+      "mode": "lyric",
+      "answer": "那為我對抗世界的決定",
+      "accept": [
+        "那為我對抗世界的決定"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "hebe-xiaoxingyun",
+      "title": "小幸運",
+      "artist": "田馥甄",
+      "year": 2015,
+      "line": "那陪我淋的雨",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        }
+      ],
+      "id": "hebe-xiaoxingyun:9:title",
+      "mode": "title",
+      "answer": "小幸運",
+      "accept": [
+        "小幸運"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "hebe-xiaoxingyun",
+      "title": "小幸運",
+      "artist": "田馥甄",
+      "year": 2015,
+      "line": "那陪我淋的雨",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄆ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        }
+      ],
+      "id": "hebe-xiaoxingyun:9:lyric",
+      "mode": "lyric",
+      "answer": "那陪我淋的雨",
+      "accept": [
+        "那陪我淋的雨"
+      ],
+      "difficulty": 2
     },
     {
       "songId": "joker-yanyuan",
@@ -57966,7 +67590,7 @@
       "title": "綠色",
       "artist": "陳雪凝",
       "year": 2019,
-      "line": "空氣中的溫柔 卷走了 我什麼都沒有",
+      "line": "空氣中的溫柔 捲走了 我什麼都沒有",
       "tiles": [
         {
           "k": "han",
@@ -58048,7 +67672,7 @@
       "title": "綠色",
       "artist": "陳雪凝",
       "year": 2019,
-      "line": "空氣中的溫柔 卷走了 我什麼都沒有",
+      "line": "空氣中的溫柔 捲走了 我什麼都沒有",
       "tiles": [
         {
           "k": "han",
@@ -58119,9 +67743,9 @@
       ],
       "id": "chenxuening-lvse:2:lyric",
       "mode": "lyric",
-      "answer": "空氣中的溫柔 卷走了 我什麼都沒有",
+      "answer": "空氣中的溫柔 捲走了 我什麼都沒有",
       "accept": [
-        "空氣中的溫柔 卷走了 我什麼都沒有"
+        "空氣中的溫柔 捲走了 我什麼都沒有"
       ],
       "difficulty": 4
     },

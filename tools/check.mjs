@@ -242,11 +242,45 @@ test('零聲母音節都對應到正確的注音首符', () => {
   );
 });
 
+test('21 個聲母都對得上', () => {
+    const table = {
+      ba: 'ㄅ', pa: 'ㄆ', ma: 'ㄇ', fa: 'ㄈ', da: 'ㄉ', ta: 'ㄊ', na: 'ㄋ',
+      la: 'ㄌ', ga: 'ㄍ', ka: 'ㄎ', ha: 'ㄏ', ji: 'ㄐ', qi: 'ㄑ', xi: 'ㄒ',
+      zha: 'ㄓ', cha: 'ㄔ', sha: 'ㄕ', re: 'ㄖ', za: 'ㄗ', ca: 'ㄘ', sa: 'ㄙ',
+      // 兩個字母的要先比對，不然 zh/ch/sh 會被 z/c/s 搶走
+      zhi: 'ㄓ', chi: 'ㄔ', shi: 'ㄕ', zi: 'ㄗ', ci: 'ㄘ', si: 'ㄙ',
+    };
+    const wrong = Object.entries(table)
+      .map(([py, want]) => [py, want, pinyinToInitial(py)])
+      .filter(([, want, got]) => want !== got);
+    assert.deepEqual(wrong.map(([py, w, g]) => `${py} 應該是 ${w}，卻得到 ${g}`), []);
+  });
+
 test('有聲母的字取聲母，不會被零聲母規則搶走', () => {
   assert.equal(pinyinToInitial('zhong'), 'ㄓ');   // 中
   assert.equal(pinyinToInitial('xiong'), 'ㄒ');   // 兄
   assert.equal(pinyinToInitial('yun'), 'ㄩ');     // 雲
   assert.equal(pinyinToInitial('jun'), 'ㄐ');     // 軍
+});
+
+test('歌詞裡沒有混進非中文的雜字', () => {
+  // 手打歌詞很容易不小心貼到別的語言的字，這種字轉不出注音，題目就變成無解
+  const junk = [];
+  for (const q of bank.questions) {
+    if (q.mode !== 'lyric') continue;
+    const bad = [...q.line].filter(
+      (c) => !/[\p{Script=Han}\s0-9A-Za-z·，。！？、－]/u.test(c)
+    );
+    if (bad.length) junk.push(`${q.title}：${q.line} → ${bad.join('')}`);
+  }
+  assert.deepEqual([...new Set(junk)], []);
+});
+
+test('每個磚塊都轉得出注音，沒有問號', () => {
+  const unknown = bank.questions
+    .filter((q) => q.tiles.some((t) => t.k === 'han' && t.t === '？'))
+    .map((q) => `${q.title}：${q.line}`);
+  assert.deepEqual([...new Set(unknown)], []);
 });
 
 console.log('\n年代分組');
