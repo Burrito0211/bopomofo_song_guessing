@@ -529,6 +529,45 @@ kbd {
   opacity: .7;
 }
 
+/* ── 對答案 ── */
+.fb-check {
+  margin: .6rem auto .2rem;
+  max-width: 22rem;
+  display: grid;
+  gap: .3rem;
+  padding: .6rem .7rem;
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  text-align: left;
+}
+.fb-check-row { display: flex; gap: .5rem; align-items: baseline; }
+.fb-check-label {
+  flex: none;
+  width: 3.2em;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--ink-3);
+}
+.fb-check-text {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  word-break: break-all;
+}
+/* 你打錯的字 */
+.fb-check-text .ch-bad {
+  color: #d64550;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+/* 正解裡你沒打到的字 */
+.fb-check-text .ch-miss {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+.fb-check-note { font-size: .78rem; color: var(--ink-3); margin: .15rem 0 0; }
+
 /* ── 結算 ── */
 .over-card { text-align: center; }
 .over-score {

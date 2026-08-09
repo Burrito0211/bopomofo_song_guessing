@@ -187,6 +187,7 @@ const state = {
   ticker: null,
   awaitingNext: false,
   composing: false,
+  lastInput: '',
   challenge: null,   // { code, seed, rounds, … }，一般模式是 null
   qrng: nativeRng,   // 這一題專用的亂數（送字與提示都用它）
 };
@@ -310,7 +311,7 @@ function nextQuestion() {
     // 保證每個人重洗出來的順序還是一樣。
     state.queue = spreadBySong(
       state.bank,
-      state.challenge ? Challenge.makeRng(state.challenge.seed ^ 0x5f5f) : nativeRng
+      state.challenge ? Challenge.rngFor(state.challenge.seed, Challenge.QUEUE_INDEX) : nativeRng
     );
     state.cursor = 0;
   }
@@ -319,11 +320,12 @@ function nextQuestion() {
   state.hintsUsed = 0;
   state.hints = buildHints(state.current);
   state.revealed = new Set();
+  state.lastInput = '';
 
   // 每題一條獨立的亂數流：用「種子＋題號」推出來，不受玩家按過幾次提示影響，
   // 否則有人買提示就會讓後面每一題的送字都跟別人不一樣。
   state.qrng = state.challenge
-    ? Challenge.makeRng(Challenge.mixSeed(state.challenge.seed, state.asked))
+    ? Challenge.rngFor(state.challenge.seed, state.asked)
     : nativeRng;
 
   state.given = pickFreebies(state.current, state.revealRatio, state.qrng);
@@ -427,6 +429,82 @@ function skipQuestion() {
   resolveQuestion('skip');
 }
 
+/* ─────────────── 對答案 ─────────────── */
+
+/**
+ * 最長共同子序列，用來標出「哪幾個字打錯了」。
+ * 答案都很短（十幾個字），O(n·m) 綽綽有餘。
+ */
+function matchedPairs(a, b) {
+  const dp = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+  for (let i = a.length - 1; i >= 0; i--) {
+    for (let j = b.length - 1; j >= 0; j--) {
+      dp[i][j] = a[i] === b[j]
+        ? dp[i + 1][j + 1] + 1
+        : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    }
+  }
+  const inA = new Array(a.length).fill(false);
+  const inB = new Array(b.length).fill(false);
+  let i = 0;
+  let j = 0;
+  while (i < a.length && j < b.length) {
+    if (a[i] === b[j]) {
+      inA[i] = true;
+      inB[j] = true;
+      i++;
+      j++;
+    } else if (dp[i + 1][j] >= dp[i][j + 1]) {
+      i++;
+    } else {
+      j++;
+    }
+  }
+  return { inA, inB };
+}
+
+/** 把字串一個字一個字塞進容器，對不上的標紅 */
+function paintChars(container, text, keep, badClass) {
+  container.innerHTML = '';
+  [...text].forEach((ch, i) => {
+    const span = document.createElement('span');
+    span.textContent = ch;
+    if (!keep[i]) span.classList.add(badClass);
+    container.appendChild(span);
+  });
+}
+
+/**
+ * 送出之後讓玩家自己對答案：把你打的跟正解並排，
+ * 差在哪個字直接標出來。答對（完全一樣）就不用囉嗦。
+ */
+function renderAnswerCheck(q, outcome, matchKind) {
+  const box = $('#fb-check');
+  const typed = state.lastInput;
+
+  if (!typed || (outcome === 'correct' && matchKind === 'exact')) {
+    box.hidden = true;
+    return;
+  }
+
+  const guess = [...normalize(typed)];
+  const answer = [...normalize(q.answer)];
+  const { inA, inB } = matchedPairs(guess, answer);
+
+  paintChars($('#fb-check-yours'), normalize(typed), inA, 'ch-bad');
+  paintChars($('#fb-check-answer'), normalize(q.answer), inB, 'ch-miss');
+
+  const missed = inB.filter((ok) => !ok).length;
+  $('#fb-check-note').textContent =
+    outcome === 'correct'
+      ? `只差 ${missed} 個字，算你對`
+      : missed === 0
+        ? '字都對了，但順序或長度不一樣'
+        : `差了 ${missed} 個字`;
+
+  box.hidden = false;
+}
+
 /* ─────────────── 判定結果 ─────────────── */
 
 function resolveQuestion(outcome, matchKind) {
@@ -485,6 +563,7 @@ function resolveQuestion(outcome, matchKind) {
       ? `${q.artist}${year}　·　${q.line}`
       : `${q.artist}《${q.title}》${year}`;
   $('#fb-points').textContent = note;
+  renderAnswerCheck(q, outcome, matchKind);
 
   renderHud();
   bump($('#hud-score'));
@@ -540,7 +619,7 @@ function beginRun(challenge) {
     challenge,
     queue: spreadBySong(
       state.bank,
-      challenge ? Challenge.makeRng(challenge.seed) : nativeRng
+      challenge ? Challenge.rngFor(challenge.seed, Challenge.QUEUE_INDEX) : nativeRng
     ),
     cursor: 0,
     score: 0,
@@ -854,6 +933,7 @@ function bindEvents() {
     const value = input.value.trim();
     if (!value) return;
 
+    state.lastInput = value;
     const result = judge(value, state.current.accept);
     if (result === 'wrong') {
       input.classList.remove('shake');

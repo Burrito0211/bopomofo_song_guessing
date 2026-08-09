@@ -112,7 +112,7 @@ const inner = appSrc
   .replace("const loadQuestions = () => window.GameData.loadQuestions();", '');
 
 const exposed = new Function(
-  `${inner}\nreturn { normalize, judge, editDistance, hanChars, spreadBySong, pickFreebies, LEVELS, ERAS };`
+  `${inner}\nreturn { normalize, judge, editDistance, hanChars, spreadBySong, pickFreebies, matchedPairs, LEVELS, ERAS };`
 )();
 
 console.log('\n答案判定');
@@ -299,20 +299,95 @@ test('每個磚塊都轉得出注音，沒有問號', () => {
 
 console.log('\n多人競賽');
 
-test('比賽代碼編碼解碼可以來回', () => {
+test('比賽代碼就是 4 個字，而且編碼解碼可以來回', () => {
   const settings = {
-    seed: 3735928559,
+    seed: 813,
     mode: 'lyric',
     level: 'hard',
     eras: ['classic', 'y2020s'],
     rounds: 20,
   };
-  const back = Challenge.decodeChallenge(Challenge.encodeChallenge(settings));
+  const code = Challenge.encodeChallenge(settings);
+  assert.equal(code.length, 4, `代碼應該是 4 個字，實際是 ${code}`);
+
+  const back = Challenge.decodeChallenge(code);
   assert.equal(back.seed, settings.seed);
   assert.equal(back.mode, settings.mode);
   assert.equal(back.level, settings.level);
   assert.deepEqual(back.eras, settings.eras);
   assert.equal(back.rounds, settings.rounds);
+});
+
+test('所有設定組合都能塞進 4 個字並原樣解回來', () => {
+  // 4 個字 = 20 位元，設定佔 10 位、種子佔 10 位，全部走一遍確認沒有溢位
+  let checked = 0;
+  for (const mode of Challenge.MODES) {
+    for (const level of Challenge.LEVELS) {
+      for (const rounds of Challenge.ROUND_CHOICES) {
+        for (let mask = 1; mask < 16; mask++) {
+          const eras = Challenge.ERA_IDS.filter((_, i) => mask & (1 << i));
+          const seed = (mask * 37 + rounds) % Challenge.SEED_MAX;
+          const code = Challenge.encodeChallenge({ seed, mode, level, eras, rounds });
+          assert.equal(code.length, 4);
+          const back = Challenge.decodeChallenge(code);
+          assert.ok(back, `${code} 解不開`);
+          assert.equal(back.mode, mode);
+          assert.equal(back.level, level);
+          assert.equal(back.rounds, rounds);
+          assert.equal(back.seed, seed);
+          assert.deepEqual(back.eras, eras);
+          checked++;
+        }
+      }
+    }
+  }
+  assert.equal(checked, 3 * 3 * 4 * 15);
+});
+
+test('代碼的位元打散是可逆的，而且 2^20 個值一對一', () => {
+  // 不可逆就代表有兩組設定會編出同一個代碼，或是解出錯的設定
+  const seen = new Uint8Array(1 << 20);
+  for (let v = 0; v < (1 << 20); v++) {
+    const s = Challenge.scramble(v);
+    assert.equal(Challenge.unscramble(s), v, `${v} 打散之後回不來`);
+    assert.equal(seen[s], 0, `${v} 跟別的值撞在一起了`);
+    seen[s] = 1;
+  }
+});
+
+test('同設定不同種子，代碼每一個位置都會變', () => {
+  // 沒打散的話設定會固定在低位，代碼後兩個字永遠一樣
+  const codeFor = (seed) => Challenge.encodeChallenge({
+    seed, mode: 'mixed', level: 'normal', eras: ['classic', 'y2000s'], rounds: 10,
+  });
+  const codes = [0, 1, 2, 3, 4, 5, 6, 7, 500, 1023].map(codeFor);
+  for (let pos = 0; pos < Challenge.CODE_LEN; pos++) {
+    const distinct = new Set(codes.map((c) => c[pos]));
+    assert.ok(distinct.size > 1, `第 ${pos + 1} 個字永遠是「${[...distinct][0]}」，沒有被打散`);
+  }
+});
+
+test('連續的種子不會編出長得很像的代碼', () => {
+  const codeFor = (seed) => Challenge.encodeChallenge({
+    seed, mode: 'mixed', level: 'normal', eras: ['classic', 'y2000s'], rounds: 10,
+  });
+  const a = codeFor(10);
+  const b = codeFor(11);
+  const same = [...a].filter((ch, i) => ch === b[i]).length;
+  assert.ok(same <= 2, `${a} 跟 ${b} 有 ${same} 個字一樣，太像了`);
+});
+
+test('代碼不會用到容易看錯的 I L O U，打錯也救得回來', () => {
+  for (const ch of 'ILOU') {
+    assert.ok(!Challenge.ALPHABET.includes(ch), `${ch} 不該出現在代碼裡`);
+  }
+  // 有人把 0 唸成 O、1 抄成 I，還是要能加入
+  assert.deepEqual(Challenge.normalizeCode('o1lI'), '0111');
+  const code = Challenge.encodeChallenge({
+    seed: 0, mode: 'mixed', level: 'normal', eras: ['classic'], rounds: 5,
+  });
+  const typo = code.replace(/0/g, 'O').replace(/1/g, 'I').toLowerCase();
+  assert.deepEqual(Challenge.decodeChallenge(typo), Challenge.decodeChallenge(code));
 });
 
 test('代碼大小寫、空白都不影響，看不懂的回 null', () => {
@@ -334,10 +409,18 @@ test('一個年代都沒選就編不出代碼', () => {
   );
 });
 
-test('題數會被夾在合理範圍內', () => {
-  assert.equal(Challenge.clampRounds(0), Challenge.MIN_ROUNDS);
-  assert.equal(Challenge.clampRounds(9999), Challenge.MAX_ROUNDS);
-  assert.equal(Challenge.clampRounds(12), 12);
+test('題數會被收斂到最接近的合法選項', () => {
+  assert.equal(Challenge.nearestRounds(0), 5);
+  assert.equal(Challenge.nearestRounds(9999), 40);
+  assert.equal(Challenge.nearestRounds(12), 10);
+  assert.equal(Challenge.nearestRounds(20), 20);
+});
+
+test('index.html 的題數選項都是代碼放得下的', () => {
+  const offered = [...html.matchAll(/name="vs-rounds" value="(\d+)"/g)].map((m) => Number(m[1]));
+  assert.ok(offered.length > 0, '找不到題數選項');
+  const extra = offered.filter((n) => !Challenge.ROUND_CHOICES.includes(n));
+  assert.deepEqual(extra, [], `這些題數編不進代碼：${extra}`);
 });
 
 test('challenge.js 的年代順序跟 app.js 的 ERAS 一致', () => {
@@ -396,6 +479,39 @@ test('排名依分數高低，同分再比答對題數', () => {
     { name: 'c', score: 300, correct: 9 },
   ]);
   assert.deepEqual(ranked.map((r) => r.name), ['c', 'b', 'a']);
+});
+
+console.log('\n對答案');
+const { matchedPairs } = exposed;
+
+test('完全一樣時每個字都算對上', () => {
+  const { inA, inB } = matchedPairs([...'天青色等煙雨'], [...'天青色等煙雨']);
+  assert.ok(inA.every(Boolean));
+  assert.ok(inB.every(Boolean));
+});
+
+test('錯一個字只會標那一個字', () => {
+  const { inA, inB } = matchedPairs([...'天青色等煙雲'], [...'天青色等煙雨']);
+  assert.deepEqual(inA, [true, true, true, true, true, false]);
+  assert.deepEqual(inB, [true, true, true, true, true, false]);
+});
+
+test('少打一個字時，正解那邊會標出漏掉的字', () => {
+  const { inA, inB } = matchedPairs([...'天青色等雨'], [...'天青色等煙雨']);
+  assert.ok(inA.every(Boolean), '你打的字其實都在正解裡');
+  assert.deepEqual(inB, [true, true, true, true, false, true], '應該標出漏掉的「煙」');
+});
+
+test('多打一個字時，標出多出來的那個', () => {
+  const { inA, inB } = matchedPairs([...'天青色等煙雨啊'], [...'天青色等煙雨']);
+  assert.deepEqual(inA, [true, true, true, true, true, true, false]);
+  assert.ok(inB.every(Boolean));
+});
+
+test('完全不一樣就整串都標起來', () => {
+  const { inA, inB } = matchedPairs([...'abc'], [...'xyz']);
+  assert.ok(inA.every((x) => !x));
+  assert.ok(inB.every((x) => !x));
 });
 
 console.log('\n年代分組');

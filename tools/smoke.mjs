@@ -37,6 +37,13 @@ function makeEl(id = '') {
     addEventListener: (type, fn) => (el._handlers ??= {})[type] = fn,
     focus: () => {},
   };
+  Object.defineProperty(el, 'className', {
+    get: () => [...el._classes].join(' '),
+    set: (v) => {
+      el._classes.clear();
+      for (const c of String(v).split(/s+/).filter(Boolean)) el._classes.add(c);
+    },
+  });
   let html = '';
   Object.defineProperty(el, 'innerHTML', {
     get: () => html,
@@ -117,7 +124,7 @@ const navigator = { clipboard: { writeText: async () => {} } };
 const app = new Function(
   'document', 'window', 'localStorage', 'setInterval', 'clearInterval', 'performance', 'alert',
   'Challenge', 'location', 'navigator', 'setTimeout', 'URLSearchParams',
-  `${src}\nreturn { main, startGame, beginRun, startChallenge, nextQuestion, resolveQuestion, proceed, useHint, skipQuestion, updateBankSummary, renderVsResult, state, judge };`
+  `${src}\nreturn { main, startGame, beginRun, startChallenge, nextQuestion, resolveQuestion, proceed, useHint, skipQuestion, updateBankSummary, renderVsResult, state, judge, normalize };`
 )(
   document, window, localStorage, setInterval, clearInterval, performance, () => {},
   Challenge, location, navigator, (fn) => fn, URLSearchParams
@@ -347,7 +354,7 @@ const allEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
 const makeCode = (over = {}) =>
   Challenge.decodeChallenge(
     Challenge.encodeChallenge({
-      seed: 20260810, mode: 'mixed', level: 'normal', eras: allEras, rounds: 6, ...over,
+      seed: 813, mode: 'mixed', level: 'normal', eras: allEras, rounds: 5, ...over,
     })
   );
 
@@ -369,7 +376,7 @@ test('同一組代碼，兩個人拿到的題目與送字完全一樣', () => {
   const playerA = playChallenge(settings);
   const playerB = playChallenge(settings);
   assert.deepEqual(playerB, playerA, '同一組代碼卻抽到不一樣的題目，比賽就不公平了');
-  assert.equal(playerA.length, 6);
+  assert.equal(playerA.length, 5);
 });
 
 test('有人買提示也不會害後面的題目跟別人不同步', () => {
@@ -386,9 +393,9 @@ test('換一組代碼就換一份考卷', () => {
 });
 
 test('競賽是固定題數，答錯不扣愛心也不會提早結束', () => {
-  const settings = makeCode({ rounds: 6 });
+  const settings = makeCode({ rounds: 10 });
   app.startChallenge(settings);
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 9; i++) {
     app.resolveQuestion('wrong');
     assert.equal(app.state.lives, 3, `第 ${i + 1} 題被扣愛心了`);
     app.proceed();
@@ -399,8 +406,18 @@ test('競賽是固定題數，答錯不扣愛心也不會提早結束', () => {
   }
   app.resolveQuestion('wrong');
   app.proceed();
-  assert.equal(app.state.asked, 6);
-  assert.equal(el('screen-over')._classes.has('is-active'), true, '第 6 題後沒有進結算');
+  assert.equal(app.state.asked, 10);
+  assert.equal(el('screen-over')._classes.has('is-active'), true, '第 10 題後沒有進結算');
+});
+
+test('4 碼代碼就能開一場比賽', () => {
+  const code = Challenge.encodeChallenge({
+    seed: 500, mode: 'mixed', level: 'normal', eras: allEras, rounds: 5,
+  });
+  assert.equal(code.length, 4);
+  assert.equal(app.startChallenge(Challenge.decodeChallenge(code)), true);
+  assert.equal(app.state.challenge.code, code);
+  assert.equal(app.state.challenge.rounds, 5);
 });
 
 test('競賽結束會產生成績碼，解回來的內容跟實際成績相符', () => {
@@ -432,6 +449,83 @@ test('競賽成績不會汙染單人模式的最高分紀錄', () => {
   for (let i = 0; i < 5; i++) { app.resolveQuestion('correct', 'exact'); app.proceed(); }
   const best = JSON.parse(store.get('bpmf-lyrics:v1') ?? '{"score":0}');
   assert.equal(best.score ?? 0, 0, '競賽分數被寫進單人最高分了');
+});
+
+/* ── 送出後對答案 ── */
+
+/** 模擬玩家在輸入框打字並送出 */
+function submitAnswer(text) {
+  el('answer-input').value = text;
+  el('answer-form')._handlers.submit({ preventDefault() {} });
+}
+
+test('答錯時會把你打的跟正解並排出來', () => {
+  checked.mode = 'lyric';
+  app.startGame();
+  const answer = app.state.current.answer;
+
+  submitAnswer('這一定不是答案啦');
+  assert.equal(el('fb-check').hidden, false, '沒有顯示對答案的區塊');
+  assert.equal(
+    el('fb-check-yours').children.map((c) => c.textContent).join(''),
+    '這一定不是答案啦'
+  );
+  // 比對用的是正規化後的字串，標點與空白不算錯
+  assert.equal(
+    el('fb-check-answer').children.map((c) => c.textContent).join(''),
+    app.normalize(answer)
+  );
+  app.proceed();
+});
+
+test('完全答對就不用囉嗦，不顯示對答案', () => {
+  checked.mode = 'lyric';
+  app.startGame();
+  submitAnswer(app.state.current.answer);
+  assert.equal(el('fb-check').hidden, true, '答對了還跳出對答案');
+  app.proceed();
+});
+
+test('打錯的字會被標出來，對的字不會', () => {
+  checked.mode = 'lyric';
+  app.startGame();
+  // 找一句夠長的，然後把最後一個字改掉
+  for (let i = 0; i < 50 && app.state.current.answer.length < 6; i++) app.nextQuestion();
+  const answer = app.state.current.answer;
+  const typo = answer.slice(0, -1) + '嗎';
+
+  submitAnswer(typo);
+  const yours = el('fb-check-yours').children;
+  const bad = yours.filter((c) => c._classes.has('ch-bad'));
+  assert.equal(bad.length, 1, `應該只標一個字，實際標了 ${bad.length} 個`);
+  assert.equal(bad[0].textContent, '嗎');
+  assert.ok(
+    el('fb-check-note').textContent.length > 0,
+    '應該有一句說明差幾個字'
+  );
+  app.proceed();
+  checked.mode = 'mixed';
+  app.startGame();
+});
+
+test('超時沒送出就不會有對答案（你根本沒打）', () => {
+  app.startGame();
+  app.resolveQuestion('timeout');
+  assert.equal(el('fb-check').hidden, true);
+  app.proceed();
+});
+
+test('上一題打的東西不會殘留到下一題', () => {
+  checked.mode = 'lyric';
+  app.startGame();
+  submitAnswer('亂打一通');
+  assert.equal(el('fb-check').hidden, false);
+  app.proceed();
+  app.resolveQuestion('timeout');
+  assert.equal(el('fb-check').hidden, true, '上一題的答案殘留到這一題了');
+  app.proceed();
+  checked.mode = 'mixed';
+  app.startGame();
 });
 
 test('題庫用完會自動重洗，連續 300 題不出錯', () => {

@@ -109,8 +109,8 @@
       <p class="eyebrow">多人競賽</p>
       <h2 class="vs-title">同一份考卷，比誰分數高</h2>
       <p class="vs-lead">
-        主持人建立比賽會拿到一組代碼。拿到代碼的人，抽到的題目、順序、
-        開場送的字全都一模一樣，所以比得出高下。各玩各的，不用同時上線。
+        主持人建立比賽會拿到一組 <strong>4 碼代碼</strong>。拿到代碼的人，抽到的題目、
+        順序、開場送的字全都一模一樣，所以比得出高下。各玩各的，不用同時上線。
       </p>
 
       <div class="vs-tabs" role="tablist">
@@ -126,6 +126,7 @@
             <label class="chip"><input type="radio" name="vs-rounds" value="5"><span>5 題</span></label>
             <label class="chip"><input type="radio" name="vs-rounds" value="10" checked><span>10 題</span></label>
             <label class="chip"><input type="radio" name="vs-rounds" value="20"><span>20 題</span></label>
+            <label class="chip"><input type="radio" name="vs-rounds" value="40"><span>40 題</span></label>
           </div>
         </fieldset>
         <p class="vs-note">題型、年代、難度沿用上面首頁的設定。</p>
@@ -147,7 +148,7 @@
       <div id="panel-join" class="vs-panel" hidden>
         <label class="vs-field">
           <span>比賽代碼</span>
-          <input id="vs-code-input" class="answer-input" type="text" placeholder="例如 3F2K9Z-1A9"
+          <input id="vs-code-input" class="answer-input" type="text" placeholder="例如 7K2P" maxlength="8"
                  autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false">
         </label>
         <p id="vs-join-error" class="vs-error" hidden></p>
@@ -217,6 +218,18 @@
       <div class="feedback-inner card">
         <p id="fb-verdict" class="fb-verdict"></p>
         <p id="fb-answer" class="fb-answer"></p>
+
+        <div id="fb-check" class="fb-check" hidden>
+          <div class="fb-check-row">
+            <span class="fb-check-label">你打的</span>
+            <span id="fb-check-yours" class="fb-check-text"></span>
+          </div>
+          <div class="fb-check-row">
+            <span class="fb-check-label">正解</span>
+            <span id="fb-check-answer" class="fb-check-text"></span>
+          </div>
+          <p id="fb-check-note" class="fb-check-note"></p>
+        </div>
         <p id="fb-song" class="fb-song"></p>
         <p id="fb-points" class="fb-points"></p>
         <button id="btn-next" class="btn btn-primary btn-lg" type="button">下一題 <kbd>Enter</kbd></button>
