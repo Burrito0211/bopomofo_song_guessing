@@ -48,7 +48,9 @@ const stub = (id) => {
 };
 const el = stub;
 
-const checked = { mode: 'mixed', level: 'normal', era: 'all' };
+const checked = { mode: 'mixed', level: 'normal' };
+// 年代改成複選，用陣列表示目前勾了哪幾個
+let checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
 
 const document = {
   documentElement: makeEl('html'),
@@ -61,6 +63,9 @@ const document = {
   querySelectorAll(sel) {
     if (sel === '.screen') {
       return ['screen-start', 'screen-game', 'screen-over'].map(el);
+    }
+    if (sel === 'input[name="era"]:checked') {
+      return checkedEras.map((value) => ({ value }));
     }
     return [];
   },
@@ -97,7 +102,7 @@ const src = read('assets/app.js')
 
 const app = new Function(
   'document', 'window', 'localStorage', 'setInterval', 'clearInterval', 'performance', 'alert',
-  `${src}\nreturn { main, startGame, nextQuestion, resolveQuestion, proceed, useHint, skipQuestion, state, judge };`
+  `${src}\nreturn { main, startGame, nextQuestion, resolveQuestion, proceed, useHint, skipQuestion, updateBankSummary, state, judge };`
 )(document, window, localStorage, setInterval, clearInterval, performance, () => {});
 
 let failures = 0;
@@ -187,29 +192,83 @@ test('愛心歸零就進結算，並寫入最高分', () => {
 test('年代按鈕上會標出各年代有幾首歌', () => {
   const count = (era) =>
     el(`sel:.chip[data-era="${era}"]`).querySelector('.chip-count').textContent;
-  for (const era of ['all', 'classic', 'y2000s', 'y2010s', 'y2020s']) {
+  for (const era of ['classic', 'y2000s', 'y2010s', 'y2020s']) {
     assert.match(count(era), /^\d+首$/, `${era} 沒標上數量`);
+    assert.notEqual(count(era), '0首', `${era} 不該是 0 首`);
   }
-  assert.notEqual(count('all'), '0首', '全部不該是 0 首');
 });
 
-test('選了年代就只會出那個年代的歌', () => {
-  checked.era = 'y2020s';
+test('題庫那格會跟著勾選即時更新', () => {
+  const shown = () => el('bank-size').textContent;
+  checkedEras = ['y2020s'];
+  app.updateBankSummary();
+  const only2020s = shown();
+  assert.match(only2020s, /^\d+ 首 · \d+ 題$/, `格式不對：${only2020s}`);
+
+  checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
+  app.updateBankSummary();
+  assert.notEqual(shown(), only2020s, '全選跟只選 2020 顯示一樣，沒有更新');
+
+  checkedEras = [];
+  app.updateBankSummary();
+  assert.equal(shown(), '未選年代');
+
+  checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
+  app.updateBankSummary();
+});
+
+test('只勾一個年代就只會出那個年代的歌', () => {
+  checkedEras = ['y2020s'];
   app.startGame();
   assert.ok(app.state.bank.length > 0, '2020 年代沒題目');
-  const strays = app.state.bank.filter((q) => q.year < 2020);
-  assert.deepEqual(strays.map((q) => q.title), [], '混進了別的年代');
+  assert.deepEqual(
+    app.state.bank.filter((q) => q.year < 2020).map((q) => q.title), [], '混進了別的年代'
+  );
 
-  checked.era = 'classic';
+  checkedEras = ['classic'];
   app.startGame();
   assert.ok(app.state.bank.every((q) => q.year <= 1999), '經典組混進了 2000 年以後的歌');
 
-  checked.era = 'all';
+  checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
+  app.startGame();
+});
+
+test('複選會拿到兩個年代的聯集，而且不多不少', () => {
+  checkedEras = ['classic', 'y2020s'];
+  app.startGame();
+  const picked = app.state.bank;
+  assert.ok(picked.length > 0, '沒題目');
+  assert.ok(
+    picked.every((q) => q.year <= 1999 || q.year >= 2020),
+    '複選混進了沒勾的年代'
+  );
+  assert.ok(picked.some((q) => q.year <= 1999), '缺了經典那組');
+  assert.ok(picked.some((q) => q.year >= 2020), '缺了 2020 那組');
+
+  // 聯集的題數應該等於各自單獨選時的題數相加
+  checkedEras = ['classic'];
+  app.startGame();
+  const a = app.state.bank.length;
+  checkedEras = ['y2020s'];
+  app.startGame();
+  const b = app.state.bank.length;
+  assert.equal(picked.length, a + b, `聯集 ${picked.length} 不等於 ${a}+${b}`);
+
+  checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
+  app.startGame();
+});
+
+test('一個年代都沒勾就不開始', () => {
+  checkedEras = [];
+  const before = app.state.bank.length;
+  app.startGame();
+  assert.equal(app.state.bank.length, before, '沒勾年代卻還是換了題庫');
+  checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
   app.startGame();
 });
 
 test('年代加題型可以疊著用', () => {
-  checked.era = 'y2010s';
+  checkedEras = ['y2010s'];
   checked.mode = 'title';
   app.startGame();
   assert.ok(app.state.bank.length > 0, '沒題目');
@@ -217,7 +276,7 @@ test('年代加題型可以疊著用', () => {
     app.state.bank.every((q) => q.mode === 'title' && q.year >= 2010 && q.year <= 2019),
     '篩選沒同時吃到題型與年代'
   );
-  checked.era = 'all';
+  checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
   checked.mode = 'mixed';
   app.startGame();
 });

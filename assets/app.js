@@ -19,14 +19,24 @@ const LEVELS = {
 
 // 年代分組。依歌曲年份把題庫切開，玩家可以只挑某個世代來玩。
 const ERAS = [
-  { id: 'all', label: '全部', match: () => true },
   { id: 'classic', label: '90年代以前', match: (y) => y != null && y <= 1999 },
   { id: 'y2000s', label: '2000年代', match: (y) => y >= 2000 && y <= 2009 },
   { id: 'y2010s', label: '2010年代', match: (y) => y >= 2010 && y <= 2019 },
   { id: 'y2020s', label: '2020年代', match: (y) => y >= 2020 },
 ];
 
-const eraById = (id) => ERAS.find((e) => e.id === id) ?? ERAS[0];
+/** 目前勾起來的年代；一個都沒勾就回空陣列（開始遊戲時會擋下來） */
+function checkedEras() {
+  const ids = [...document.querySelectorAll('input[name="era"]:checked')].map((el) => el.value);
+  return ERAS.filter((e) => ids.includes(e.id));
+}
+
+/** 依目前的題型與年代篩題目 */
+function filterBank(all, mode, eras) {
+  return all.filter(
+    (q) => (mode === 'mixed' || q.mode === mode) && eras.some((e) => e.match(q.year))
+  );
+}
 
 // 這些字給出來只是幫忙讀順，不太會直接洩漏答案，優先送
 const GLUE = new Set([...'的了是不在有就都和也很到我你他她們一個這那要會來去上下中又再為之以把被給對從而但還沒過只才更最每些麼呢吧啊嗎與或且因所卻讓使將']);
@@ -437,15 +447,17 @@ function startGame() {
   if (!state.allQuestions) return; // 題庫還沒載好
   const mode = document.querySelector('input[name="mode"]:checked').value;
   const level = document.querySelector('input[name="level"]:checked').value;
-  const era = document.querySelector('input[name="era"]:checked').value;
-  const inEra = eraById(era).match;
+  const eras = checkedEras();
 
-  state.bank = state.allQuestions.filter(
-    (q) => (mode === 'mixed' || q.mode === mode) && inEra(q.year)
-  );
+  if (!eras.length) {
+    alert('至少要選一個年代');
+    return;
+  }
+
+  state.bank = filterBank(state.allQuestions, mode, eras);
 
   if (!state.bank.length) {
-    alert('這個題型加上這個年代目前沒有題目，換一個試試');
+    alert('這個題型加上這些年代目前沒有題目，換一個試試');
     return;
   }
 
@@ -521,6 +533,23 @@ function renderEraCounts() {
   }
 }
 
+/** 「題庫」那格顯示目前選到的範圍，不是全部 */
+function updateBankSummary() {
+  const el = $('#bank-size');
+  if (!state.allQuestions) return;
+
+  const eras = checkedEras();
+  if (!eras.length) {
+    el.textContent = '未選年代';
+    return;
+  }
+
+  const mode = document.querySelector('input[name="mode"]:checked').value;
+  const picked = filterBank(state.allQuestions, mode, eras);
+  const songs = new Set(picked.map((q) => q.songId)).size;
+  el.textContent = `${songs} 首 · ${picked.length} 題`;
+}
+
 function refreshBestDisplay() {
   const best = loadBest();
   $('#best-score').textContent = best.score;
@@ -536,6 +565,10 @@ function bindEvents() {
   $('#btn-hint').addEventListener('click', useHint);
   $('#btn-skip').addEventListener('click', skipQuestion);
   $('#btn-next').addEventListener('click', proceed);
+
+  for (const el of document.querySelectorAll('input[name="era"], input[name="mode"]')) {
+    el.addEventListener('change', updateBankSummary);
+  }
 
   $('#btn-quit').addEventListener('click', () => {
     stopTimer();
@@ -592,10 +625,10 @@ async function main() {
   startBtn.textContent = '載入題庫中…';
 
   try {
-    const { questions, songCount } = await loadQuestions();
+    const { questions } = await loadQuestions();
     state.allQuestions = questions;
     renderEraCounts();
-    $('#bank-size').textContent = `${songCount} 首`;
+    updateBankSummary();
     $('#footer-count').textContent = questions.length;
     startBtn.disabled = false;
     startBtn.textContent = '開始遊戲';

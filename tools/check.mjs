@@ -48,11 +48,20 @@ test('每個年代在 index.html 都有對應的按鈕，選擇器對得上', ()
   assert.deepEqual(inHtml, inJs, 'index.html 的年代按鈕跟 app.js 的 ERAS 對不起來');
   for (const [tag, id, body] of chips.map((m) => [m[0], m[1], m[2]])) {
     assert.ok(body.includes('class="chip-count"'), `${id} 少了 .chip-count`);
-    assert.ok(tag.includes(`name="era" value="${id}"`), `${id} 的 radio value 不對`);
+    assert.ok(tag.includes(`name="era" value="${id}"`), `${id} 的 value 不對`);
   }
-  assert.equal(
-    (html.match(/name="era"[^>]*checked/g) ?? []).length, 1,
-    '年代必須剛好有一個預設選項'
+});
+
+test('年代是複選（checkbox），而且預設全部勾起來', () => {
+  const boxes = [...html.matchAll(/<input type="(\w+)" name="era"[^>]*>/g)];
+  assert.equal(boxes.length, 4, '應該有四個年代選項');
+  for (const [tag, type] of boxes.map((m) => [m[0], m[1]])) {
+    assert.equal(type, 'checkbox', `年代要用 checkbox 才能複選：${tag}`);
+    assert.ok(tag.includes('checked'), `預設要勾起來：${tag}`);
+  }
+  assert.ok(
+    /aria-label="年代，可複選"/.test(html),
+    '複選群組不該再標成 radiogroup，要讓螢幕閱讀器知道可以多選'
   );
 });
 
@@ -285,7 +294,7 @@ test('每個磚塊都轉得出注音，沒有問號', () => {
 
 console.log('\n年代分組');
 const { ERAS } = exposed;
-const buckets = ERAS.filter((e) => e.id !== 'all');
+const buckets = ERAS;
 
 test('每首歌都有年份，才分得進年代', () => {
   const undated = bank.questions.filter((q) => typeof q.year !== 'number');
@@ -299,9 +308,9 @@ test('每一題剛好落在一個年代，不重疊也不漏掉', () => {
   }
 });
 
-test('「全部」真的包含全部', () => {
-  const all = ERAS.find((e) => e.id === 'all');
-  assert.ok(bank.questions.every((q) => all.match(q.year)));
+test('四個年代加起來就是整個題庫', () => {
+  const covered = bank.questions.filter((q) => buckets.some((e) => e.match(q.year)));
+  assert.equal(covered.length, bank.questions.length, '有題目不屬於任何年代');
 });
 
 test('每個年代都有歌，介面上不會出現空選項', () => {
