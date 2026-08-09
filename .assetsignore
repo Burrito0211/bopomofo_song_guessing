@@ -1,0 +1,24 @@
+# Wrangler 會把 assets 目錄（這裡就是專案根目錄）底下的每個檔案都上傳成網站內容。
+# 這個檔案列出「不該變成網頁」的東西，格式跟 .gitignore 一樣。
+#
+# 最重要的是 node_modules：Cloudflare 建置時跑 npm install 會裝出
+# node_modules/workerd/bin/workerd（122 MiB），超過單檔 25 MiB 上限，
+# 部署就會失敗 "Asset too large"。
+
+node_modules
+.git
+.github
+
+# 開發與建置工具，上線不需要
+tools
+supabase
+package.json
+package-lock.json
+wrangler.jsonc
+.assetsignore
+.gitignore
+.gitattributes
+README.md
+
+# 題庫原始檔（網站實際讀的是 data/questions.js，這份只是拿來編譯用的）
+data/songs.source.json

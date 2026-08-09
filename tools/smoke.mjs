@@ -5,8 +5,13 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import assert from 'node:assert/strict';
 
+const CR = String.fromCharCode(13);
+const NL = String.fromCharCode(10);
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const read = (p) => readFileSync(join(ROOT, p), 'utf8');
+// 統一換行：Windows checkout 會把檔案變成 CRLF，字串比對會對不上
+const read = (p) =>
+  readFileSync(join(ROOT, p), 'utf8').split(CR + NL).join(NL);
 
 /* ── 極簡 DOM ── */
 function makeEl(id = '') {

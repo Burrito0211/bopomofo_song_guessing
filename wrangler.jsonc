@@ -1,0 +1,9 @@
+{
+  // 純靜態網站：只有 assets，沒有伺服器端程式碼，所以不需要 "main"。
+  // 要排除哪些檔案不上傳，見同目錄的 .assetsignore。
+  "name": "guess-the-lyrics-by-initial-consonant",
+  "compatibility_date": "2026-08-07",
+  "assets": {
+    "directory": "."
+  }
+}

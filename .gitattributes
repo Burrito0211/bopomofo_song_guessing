@@ -1,0 +1,2 @@
+# 全部用 LF 存進 repo，避免 Windows checkout 之後整份檔案變成 CRLF 假差異
+* text=auto eol=lf

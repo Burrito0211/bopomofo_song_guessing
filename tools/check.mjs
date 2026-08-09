@@ -1,12 +1,17 @@
 // 出貨前的自我檢查：語法、DOM id 對得上、答案判定邏輯。
 // 用法：npm run check
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import assert from 'node:assert/strict';
 
+const CR = String.fromCharCode(13);
+const NL = String.fromCharCode(10);
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const read = (p) => readFileSync(join(ROOT, p), 'utf8');
+// 統一換行：Windows checkout 會把檔案變成 CRLF，字串比對會對不上
+const read = (p) =>
+  readFileSync(join(ROOT, p), 'utf8').split(CR + NL).join(NL);
 
 let failures = 0;
 function test(name, fn) {
@@ -190,6 +195,59 @@ test('題目順序不會讓同一首歌連在一起', () => {
     if (ordered[i].songId === ordered[i - 1].songId) adjacent++;
   }
   assert.ok(adjacent === 0, `還有 ${adjacent} 處相鄰同歌`);
+});
+
+/* ── 部署：模擬 Wrangler 會上傳哪些檔案 ── */
+console.log('\n部署（Cloudflare）');
+
+const CF_MAX_BYTES = 25 * 1024 * 1024; // 單檔上限 25 MiB
+
+const ignorePatterns = read('.assetsignore')
+  .split('\n')
+  .map((l) => l.trim())
+  .filter((l) => l && !l.startsWith('#'));
+
+const isIgnored = (rel) => {
+  const parts = rel.split('/');
+  return ignorePatterns.some((p) => rel === p || parts[0] === p || rel.startsWith(`${p}/`));
+};
+
+function walk(dir, base = '') {
+  const out = [];
+  for (const entry of readdirSync(join(ROOT, dir === '' ? '.' : dir), { withFileTypes: true })) {
+    const rel = base ? `${base}/${entry.name}` : entry.name;
+    if (isIgnored(rel)) continue;
+    if (entry.isDirectory()) out.push(...walk(rel, rel));
+    else out.push(rel);
+  }
+  return out;
+}
+
+const uploaded = walk('');
+
+test('node_modules 不會被上傳（就是它害部署失敗的）', () => {
+  const leaked = uploaded.filter((f) => f.startsWith('node_modules/'));
+  assert.equal(leaked.length, 0, `還會上傳 ${leaked.length} 個 node_modules 檔案`);
+});
+
+test('沒有任何檔案超過 Cloudflare 的 25 MiB 上限', () => {
+  const tooBig = uploaded
+    .map((f) => [f, statSync(join(ROOT, f)).size])
+    .filter(([, size]) => size > CF_MAX_BYTES);
+  assert.deepEqual(tooBig, [], `過大：${tooBig.map(([f]) => f).join(', ')}`);
+});
+
+test('網站真正需要的檔案都還在', () => {
+  for (const f of [
+    'index.html',
+    'assets/app.js',
+    'assets/data.js',
+    'assets/styles.css',
+    'data/questions.js',
+    'data/questions.json',
+  ]) {
+    assert.ok(uploaded.includes(f), `${f} 被 .assetsignore 誤殺了`);
+  }
 });
 
 console.log(failures ? `\n✗ ${failures} 項失敗` : '\n✅ 全部通過');
