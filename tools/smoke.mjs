@@ -20,7 +20,6 @@ function makeEl(id = '') {
     children: [],
     _classes: new Set(),
     textContent: '',
-    innerHTML: '',
     value: '',
     disabled: false,
     hidden: false,
@@ -38,6 +37,14 @@ function makeEl(id = '') {
     addEventListener: (type, fn) => (el._handlers ??= {})[type] = fn,
     focus: () => {},
   };
+  let html = '';
+  Object.defineProperty(el, 'innerHTML', {
+    get: () => html,
+    set: (v) => {
+      html = v;
+      if (v === '') el.children.length = 0;
+    },
+  });
   return el;
 }
 
@@ -277,6 +284,48 @@ test('年代加題型可以疊著用', () => {
     '篩選沒同時吃到題型與年代'
   );
   checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
+  checked.mode = 'mixed';
+  app.startGame();
+});
+
+test('猜歌詞時歌名是連結，點了會開新分頁去 YouTube', () => {
+  checked.mode = 'lyric';
+  app.startGame();
+  const link = el('q-prompt').children.find((c) => c.href);
+  assert.ok(link, 'q-prompt 裡沒有連結');
+  assert.match(link.href, /^https:\/\/www\.youtube\.com\//, `網址怪怪的：${link.href}`);
+  assert.equal(link.target, '_blank', '沒開新分頁的話一點就把這局玩掉了');
+  assert.match(link.rel ?? '', /noopener/, '開新分頁一定要加 noopener');
+  assert.ok(
+    link.textContent.includes(app.state.current.title),
+    `連結文字應該是歌名，實際是 ${link.textContent}`
+  );
+  checked.mode = 'mixed';
+  app.startGame();
+});
+
+test('猜歌名時不放連結，不然等於直接把答案送出去', () => {
+  checked.mode = 'title';
+  app.startGame();
+  const links = el('q-prompt').children.filter((c) => c.href);
+  assert.deepEqual(links, [], '猜歌名的題目不該出現歌名連結');
+  checked.mode = 'mixed';
+  app.startGame();
+});
+
+test('沒填 youtube 欄位就退成搜尋，歌名有英文也不會壞掉', () => {
+  checked.mode = 'lyric';
+  app.startGame();
+  for (let i = 0; i < 400; i++) {
+    const link = el('q-prompt').children.find((c) => c.href);
+    const q = app.state.current;
+    const expected = q.youtube
+      ? `https://www.youtube.com/watch?v=${encodeURIComponent(q.youtube)}`
+      : `https://www.youtube.com/results?search_query=${encodeURIComponent(`${q.artist} ${q.title}`)}`;
+    assert.equal(link.href, expected, `${q.title} 的連結不對`);
+    assert.ok(!/[ 《》]/.test(link.href), `網址沒編碼乾淨：${link.href}`);
+    app.nextQuestion();
+  }
   checked.mode = 'mixed';
   app.startGame();
 });

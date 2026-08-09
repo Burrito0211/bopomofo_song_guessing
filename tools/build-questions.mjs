@@ -107,6 +107,8 @@ for (const song of src.songs) {
       title: song.title,
       artist: song.artist,
       year: song.year ?? null,
+      // 有填就直接連到那支影片，沒填的話前端會退成 YouTube 搜尋
+      youtube: song.youtube ?? null,
       line: line.text,
       tiles,
     };

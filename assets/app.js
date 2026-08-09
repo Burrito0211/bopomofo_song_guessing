@@ -309,10 +309,7 @@ function nextQuestion() {
   state.awaitingNext = false;
 
   const q = state.current;
-  $('#q-prompt').innerHTML =
-    q.mode === 'title'
-      ? '這句歌詞出自哪首歌？'
-      : `<span class="song-name">《${q.title}》</span>的這句歌詞是什麼？`;
+  renderPrompt(q);
 
   $('#q-meta').textContent =
     q.mode === 'title'
@@ -332,6 +329,46 @@ function nextQuestion() {
   input.focus();
 
   startTimer();
+}
+
+/**
+ * 這首歌的 YouTube 連結。來源檔有填 youtube（影片 id）就直接連過去，
+ * 沒填就退成「歌手＋歌名」的搜尋結果——192 首歌沒辦法一一去查影片 id，
+ * 但搜尋幾乎都會把正確的那支排在第一個。
+ */
+function youtubeUrl(q) {
+  if (q.youtube) {
+    return `https://www.youtube.com/watch?v=${encodeURIComponent(q.youtube)}`;
+  }
+  const query = `${q.artist} ${q.title}`;
+  return `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
+}
+
+/**
+ * 題目那行字。猜歌詞時歌名本來就給你了，做成連結不會洩漏答案，
+ * 想不起旋律可以直接點去聽。一定要開新分頁，不然一點就把這局玩掉了。
+ */
+function renderPrompt(q) {
+  const el = $('#q-prompt');
+  el.innerHTML = '';
+
+  if (q.mode === 'title') {
+    el.textContent = '這句歌詞出自哪首歌？';
+    return;
+  }
+
+  const link = document.createElement('a');
+  link.className = 'song-name';
+  link.href = youtubeUrl(q);
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.title = `在 YouTube 上聽《${q.title}》（開新分頁）`;
+  link.textContent = `《${q.title}》`;
+  el.appendChild(link);
+
+  const tail = document.createElement('span');
+  tail.textContent = '的這句歌詞是什麼？';
+  el.appendChild(tail);
 }
 
 /* ─────────────── 提示 / 跳過 ─────────────── */
