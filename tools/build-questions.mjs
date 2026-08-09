@@ -14,7 +14,7 @@ const OUT_JS = join(ROOT, 'data', 'questions.js');
 const warnings = [];
 
 /** 一行歌詞 → 顯示用的磚塊陣列。中文字露出注音首符，其餘照規則處理。 */
-function toTiles(text, songTitle) {
+function toTiles(text, songTitle, { warn = true } = {}) {
   const tiles = [];
   const chars = [...text];
   const pinyins = pinyin(text, { toneType: 'none', type: 'array', nonZh: 'consecutive' });
@@ -24,7 +24,7 @@ function toTiles(text, songTitle) {
     if (isHan(ch)) {
       const zh = pinyinToInitial(pinyins[i] ?? '');
       if (!zh) {
-        warnings.push(`無法轉換「${ch}」（${songTitle}：${text}）— 請在來源檔用 initials 手動指定`);
+        if (warn) warnings.push(`無法轉換「${ch}」（${songTitle}：${text}）— 請在來源檔用 initials 手動指定`);
         tiles.push({ k: 'han', t: '？' });
       } else {
         tiles.push({ k: 'han', t: zh });
@@ -45,9 +45,16 @@ function toTiles(text, songTitle) {
   return tiles;
 }
 
-/** 手動覆寫格式：「ㄨ ㄏ ㄋ ㄉ」以空白分隔 */
-function tilesFromOverride(str) {
-  return str.trim().split(/\s+/).map((t) => ({ k: 'han', t }));
+/**
+ * 手動覆寫多音字。initials 是「ㄨ ㄏ ㄋ ㄉ」這種以空白分隔的聲母，只對應中文字；
+ * 句子裡的空白與標點仍照歌詞原樣排版，所以覆寫不會把版面弄亂。
+ */
+function tilesFromOverride(text, initials, songTitle) {
+  const given = initials.trim().split(/\s+/);
+  const tiles = toTiles(text, songTitle, { warn: false });
+  let i = 0;
+  for (const tile of tiles) if (tile.k === 'han') tile.t = given[i++] ?? '？';
+  return { tiles, count: given.length };
 }
 
 const hanCount = (s) => [...s].filter(isHan).length;
@@ -69,10 +76,13 @@ for (const song of src.songs) {
 
   song.lines.forEach((raw, idx) => {
     const line = typeof raw === 'string' ? { text: raw } : raw;
-    const tiles = line.initials ? tilesFromOverride(line.initials) : toTiles(line.text, song.title);
+    const override = line.initials
+      ? tilesFromOverride(line.text, line.initials, song.title)
+      : null;
+    const tiles = override ? override.tiles : toTiles(line.text, song.title);
 
-    if (line.initials && tiles.length !== hanCount(line.text)) {
-      warnings.push(`${song.title} 第 ${idx + 1} 句：手動 initials 有 ${tiles.length} 個，歌詞卻有 ${hanCount(line.text)} 個中文字`);
+    if (override && override.count !== hanCount(line.text)) {
+      warnings.push(`${song.title} 第 ${idx + 1} 句：手動 initials 有 ${override.count} 個，歌詞卻有 ${hanCount(line.text)} 個中文字`);
     }
 
     const base = {

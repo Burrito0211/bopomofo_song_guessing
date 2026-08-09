@@ -34,6 +34,7 @@ function makeEl(id = '') {
       contains: (c) => el._classes.has(c),
     },
     appendChild: (child) => el.children.push(child),
+    querySelector: (sel) => stub(`${id}>${sel}`),
     addEventListener: (type, fn) => (el._handlers ??= {})[type] = fn,
     focus: () => {},
   };
@@ -41,12 +42,13 @@ function makeEl(id = '') {
 }
 
 const els = new Map();
-const el = (id) => {
+const stub = (id) => {
   if (!els.has(id)) els.set(id, makeEl(id));
   return els.get(id);
 };
+const el = stub;
 
-const checked = { mode: 'mixed', level: 'normal' };
+const checked = { mode: 'mixed', level: 'normal', era: 'all' };
 
 const document = {
   documentElement: makeEl('html'),
@@ -54,7 +56,7 @@ const document = {
     if (sel.startsWith('#')) return el(sel.slice(1));
     const m = sel.match(/input\[name="(\w+)"\]:checked/);
     if (m) return { value: checked[m[1]] };
-    return makeEl();
+    return stub(`sel:${sel}`);
   },
   querySelectorAll(sel) {
     if (sel === '.screen') {
@@ -180,6 +182,44 @@ test('愛心歸零就進結算，並寫入最高分', () => {
   assert.equal(el('screen-over')._classes.has('is-active'), true, '沒切到結算畫面');
   assert.ok(Number(el('over-score').textContent) >= 0);
   assert.ok(store.get('bpmf-lyrics:v1'), '最高分沒存進 localStorage');
+});
+
+test('年代按鈕上會標出各年代有幾首歌', () => {
+  const count = (era) =>
+    el(`sel:.chip[data-era="${era}"]`).querySelector('.chip-count').textContent;
+  for (const era of ['all', 'classic', 'y2000s', 'y2010s', 'y2020s']) {
+    assert.match(count(era), /^\d+首$/, `${era} 沒標上數量`);
+  }
+  assert.notEqual(count('all'), '0首', '全部不該是 0 首');
+});
+
+test('選了年代就只會出那個年代的歌', () => {
+  checked.era = 'y2020s';
+  app.startGame();
+  assert.ok(app.state.bank.length > 0, '2020 年代沒題目');
+  const strays = app.state.bank.filter((q) => q.year < 2020);
+  assert.deepEqual(strays.map((q) => q.title), [], '混進了別的年代');
+
+  checked.era = 'classic';
+  app.startGame();
+  assert.ok(app.state.bank.every((q) => q.year <= 1999), '經典組混進了 2000 年以後的歌');
+
+  checked.era = 'all';
+  app.startGame();
+});
+
+test('年代加題型可以疊著用', () => {
+  checked.era = 'y2010s';
+  checked.mode = 'title';
+  app.startGame();
+  assert.ok(app.state.bank.length > 0, '沒題目');
+  assert.ok(
+    app.state.bank.every((q) => q.mode === 'title' && q.year >= 2010 && q.year <= 2019),
+    '篩選沒同時吃到題型與年代'
+  );
+  checked.era = 'all';
+  checked.mode = 'mixed';
+  app.startGame();
 });
 
 test('題庫用完會自動重洗，連續 300 題不出錯', () => {

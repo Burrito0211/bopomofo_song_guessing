@@ -62,6 +62,17 @@
       </fieldset>
 
       <fieldset class="field">
+        <legend>年代</legend>
+        <div class="chips" role="radiogroup" aria-label="年代">
+          <label class="chip" data-era="all"><input type="radio" name="era" value="all" checked><span>全部<small class="chip-count"></small></span></label>
+          <label class="chip" data-era="classic"><input type="radio" name="era" value="classic"><span>90年代以前<small class="chip-count"></small></span></label>
+          <label class="chip" data-era="y2000s"><input type="radio" name="era" value="y2000s"><span>2000年代<small class="chip-count"></small></span></label>
+          <label class="chip" data-era="y2010s"><input type="radio" name="era" value="y2010s"><span>2010年代<small class="chip-count"></small></span></label>
+          <label class="chip" data-era="y2020s"><input type="radio" name="era" value="y2020s"><span>2020年代<small class="chip-count"></small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
         <legend>難度（時間長短 · 開場送幾個字）</legend>
         <div class="chips" role="radiogroup" aria-label="難度">
           <label class="chip"><input type="radio" name="level" value="chill"><span>悠閒 60秒 · 送最多字</span></label>
@@ -87,6 +98,7 @@
         <li>每題都會先<strong>直接送你幾個字</strong>（虛線格），猜歌名時還會固定送出這句的開頭，好讓你有個線索起頭。送幾個字由難度決定。</li>
         <li>答對可累積<strong>連擊倍率</strong>，剩餘時間也會換成分數。答錯或超時扣一顆愛心，三顆用完就結束。</li>
         <li>卡住時可以用<strong>提示</strong>（會扣該題分數）或<strong>跳過</strong>（連擊歸零，每局限三次）。</li>
+        <li>選<strong>年代</strong>可以只玩某個世代的歌，從鄧麗君到 2020 年代都有。</li>
       </ul>
     </details>
   </section>

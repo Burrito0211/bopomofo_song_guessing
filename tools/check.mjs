@@ -37,6 +37,24 @@ test('app.js 用到的 id 都存在於 index.html', () => {
   assert.deepEqual(missing, [], `找不到這些 id：${missing.join(', ')}`);
 });
 
+test('每個年代在 index.html 都有對應的按鈕，選擇器對得上', () => {
+  // app.js 用 .chip[data-era="…"] 找按鈕、再往下找 .chip-count 寫數量，
+  // 兩邊對不上的話只有在瀏覽器裡才會炸，所以在這裡先擋下來。
+  const chips = [...html.matchAll(/<label class="chip" data-era="([^"]+)">([\s\S]*?)<\/label>/g)];
+  const inHtml = chips.map((m) => m[1]);
+  const inJs = [...appSrc.matchAll(/\{ id: '([^']+)', label: '[^']*', match:/g)].map((m) => m[1]);
+
+  assert.deepEqual(inHtml, inJs, 'index.html 的年代按鈕跟 app.js 的 ERAS 對不起來');
+  for (const [tag, id, body] of chips.map((m) => [m[0], m[1], m[2]])) {
+    assert.ok(body.includes('class="chip-count"'), `${id} 少了 .chip-count`);
+    assert.ok(tag.includes(`name="era" value="${id}"`), `${id} 的 radio value 不對`);
+  }
+  assert.equal(
+    (html.match(/name="era"[^>]*checked/g) ?? []).length, 1,
+    '年代必須剛好有一個預設選項'
+  );
+});
+
 test('index.html 有載入 data.js 與 app.js', () => {
   assert.ok(html.includes('assets/data.js'), '缺少 data.js');
   assert.ok(html.includes('assets/app.js'), '缺少 app.js');
@@ -79,7 +97,7 @@ const inner = appSrc
   .replace("const loadQuestions = () => window.GameData.loadQuestions();", '');
 
 const exposed = new Function(
-  `${inner}\nreturn { normalize, judge, editDistance, hanChars, spreadBySong, pickFreebies, LEVELS };`
+  `${inner}\nreturn { normalize, judge, editDistance, hanChars, spreadBySong, pickFreebies, LEVELS, ERAS };`
 )();
 
 console.log('\n答案判定');
@@ -195,6 +213,34 @@ test('題目順序不會讓同一首歌連在一起', () => {
     if (ordered[i].songId === ordered[i - 1].songId) adjacent++;
   }
   assert.ok(adjacent === 0, `還有 ${adjacent} 處相鄰同歌`);
+});
+
+console.log('\n年代分組');
+const { ERAS } = exposed;
+const buckets = ERAS.filter((e) => e.id !== 'all');
+
+test('每首歌都有年份，才分得進年代', () => {
+  const undated = bank.questions.filter((q) => typeof q.year !== 'number');
+  assert.deepEqual([...new Set(undated.map((q) => q.title))], []);
+});
+
+test('每一題剛好落在一個年代，不重疊也不漏掉', () => {
+  for (const q of bank.questions) {
+    const hits = buckets.filter((e) => e.match(q.year)).map((e) => e.id);
+    assert.equal(hits.length, 1, `${q.title}（${q.year}）落在 ${hits.length} 個年代：${hits}`);
+  }
+});
+
+test('「全部」真的包含全部', () => {
+  const all = ERAS.find((e) => e.id === 'all');
+  assert.ok(bank.questions.every((q) => all.match(q.year)));
+});
+
+test('每個年代都有歌，介面上不會出現空選項', () => {
+  const empty = buckets.filter(
+    (e) => !bank.questions.some((q) => e.match(q.year))
+  );
+  assert.deepEqual(empty.map((e) => e.label), []);
 });
 
 /* ── 部署：模擬 Wrangler 會上傳哪些檔案 ── */

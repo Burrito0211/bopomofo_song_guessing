@@ -17,6 +17,17 @@ const LEVELS = {
   hard: { seconds: 15, reveal: 0.12, label: '刺激' },
 };
 
+// 年代分組。依歌曲年份把題庫切開，玩家可以只挑某個世代來玩。
+const ERAS = [
+  { id: 'all', label: '全部', match: () => true },
+  { id: 'classic', label: '90年代以前', match: (y) => y != null && y <= 1999 },
+  { id: 'y2000s', label: '2000年代', match: (y) => y >= 2000 && y <= 2009 },
+  { id: 'y2010s', label: '2010年代', match: (y) => y >= 2010 && y <= 2019 },
+  { id: 'y2020s', label: '2020年代', match: (y) => y >= 2020 },
+];
+
+const eraById = (id) => ERAS.find((e) => e.id === id) ?? ERAS[0];
+
 // 這些字給出來只是幫忙讀順，不太會直接洩漏答案，優先送
 const GLUE = new Set([...'的了是不在有就都和也很到我你他她們一個這那要會來去上下中又再為之以把被給對從而但還沒過只才更最每些麼呢吧啊嗎與或且因所卻讓使將']);
 
@@ -395,11 +406,12 @@ function resolveQuestion(outcome, matchKind) {
   verdictEl.textContent = verdict;
   verdictEl.className = `fb-verdict ${verdictClass}`;
 
+  const year = q.year ? `（${q.year}）` : '';
   $('#fb-answer').textContent = q.mode === 'title' ? `《${q.answer}》` : q.answer;
   $('#fb-song').textContent =
     q.mode === 'title'
-      ? `${q.artist}　·　${q.line}`
-      : `${q.artist}《${q.title}》`;
+      ? `${q.artist}${year}　·　${q.line}`
+      : `${q.artist}《${q.title}》${year}`;
   $('#fb-points').textContent = note;
 
   renderHud();
@@ -425,13 +437,15 @@ function startGame() {
   if (!state.allQuestions) return; // 題庫還沒載好
   const mode = document.querySelector('input[name="mode"]:checked').value;
   const level = document.querySelector('input[name="level"]:checked').value;
+  const era = document.querySelector('input[name="era"]:checked').value;
+  const inEra = eraById(era).match;
 
-  state.bank = mode === 'mixed'
-    ? state.allQuestions
-    : state.allQuestions.filter((q) => q.mode === mode);
+  state.bank = state.allQuestions.filter(
+    (q) => (mode === 'mixed' || q.mode === mode) && inEra(q.year)
+  );
 
   if (!state.bank.length) {
-    alert('這個題型目前沒有題目');
+    alert('這個題型加上這個年代目前沒有題目，換一個試試');
     return;
   }
 
@@ -486,12 +500,25 @@ function gameOver() {
     seen.add(q.id);
     const li = document.createElement('li');
     li.innerHTML =
-      `<strong>${q.line}</strong><span>${q.artist}《${q.title}》</span>`;
+      `<strong>${q.line}</strong><span>${q.artist}《${q.title}》${q.year ? `（${q.year}）` : ''}</span>`;
     list.appendChild(li);
   }
   missedBox.hidden = state.missed.length === 0;
 
   refreshBestDisplay();
+}
+
+/** 把各年代的歌曲數量寫進按鈕，順便把空的年代停用 */
+function renderEraCounts() {
+  for (const era of ERAS) {
+    const chip = document.querySelector(`.chip[data-era="${era.id}"]`);
+    if (!chip) continue;
+    const songs = new Set(
+      state.allQuestions.filter((q) => era.match(q.year)).map((q) => q.songId)
+    );
+    chip.querySelector('.chip-count').textContent = `${songs.size}首`;
+    chip.querySelector('input').disabled = songs.size === 0;
+  }
 }
 
 function refreshBestDisplay() {
@@ -567,6 +594,7 @@ async function main() {
   try {
     const { questions, songCount } = await loadQuestions();
     state.allQuestions = questions;
+    renderEraCounts();
     $('#bank-size').textContent = `${songCount} 首`;
     $('#footer-count').textContent = questions.length;
     startBtn.disabled = false;

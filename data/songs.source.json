@@ -2,137 +2,53 @@
   "$comment": "題庫原始檔。只需填中文歌詞，注音聲母由 npm run build:questions 自動產生。多音字可用 { text, initials } 手動覆寫。",
   "songs": [
     {
-      "id": "jay-qingtian",
-      "title": "晴天",
-      "artist": "周杰倫",
-      "year": 2003,
-      "lines": ["故事的小黃花", "從那年蟬鳴的夏天"]
+      "id": "teresa-yueliang",
+      "title": "月亮代表我的心",
+      "artist": "鄧麗君",
+      "year": 1977,
+      "lines": ["你問我愛你有多深", "我愛你有幾分"]
     },
     {
-      "id": "jay-qinghuaci",
-      "title": "青花瓷",
-      "artist": "周杰倫",
-      "year": 2007,
-      "lines": ["天青色等煙雨", "而我在等你"]
+      "id": "teresa-tianmimi",
+      "title": "甜蜜蜜",
+      "artist": "鄧麗君",
+      "year": 1979,
+      "lines": ["甜蜜蜜 你笑得甜蜜蜜", "好像花兒開在春風裡"]
     },
     {
-      "id": "jay-daoxiang",
-      "title": "稻香",
-      "artist": "周杰倫",
-      "year": 2008,
-      "lines": ["還記得你說家是唯一的城堡"]
+      "id": "wangjie-yichangyouxi",
+      "title": "一場遊戲一場夢",
+      "artist": "王傑",
+      "year": 1987,
+      "lines": ["不要談什麼分離", "我不會因為這樣而哭泣"]
     },
     {
-      "id": "jay-qilixiang",
-      "title": "七里香",
-      "artist": "周杰倫",
-      "year": 2004,
-      "lines": ["窗外的麻雀", "在電線桿上多嘴"]
+      "id": "qiqin-dayue",
+      "title": "大約在冬季",
+      "artist": "齊秦",
+      "year": 1987,
+      "lines": ["沒有你的日子裡", "我會更加珍惜自己"]
     },
     {
-      "id": "jay-jiandanai",
-      "title": "簡單愛",
-      "artist": "周杰倫",
-      "year": 2001,
-      "lines": ["說不上為什麼", "我變得很主動"]
+      "id": "sarah-mengxingshifen",
+      "title": "夢醒時分",
+      "artist": "陳淑樺",
+      "year": 1989,
+      "lines": ["有些人你永遠不必等", "早知道傷心總是難免的"]
     },
     {
-      "id": "jay-gaobaiqiqiu",
-      "title": "告白氣球",
-      "artist": "周杰倫",
-      "year": 2016,
-      "lines": ["親愛的愛上你", "從那天起"]
+      "id": "wawa-piaoyangguohai",
+      "title": "漂洋過海來看你",
+      "artist": "娃娃",
+      "year": 1991,
+      "lines": ["為你我用了半年的積蓄", "漂洋過海的來看你"]
     },
     {
-      "id": "mayday-turan",
-      "title": "突然好想你",
-      "artist": "五月天",
-      "year": 2008,
-      "lines": ["突然好想你", "你會在哪裡"]
-    },
-    {
-      "id": "mayday-juejiang",
-      "title": "倔強",
-      "artist": "五月天",
-      "year": 2004,
-      "lines": ["當我和世界不一樣", "那就讓我不一樣"]
-    },
-    {
-      "id": "mayday-wenrou",
-      "title": "溫柔",
-      "artist": "五月天",
-      "year": 2000,
-      "lines": ["走在風中", "今天陽光突然好溫柔"]
-    },
-    {
-      "id": "mayday-zhizu",
-      "title": "知足",
-      "artist": "五月天",
-      "year": 2005,
-      "lines": ["如果我愛上你的笑容"]
-    },
-    {
-      "id": "sunyanzi-yujian",
-      "title": "遇見",
-      "artist": "孫燕姿",
-      "year": 2004,
-      "lines": ["聽見冬天的離開", "我在某年某月醒過來"]
-    },
-    {
-      "id": "sunyanzi-wohuainiande",
-      "title": "我懷念的",
-      "artist": "孫燕姿",
-      "year": 2007,
-      "lines": ["我懷念的是無話不說", "我懷念的是一起做夢"]
-    },
-    {
-      "id": "hebe-xiaoxingyun",
-      "title": "小幸運",
-      "artist": "田馥甄",
-      "year": 2015,
-      "lines": ["我聽見雨滴落在青青草地", "我聽見遠方下課鐘聲響起"]
-    },
-    {
-      "id": "gem-paomo",
-      "title": "泡沫",
-      "artist": "鄧紫棋",
-      "year": 2012,
-      "lines": ["陽光下的泡沫", "是彩色的"]
-    },
-    {
-      "id": "jj-jiangnan",
-      "title": "江南",
-      "artist": "林俊傑",
-      "year": 2004,
-      "lines": ["圈圈圓圓圈圈", "天天年年天天的我"]
-    },
-    {
-      "id": "amei-tinghai",
-      "title": "聽海",
-      "artist": "張惠妹",
-      "year": 1997,
-      "lines": ["聽海哭的聲音", "嘆息著誰又被傷了心"]
-    },
-    {
-      "id": "fish-yongqi",
-      "title": "勇氣",
-      "artist": "梁靜茹",
-      "year": 2000,
-      "lines": ["愛真的需要勇氣", "來面對流言蜚語"]
-    },
-    {
-      "id": "eason-shinian",
-      "title": "十年",
-      "artist": "陳奕迅",
-      "year": 2003,
-      "lines": ["十年之前", "我不認識你"]
-    },
-    {
-      "id": "rene-houlai",
-      "title": "後來",
-      "artist": "劉若英",
-      "year": 1999,
-      "lines": ["後來我總算學會了如何去愛"]
+      "id": "tom-dahai",
+      "title": "大海",
+      "artist": "張雨生",
+      "year": 1992,
+      "lines": ["如果大海能夠喚回曾經的愛", "就讓我用一生等待"]
     },
     {
       "id": "jacky-wenbie",
@@ -142,11 +58,214 @@
       "lines": ["我和你吻別", "在無人的街"]
     },
     {
-      "id": "leehom-nibuzhidaodeshi",
-      "title": "你不知道的事",
+      "id": "andy-wangqingshui",
+      "title": "忘情水",
+      "artist": "劉德華",
+      "year": 1994,
+      "lines": ["給我一杯忘情水", "換我一夜不流淚"]
+    },
+    {
+      "id": "winnie-lingwu",
+      "title": "領悟",
+      "artist": "辛曉琪",
+      "year": 1994,
+      "lines": ["啊 多麼痛的領悟", "你曾是我的全部"]
+    },
+    {
+      "id": "richie-xintairuan",
+      "title": "心太軟",
+      "artist": "任賢齊",
+      "year": 1996,
+      "lines": ["你總是心太軟 心太軟", "把所有問題都自己扛"]
+    },
+    {
+      "id": "wubai-nuowei",
+      "title": "挪威的森林",
+      "artist": "伍佰",
+      "year": 1996,
+      "lines": ["讓我將你心兒摘下", "試著將它慢慢溶化"]
+    },
+    {
+      "id": "wakin-pengyou",
+      "title": "朋友",
+      "artist": "周華健",
+      "year": 1997,
+      "lines": ["朋友一生一起走", "那些日子不再有"]
+    },
+    {
+      "id": "amei-tinghai",
+      "title": "聽海",
+      "artist": "張惠妹",
+      "year": 1997,
+      "lines": ["聽海哭的聲音", "嘆息著誰又被傷了心"]
+    },
+    {
+      "id": "philzhang-yueliangrede",
+      "title": "月亮惹的禍",
+      "artist": "張宇",
+      "year": 1998,
+      "lines": ["都是月亮惹的禍", "那樣的夜色太美你太溫柔"]
+    },
+    {
+      "id": "nayin-zhengfu",
+      "title": "征服",
+      "artist": "那英",
+      "year": 1998,
+      "lines": ["就這樣被你征服", "切斷了所有退路"]
+    },
+    {
+      "id": "faye-hongdou",
+      "title": "紅豆",
+      "artist": "王菲",
+      "year": 1998,
+      "lines": ["還沒好好的感受", "雪花綻放的氣候"]
+    },
+    {
+      "id": "rene-houlai",
+      "title": "後來",
+      "artist": "劉若英",
+      "year": 1999,
+      "lines": ["後來我總算學會了如何去愛"]
+    },
+    {
+      "id": "sunyanzi-tianheihei",
+      "title": "天黑黑",
+      "artist": "孫燕姿",
+      "year": 2000,
+      "lines": ["我愛上讓我奮不顧身的一個人"]
+    },
+    {
+      "id": "fish-yongqi",
+      "title": "勇氣",
+      "artist": "梁靜茹",
+      "year": 2000,
+      "lines": ["愛真的需要勇氣", "來面對流言蜚語"]
+    },
+    {
+      "id": "steve-huanghun",
+      "title": "黃昏",
+      "artist": "周傳雄",
+      "year": 2000,
+      "lines": ["過完整個夏天", "憂傷並沒有好一些"]
+    },
+    {
+      "id": "mayday-wenrou",
+      "title": "溫柔",
+      "artist": "五月天",
+      "year": 2000,
+      "lines": ["走在風中", "今天陽光突然好溫柔"]
+    },
+    {
+      "id": "leehom-weiyi",
+      "title": "唯一",
       "artist": "王力宏",
-      "year": 2010,
-      "lines": ["蝴蝶眨幾次眼睛", "才學會飛行"]
+      "year": 2001,
+      "lines": ["你是我的唯一"]
+    },
+    {
+      "id": "jay-jiandanai",
+      "title": "簡單愛",
+      "artist": "周杰倫",
+      "year": 2001,
+      "lines": ["說不上為什麼", "我變得很主動"]
+    },
+    {
+      "id": "cheer-yu",
+      "title": "魚",
+      "artist": "陳綺貞",
+      "year": 2002,
+      "lines": ["我坐在椅子上 看日出復活", "我坐在夕陽裡 看城市的衰落"]
+    },
+    {
+      "id": "eason-shinian",
+      "title": "十年",
+      "artist": "陳奕迅",
+      "year": 2003,
+      "lines": ["十年之前", "我不認識你"]
+    },
+    {
+      "id": "shinee-siledouyaoai",
+      "title": "死了都要愛",
+      "artist": "信樂團",
+      "year": 2003,
+      "lines": ["死了都要愛", "不淋漓盡致不痛快"]
+    },
+    {
+      "id": "christine-zuichudemengxiang",
+      "title": "最初的夢想",
+      "artist": "范瑋琪",
+      "year": 2003,
+      "lines": ["最初的夢想 緊握在手上", "最想要去的地方 怎麼能在半路就返航"]
+    },
+    {
+      "id": "jay-qingtian",
+      "title": "晴天",
+      "artist": "周杰倫",
+      "year": 2003,
+      "lines": ["故事的小黃花", "從那年蟬鳴的夏天"]
+    },
+    {
+      "id": "she-superstar",
+      "title": "Super Star",
+      "artist": "S.H.E",
+      "year": 2003,
+      "lines": ["你是電 你是光 你是唯一的神話"]
+    },
+    {
+      "id": "jay-qilixiang",
+      "title": "七里香",
+      "artist": "周杰倫",
+      "year": 2004,
+      "lines": ["窗外的麻雀", "在電線桿上多嘴"]
+    },
+    {
+      "id": "jj-jiangnan",
+      "title": "江南",
+      "artist": "林俊傑",
+      "year": 2004,
+      "lines": ["圈圈圓圓圈圈", "天天年年天天的我"]
+    },
+    {
+      "id": "mayday-juejiang",
+      "title": "倔強",
+      "artist": "五月天",
+      "year": 2004,
+      "lines": ["當我和世界不一樣", "那就讓我不一樣"]
+    },
+    {
+      "id": "sunyanzi-yujian",
+      "title": "遇見",
+      "artist": "孫燕姿",
+      "year": 2004,
+      "lines": ["聽見冬天的離開", "我在某年某月醒過來"]
+    },
+    {
+      "id": "fish-ningxia",
+      "title": "寧夏",
+      "artist": "梁靜茹",
+      "year": 2004,
+      "lines": ["寧靜的夏天", "天空中繁星點點"]
+    },
+    {
+      "id": "jay-yequ",
+      "title": "夜曲",
+      "artist": "周杰倫",
+      "year": 2005,
+      "lines": ["一群嗜血的螞蟻", "被腐肉所吸引"]
+    },
+    {
+      "id": "mayday-zhizu",
+      "title": "知足",
+      "artist": "五月天",
+      "year": 2005,
+      "lines": ["如果我愛上你的笑容"]
+    },
+    {
+      "id": "michael-tonghua",
+      "title": "童話",
+      "artist": "光良",
+      "year": 2005,
+      "lines": ["我願變成童話裡", "你愛的那個天使"]
     },
     {
       "id": "sodagreen-xiaoqingge",
@@ -156,11 +275,46 @@
       "lines": ["這是一首簡單的小情歌", "唱著人們心腸的曲折"]
     },
     {
-      "id": "teresa-yueliang",
-      "title": "月亮代表我的心",
-      "artist": "鄧麗君",
-      "year": 1977,
-      "lines": ["你問我愛你有多深", "我愛你有幾分"]
+      "id": "jay-juhuatai",
+      "title": "菊花台",
+      "artist": "周杰倫",
+      "year": 2006,
+      "lines": ["菊花殘 滿地傷", "你的笑容已泛黃"]
+    },
+    {
+      "id": "angela-yinxingdechibang",
+      "title": "隱形的翅膀",
+      "artist": "張韶涵",
+      "year": 2006,
+      "lines": ["每一次 都在徘徊孤單中堅強", "我終於看到 所有夢想都開花"]
+    },
+    {
+      "id": "sunyanzi-wohuainiande",
+      "title": "我懷念的",
+      "artist": "孫燕姿",
+      "year": 2007,
+      "lines": ["我懷念的是無話不說", "我懷念的是一起做夢"]
+    },
+    {
+      "id": "jay-qinghuaci",
+      "title": "青花瓷",
+      "artist": "周杰倫",
+      "year": 2007,
+      "lines": ["天青色等煙雨", "而我在等你"]
+    },
+    {
+      "id": "mayday-turan",
+      "title": "突然好想你",
+      "artist": "五月天",
+      "year": 2008,
+      "lines": ["突然好想你", "你會在哪裡"]
+    },
+    {
+      "id": "jay-daoxiang",
+      "title": "稻香",
+      "artist": "周杰倫",
+      "year": 2008,
+      "lines": ["還記得你說家是唯一的城堡"]
     },
     {
       "id": "lala-shenqibaima",
@@ -170,6 +324,76 @@
       "lines": ["我身騎白馬走三關", "我改換素衣回中原"]
     },
     {
+      "id": "aska-yangcong",
+      "title": "洋蔥",
+      "artist": "楊宗緯",
+      "year": 2009,
+      "lines": ["如果你眼神能夠為我 片刻的降臨"]
+    },
+    {
+      "id": "leehom-nibuzhidaodeshi",
+      "title": "你不知道的事",
+      "artist": "王力宏",
+      "year": 2010,
+      "lines": ["蝴蝶眨幾次眼睛", "才學會飛行"]
+    },
+    {
+      "id": "mayday-buyuanrangni",
+      "title": "我不願讓你一個人",
+      "artist": "五月天",
+      "year": 2011,
+      "lines": ["我不願讓你一個人", "承受這世界的殘忍"]
+    },
+    {
+      "id": "mayday-ganbei",
+      "title": "乾杯",
+      "artist": "五月天",
+      "year": 2011,
+      "lines": ["會不會有那麼一天", "時間真的能倒退"]
+    },
+    {
+      "id": "alin-geiwoyigeliyou",
+      "title": "給我一個理由忘記",
+      "artist": "A-Lin",
+      "year": 2011,
+      "lines": ["給我一個理由忘記", "那麼愛我的你"]
+    },
+    {
+      "id": "hebe-moguizhongdetianshi",
+      "title": "魔鬼中的天使",
+      "artist": "田馥甄",
+      "year": 2011,
+      "lines": ["你是魔鬼中的天使"]
+    },
+    {
+      "id": "wanting-wodegeshengli",
+      "title": "我的歌聲裡",
+      "artist": "曲婉婷",
+      "year": 2012,
+      "lines": ["你存在 我深深的腦海裡", "我的夢裡 我的心裡 我的歌聲裡"]
+    },
+    {
+      "id": "gem-paomo",
+      "title": "泡沫",
+      "artist": "鄧紫棋",
+      "year": 2012,
+      "lines": ["陽光下的泡沫", "是彩色的"]
+    },
+    {
+      "id": "anpu-shishenme",
+      "title": "是什麼讓我遇見這樣的你",
+      "artist": "白安",
+      "year": 2012,
+      "lines": ["是什麼讓我遇見這樣的你"]
+    },
+    {
+      "id": "jj-xiulianaiqing",
+      "title": "修煉愛情",
+      "artist": "林俊傑",
+      "year": 2013,
+      "lines": ["修煉愛情的心酸", "學會放好以前的渴望"]
+    },
+    {
       "id": "crowd-yihoubiezuopengyou",
       "title": "以後別做朋友",
       "artist": "周興哲",
@@ -177,11 +401,185 @@
       "lines": ["以後別做朋友", "朋友不能牽手"]
     },
     {
+      "id": "hebe-xiaoxingyun",
+      "title": "小幸運",
+      "artist": "田馥甄",
+      "year": 2015,
+      "lines": ["我聽見雨滴落在青青草地", "我聽見遠方下課鐘聲響起"]
+    },
+    {
+      "id": "joker-yanyuan",
+      "title": "演員",
+      "artist": "薛之謙",
+      "year": 2015,
+      "lines": ["簡單點 說話的方式簡單點"]
+    },
+    {
+      "id": "zhoushen-dayu",
+      "title": "大魚",
+      "artist": "周深",
+      "year": 2016,
+      "lines": ["海浪無聲將夜幕深深淹沒", "漫過天空盡頭的角落"]
+    },
+    {
+      "id": "caodong-shanhai",
+      "title": "山海",
+      "artist": "草東沒有派對",
+      "year": 2016,
+      "lines": ["他明白 他明白 我給不起"]
+    },
+    {
+      "id": "gem-guangnianzhiwai",
+      "title": "光年之外",
+      "artist": "鄧紫棋",
+      "year": 2016,
+      "lines": ["感受停在我髮端的指尖", "如何瞬間凍結時間"]
+    },
+    {
+      "id": "jay-gaobaiqiqiu",
+      "title": "告白氣球",
+      "artist": "周杰倫",
+      "year": 2016,
+      "lines": ["親愛的愛上你", "從那天起"]
+    },
+    {
+      "id": "mao-xiaochou",
+      "title": "消愁",
+      "artist": "毛不易",
+      "year": 2017,
+      "lines": [
+        { "text": "一杯敬朝陽 一杯敬月光", "initials": "ㄧ ㄅ ㄐ ㄓ ㄧ ㄧ ㄅ ㄐ ㄩ ㄍ" },
+        "喚醒我的嚮往 溫柔了寒窗"
+      ]
+    },
+    {
+      "id": "mao-xiangwozheyangderen",
+      "title": "像我這樣的人",
+      "artist": "毛不易",
+      "year": 2017,
+      "lines": ["像我這樣優秀的人", "本該燦爛過一生"]
+    },
+    {
+      "id": "li-nianshaoyouwei",
+      "title": "年少有為",
+      "artist": "李榮浩",
+      "year": 2018,
+      "lines": ["假如我年少有為不自卑", "懂得什麼是珍貴"]
+    },
+    {
+      "id": "alin-youyizhongbeishang",
+      "title": "有一種悲傷",
+      "artist": "A-Lin",
+      "year": 2018,
+      "lines": ["有一種悲傷", "是你的名字停留在我的過往"]
+    },
+    {
+      "id": "jolin-meiguishaonian",
+      "title": "玫瑰少年",
+      "artist": "蔡依林",
+      "year": 2018,
+      "lines": ["誰把誰的靈魂", "裝進誰的身體"]
+    },
+    {
+      "id": "laofan-woceng",
+      "title": "我曾",
+      "artist": "隔壁老樊",
+      "year": 2019,
+      "lines": ["我曾難自拔於世界之大", "也沉溺於其中夢話"]
+    },
+    {
+      "id": "wu-qifengle",
+      "title": "起風了",
+      "artist": "吳青峰",
+      "year": 2019,
+      "lines": [
+        "我曾將青春翻湧成她",
+        { "text": "也曾指尖彈出盛夏", "initials": "ㄧ ㄘ ㄓ ㄐ ㄊ ㄔ ㄕ ㄒ" }
+      ]
+    },
+    {
+      "id": "chenxuening-lvse",
+      "title": "綠色",
+      "artist": "陳雪凝",
+      "year": 2019,
+      "lines": ["若不是你突然闖進我生活"]
+    },
+    {
+      "id": "jay-shuohaobuku",
+      "title": "說好不哭",
+      "artist": "周杰倫",
+      "year": 2019,
+      "lines": ["說好不哭 讓我看著你走"]
+    },
+    {
+      "id": "danyichun-yongbushilian",
+      "title": "永不失聯的愛",
+      "artist": "單依純",
+      "year": 2020,
+      "lines": ["我要一種永不失聯的愛"]
+    },
+    {
+      "id": "dazi-baiyueguang",
+      "title": "白月光與硃砂痣",
+      "artist": "大籽",
+      "year": 2020,
+      "lines": ["白月光在照耀", "你才想起她的好"]
+    },
+    {
       "id": "crowdlu-kezai",
       "title": "刻在我心底的名字",
       "artist": "盧廣仲",
       "year": 2020,
       "lines": ["刻在我心底的名字", "你藏在塵封的位置"]
+    },
+    {
+      "id": "accusefive-pixingdaiyue",
+      "title": "披星戴月的想你",
+      "artist": "告五人",
+      "year": 2020,
+      "lines": ["披星戴月的想你"]
+    },
+    {
+      "id": "ranran-feiniaohechan",
+      "title": "飛鳥和蟬",
+      "artist": "任然",
+      "year": 2020,
+      "lines": ["你說青澀最搭初戀", "如小雪落下海岸線"]
+    },
+    {
+      "id": "831-xiangjianni",
+      "title": "想見你想見你想見你",
+      "artist": "八三夭",
+      "year": 2020,
+      "lines": ["想見你 只想見你", "未來過去 我只想見你"]
+    },
+    {
+      "id": "jay-mojito",
+      "title": "Mojito",
+      "artist": "周杰倫",
+      "year": 2020,
+      "lines": ["麻煩給我的愛人來一杯Mojito", "我喜歡閱讀她微醺時的眼眸"]
+    },
+    {
+      "id": "eason-guyongzhe",
+      "title": "孤勇者",
+      "artist": "陳奕迅",
+      "year": 2021,
+      "lines": ["愛你孤身走暗巷", "愛你不跪的模樣"]
+    },
+    {
+      "id": "liushuang-mohewuting",
+      "title": "漠河舞廳",
+      "artist": "柳爽",
+      "year": 2021,
+      "lines": ["晚星就像你的眼睛", "殺人又放火"]
+    },
+    {
+      "id": "accusefive-jibainian",
+      "title": "我肯定在幾百年前就說過愛你",
+      "artist": "告五人",
+      "year": 2022,
+      "lines": ["我肯定在幾百年前就說過愛你"]
     }
   ]
 }
