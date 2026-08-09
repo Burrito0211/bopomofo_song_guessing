@@ -13,6 +13,7 @@
     "test": "node tools/check.mjs && node tools/smoke.mjs"
   },
   "devDependencies": {
+    "opencc-js": "^1.4.1",
     "pinyin-pro": "^3.28.2"
   }
 }

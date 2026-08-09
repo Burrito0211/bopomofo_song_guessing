@@ -4,7 +4,14 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { pinyin } from 'pinyin-pro';
+import * as OpenCC from 'opencc-js';
 import { pinyinToInitial, isHan } from './zhuyin.mjs';
+
+// pinyin-pro 的詞庫是簡體的，餵繁體進去它認不出詞，只能一個字一個字猜讀音，
+// 多音字就會挑錯：長大→cháng、音樂→lè、彈奏→dàn、馬車→jū、曬乾→qián。
+// 所以查讀音前先轉成簡體，注音再貼回原本的繁體字。轉換是逐字的，字數不會變，
+// 對得上索引；萬一哪天對不上就退回用原文查，並且留一則警告。
+const toSimplified = OpenCC.Converter({ from: 'tw', to: 'cn' });
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = join(ROOT, 'data', 'songs.source.json');
@@ -17,7 +24,17 @@ const warnings = [];
 function toTiles(text, songTitle, { warn = true } = {}) {
   const tiles = [];
   const chars = [...text];
-  const pinyins = pinyin(text, { toneType: 'none', type: 'array', nonZh: 'consecutive' });
+
+  const simplified = toSimplified(text);
+  const aligned = [...simplified].length === chars.length;
+  if (!aligned && warn) {
+    warnings.push(`簡繁轉換後字數對不上（${songTitle}：${text}）— 改用原文查讀音，多音字請自行確認`);
+  }
+  const pinyins = pinyin(aligned ? simplified : text, {
+    toneType: 'none',
+    type: 'array',
+    nonZh: 'consecutive',
+  });
 
   for (let i = 0; i < chars.length; i++) {
     const ch = chars[i];
@@ -116,6 +133,10 @@ for (const song of src.songs) {
   });
 }
 
+const giveaways = questions.filter(
+  (q) => q.mode === 'title' && q.line.includes(q.title)
+);
+
 const out = {
   version: 1,
   generatedAt: new Date().toISOString(),
@@ -130,6 +151,12 @@ const banner = '/* 自動產生，請勿手動編輯。改 data/songs.source.jso
 writeFileSync(OUT_JS, banner + 'window.__QUESTIONS__ = ' + JSON.stringify(out) + ';\n', 'utf8');
 
 console.log(`✅ 產生 ${questions.length} 題（${src.songs.length} 首歌）→ data/questions.json + data/questions.js`);
+
+if (giveaways.length) {
+  console.log(`\n💡 ${giveaways.length} 句歌詞裡直接出現歌名，猜歌名那題等於送分：`);
+  for (const q of giveaways) console.log(`  - ${q.title}：${q.line}`);
+  console.log('   想讓題目難一點，就幫這幾首多補幾句別段的歌詞。');
+}
 if (warnings.length) {
   console.log(`\n⚠️  ${warnings.length} 個提醒：`);
   for (const w of warnings) console.log('  -', w);
