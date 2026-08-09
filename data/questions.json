@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-09T16:35:21.131Z",
-  "songCount": 157,
+  "generatedAt": "2026-08-09T16:42:09.200Z",
+  "songCount": 159,
   "questions": [
     {
       "songId": "teresa-yueliang",
@@ -68238,6 +68238,124 @@
       "difficulty": 3
     },
     {
+      "songId": "wangqi-keketuohai",
+      "title": "可可托海的牧羊人",
+      "artist": "王琪",
+      "year": 2020,
+      "line": "那夜的雨 也沒能留住你",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        }
+      ],
+      "id": "wangqi-keketuohai:0:title",
+      "mode": "title",
+      "answer": "可可托海的牧羊人",
+      "accept": [
+        "可可托海的牧羊人"
+      ],
+      "difficulty": 3
+    },
+    {
+      "songId": "wangqi-keketuohai",
+      "title": "可可托海的牧羊人",
+      "artist": "王琪",
+      "year": 2020,
+      "line": "那夜的雨 也沒能留住你",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄩ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        }
+      ],
+      "id": "wangqi-keketuohai:0:lyric",
+      "mode": "lyric",
+      "answer": "那夜的雨 也沒能留住你",
+      "accept": [
+        "那夜的雨 也沒能留住你"
+      ],
+      "difficulty": 3
+    },
+    {
       "songId": "danyichun-yongbushilian",
       "title": "永不失聯的愛",
       "artist": "單依純",
@@ -71220,6 +71338,282 @@
       "difficulty": 4
     },
     {
+      "songId": "eason-guyongzhe",
+      "title": "孤勇者",
+      "artist": "陳奕迅",
+      "year": 2021,
+      "line": "誰說污泥滿身的不算英雄",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "eason-guyongzhe:7:title",
+      "mode": "title",
+      "answer": "孤勇者",
+      "accept": [
+        "孤勇者"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "eason-guyongzhe",
+      "title": "孤勇者",
+      "artist": "陳奕迅",
+      "year": 2021,
+      "line": "誰說污泥滿身的不算英雄",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄨ"
+        },
+        {
+          "k": "han",
+          "t": "ㄋ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄅ"
+        },
+        {
+          "k": "han",
+          "t": "ㄙ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        }
+      ],
+      "id": "eason-guyongzhe:7:lyric",
+      "mode": "lyric",
+      "answer": "誰說污泥滿身的不算英雄",
+      "accept": [
+        "誰說污泥滿身的不算英雄"
+      ],
+      "difficulty": 4
+    },
+    {
+      "songId": "eason-guyongzhe",
+      "title": "孤勇者",
+      "artist": "陳奕迅",
+      "year": 2021,
+      "line": "他們說 要帶著光 馴服每一頭怪獸",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        }
+      ],
+      "id": "eason-guyongzhe:8:title",
+      "mode": "title",
+      "answer": "孤勇者",
+      "accept": [
+        "孤勇者"
+      ],
+      "difficulty": 1
+    },
+    {
+      "songId": "eason-guyongzhe",
+      "title": "孤勇者",
+      "artist": "陳奕迅",
+      "year": 2021,
+      "line": "他們說 要帶著光 馴服每一頭怪獸",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "han",
+          "t": "ㄒ"
+        },
+        {
+          "k": "han",
+          "t": "ㄈ"
+        },
+        {
+          "k": "han",
+          "t": "ㄇ"
+        },
+        {
+          "k": "han",
+          "t": "ㄧ"
+        },
+        {
+          "k": "han",
+          "t": "ㄊ"
+        },
+        {
+          "k": "han",
+          "t": "ㄍ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        }
+      ],
+      "id": "eason-guyongzhe:8:lyric",
+      "mode": "lyric",
+      "answer": "他們說 要帶著光 馴服每一頭怪獸",
+      "accept": [
+        "他們說 要帶著光 馴服每一頭怪獸"
+      ],
+      "difficulty": 4
+    },
+    {
       "songId": "liushuang-mohewuting",
       "title": "漠河舞廳",
       "artist": "柳爽",
@@ -71386,6 +71780,104 @@
         "殺人又放火"
       ],
       "difficulty": 2
+    },
+    {
+      "songId": "asi-reai105",
+      "title": "熱愛105度的你",
+      "artist": "阿肆",
+      "year": 2021,
+      "line": "滴滴清純的蒸餾水",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        }
+      ],
+      "id": "asi-reai105:0:title",
+      "mode": "title",
+      "answer": "熱愛105度的你",
+      "accept": [
+        "熱愛105度的你",
+        "熱愛105°C的你",
+        "熱愛105℃的你"
+      ],
+      "difficulty": 2
+    },
+    {
+      "songId": "asi-reai105",
+      "title": "熱愛105度的你",
+      "artist": "阿肆",
+      "year": 2021,
+      "line": "滴滴清純的蒸餾水",
+      "tiles": [
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄑ"
+        },
+        {
+          "k": "han",
+          "t": "ㄔ"
+        },
+        {
+          "k": "han",
+          "t": "ㄉ"
+        },
+        {
+          "k": "han",
+          "t": "ㄓ"
+        },
+        {
+          "k": "han",
+          "t": "ㄌ"
+        },
+        {
+          "k": "han",
+          "t": "ㄕ"
+        }
+      ],
+      "id": "asi-reai105:0:lyric",
+      "mode": "lyric",
+      "answer": "滴滴清純的蒸餾水",
+      "accept": [
+        "滴滴清純的蒸餾水"
+      ],
+      "difficulty": 3
     },
     {
       "songId": "accusefive-jibainian",
