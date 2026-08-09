@@ -554,6 +554,83 @@ kbd {
 .missed li strong { display: block; font-size: .95rem; }
 .missed li span { color: var(--ink-3); }
 
+/* ── 多人競賽 ── */
+.vs-title { font-size: 1.3rem; margin: .2rem 0 .5rem; }
+.vs-lead { color: var(--ink-2); font-size: .9rem; line-height: 1.7; margin-bottom: 1rem; }
+.vs-note { color: var(--ink-3); font-size: .82rem; line-height: 1.6; margin: .5rem 0; }
+.vs-error { color: #d64550; font-size: .85rem; margin: .4rem 0; font-weight: 600; }
+
+.vs-tabs { display: flex; gap: .5rem; margin-bottom: 1rem; }
+.vs-tab {
+  flex: 1;
+  padding: .55rem .6rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-weight: 700;
+  font-size: .9rem;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.vs-tab:hover { border-color: var(--accent); color: var(--ink); }
+.vs-tab.is-on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.vs-panel { display: grid; gap: 1rem; }
+
+.vs-field { display: grid; gap: .35rem; margin: 1rem 0 .5rem; }
+.vs-field > span { font-size: .8rem; font-weight: 700; color: var(--ink-3); }
+
+.vs-code-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--r-lg);
+  border: 1px dashed var(--accent);
+  background: var(--surface-2);
+  display: grid;
+  gap: .5rem;
+}
+.vs-code-label { font-size: .78rem; font-weight: 700; color: var(--ink-3); margin: 0; }
+.vs-code {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  color: var(--accent);
+  text-align: center;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  word-break: break-all;
+}
+.vs-code-inline { font-weight: 800; color: var(--accent); letter-spacing: .06em; }
+
+.vs-result { margin-top: 1.25rem; text-align: left; }
+.vs-result h3 { font-size: 1rem; margin-bottom: .5rem; }
+.vs-result-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .72rem;
+  line-height: 1.5;
+  word-break: break-all;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: .5rem;
+  padding: .5rem .6rem;
+  margin: .3rem 0 .5rem;
+  color: var(--ink-2);
+}
+
+.vs-board { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .9rem; }
+.vs-board th,
+.vs-board td { padding: .45rem .5rem; text-align: left; border-bottom: 1px solid var(--line); }
+.vs-board th { font-size: .75rem; color: var(--ink-3); font-weight: 700; }
+.vs-board td:nth-child(3),
+.vs-board td:nth-child(4) { font-variant-numeric: tabular-nums; }
+.vs-board tbody tr:first-child td { font-weight: 800; color: var(--accent); }
+
 /* ── 頁尾 ── */
 .footer {
   text-align: center;

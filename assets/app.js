@@ -92,18 +92,22 @@ function judge(input, acceptList) {
   return best;
 }
 
-function shuffle(arr) {
+// 平常用 Math.random，競賽時換成由代碼種子推出來的亂數，
+// 這樣同一組代碼的每個人抽到的題目與送字才會一模一樣。
+const nativeRng = () => Math.random();
+
+function shuffle(arr, rng = nativeRng) {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(rng() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
 }
 
 /** 洗牌後再推開同一首歌的題目，避免上一題剛好爆雷下一題 */
-function spreadBySong(list) {
-  const out = shuffle(list);
+function spreadBySong(list, rng = nativeRng) {
+  const out = shuffle(list, rng);
   for (let i = 1; i < out.length; i++) {
     if (out[i].songId !== out[i - 1].songId) continue;
     const j = out.findIndex(
@@ -122,7 +126,7 @@ const hanChars = (s) => [...s].filter((c) => /\p{Script=Han}/u.test(c));
  * 猜歌名時一定先給開頭兩個字，讀起來像半句話比較好聯想；
  * 其餘名額優先給虛字，最後一定留至少兩個字要猜。
  */
-function pickFreebies(q, ratio) {
+function pickFreebies(q, ratio, rng = nativeRng) {
   const chars = hanChars(q.line);
   const n = chars.length;
   if (n <= 2) return new Set();
@@ -136,8 +140,8 @@ function pickFreebies(q, ratio) {
 
   const quota = Math.min(maxReveal, Math.max(picked.size, 1, Math.round(n * ratio)));
   const rest = chars.map((_, i) => i).filter((i) => !picked.has(i));
-  const glue = shuffle(rest.filter((i) => GLUE.has(chars[i])));
-  const other = shuffle(rest.filter((i) => !GLUE.has(chars[i])));
+  const glue = shuffle(rest.filter((i) => GLUE.has(chars[i])), rng);
+  const other = shuffle(rest.filter((i) => !GLUE.has(chars[i])), rng);
 
   for (const i of [...glue, ...other]) {
     if (picked.size >= quota) break;
@@ -183,6 +187,8 @@ const state = {
   ticker: null,
   awaitingNext: false,
   composing: false,
+  challenge: null,   // { code, seed, rounds, … }，一般模式是 null
+  qrng: nativeRng,   // 這一題專用的亂數（送字與提示都用它）
 };
 
 const multiplier = () => Math.min(1 + state.streak * 0.15, MAX_MULTIPLIER);
@@ -245,7 +251,10 @@ function renderHud() {
   $('#hud-score').textContent = state.score;
   $('#hud-combo').textContent = `×${multiplier().toFixed(1)}`;
   $('#hud-lives').textContent = '❤️'.repeat(state.lives) + '🖤'.repeat(LIVES - state.lives);
-  $('#hud-index').textContent = state.asked + 1;
+  $('#hud-lives-box').hidden = !!state.challenge;   // 競賽是固定題數，沒有愛心
+  $('#hud-index').textContent = state.challenge
+    ? `${Math.min(state.asked + 1, state.challenge.rounds)}/${state.challenge.rounds}`
+    : state.asked + 1;
   $('#skip-left').textContent = state.skipsLeft;
   $('#btn-skip').disabled = state.skipsLeft <= 0;
   $('#btn-hint').disabled = state.hintsUsed >= state.hints.length;
@@ -297,7 +306,12 @@ function buildHints(q) {
 
 function nextQuestion() {
   if (state.cursor >= state.queue.length) {
-    state.queue = spreadBySong(state.bank); // 題庫跑完就重洗
+    // 競賽的題數上限一定小於題庫，照理不會走到這裡；真的走到就用種子重洗，
+    // 保證每個人重洗出來的順序還是一樣。
+    state.queue = spreadBySong(
+      state.bank,
+      state.challenge ? Challenge.makeRng(state.challenge.seed ^ 0x5f5f) : nativeRng
+    );
     state.cursor = 0;
   }
 
@@ -305,7 +319,14 @@ function nextQuestion() {
   state.hintsUsed = 0;
   state.hints = buildHints(state.current);
   state.revealed = new Set();
-  state.given = pickFreebies(state.current, state.revealRatio);
+
+  // 每題一條獨立的亂數流：用「種子＋題號」推出來，不受玩家按過幾次提示影響，
+  // 否則有人買提示就會讓後面每一題的送字都跟別人不一樣。
+  state.qrng = state.challenge
+    ? Challenge.makeRng(Challenge.mixSeed(state.challenge.seed, state.asked))
+    : nativeRng;
+
+  state.given = pickFreebies(state.current, state.revealRatio, state.qrng);
   state.awaitingNext = false;
 
   const q = state.current;
@@ -385,7 +406,7 @@ function useHint() {
       .map((_, i) => i)
       .filter((i) => !state.revealed.has(i) && !state.given.has(i));
     if (candidates.length) {
-      state.revealed.add(candidates[Math.floor(Math.random() * candidates.length)]);
+      state.revealed.add(candidates[Math.floor(state.qrng() * candidates.length)]);
       renderQuestionTiles();
     }
     box.textContent = `已幫你揭開 ${state.revealed.size} 個字（紫色磚塊）`;
@@ -442,10 +463,14 @@ function resolveQuestion(outcome, matchKind) {
     if (outcome === 'skip') {
       verdict = '⏭ 跳過';
     } else {
-      state.lives--;
+      if (!state.challenge) state.lives--;
       verdict = outcome === 'timeout' ? '⏰ 時間到' : '❌ 答錯了';
     }
-    note = outcome === 'skip' ? '連擊歸零' : `失去一顆愛心，還剩 ${state.lives} 顆`;
+    note = outcome === 'skip'
+      ? '連擊歸零'
+      : state.challenge
+        ? '連擊歸零，繼續下一題'
+        : `失去一顆愛心，還剩 ${state.lives} 顆`;
   }
 
   const fb = $('#feedback');
@@ -465,16 +490,21 @@ function resolveQuestion(outcome, matchKind) {
   bump($('#hud-score'));
 
   fb.hidden = false;
-  $('#btn-next').textContent = state.lives > 0 ? '下一題' : '看結果';
+  $('#btn-next').textContent = isRunOver() ? '看結果' : '下一題';
   $('#btn-next').focus();
   state.awaitingNext = true;
+}
+
+/** 這一局結束了沒：競賽是題數用完，一般模式是愛心用完 */
+function isRunOver() {
+  return state.challenge ? state.asked >= state.challenge.rounds : state.lives <= 0;
 }
 
 function proceed() {
   if (!state.awaitingNext) return;
   state.awaitingNext = false;
   $('#feedback').hidden = true;
-  if (state.lives <= 0) gameOver();
+  if (isRunOver()) gameOver();
   else nextQuestion();
 }
 
@@ -483,7 +513,6 @@ function proceed() {
 function startGame() {
   if (!state.allQuestions) return; // 題庫還沒載好
   const mode = document.querySelector('input[name="mode"]:checked').value;
-  const level = document.querySelector('input[name="level"]:checked').value;
   const eras = checkedEras();
 
   if (!eras.length) {
@@ -498,8 +527,21 @@ function startGame() {
     return;
   }
 
+  beginRun(null);
+}
+
+/** 真正開一局。challenge 為 null 就是一般無盡模式。 */
+function beginRun(challenge) {
+  const level = challenge
+    ? challenge.level
+    : document.querySelector('input[name="level"]:checked').value;
+
   Object.assign(state, {
-    queue: spreadBySong(state.bank),
+    challenge,
+    queue: spreadBySong(
+      state.bank,
+      challenge ? Challenge.makeRng(challenge.seed) : nativeRng
+    ),
     cursor: 0,
     score: 0,
     streak: 0,
@@ -523,10 +565,13 @@ function gameOver() {
   showScreen('screen-over');
 
   const best = loadBest();
-  const newRecord = state.score > best.score;
-  best.score = Math.max(best.score, state.score);
-  best.combo = Math.max(best.combo, state.bestStreak);
-  saveBest(best);
+  // 競賽是固定題數，跟無盡模式的分數不能混在一起比
+  const newRecord = !state.challenge && state.score > best.score;
+  if (!state.challenge) {
+    best.score = Math.max(best.score, state.score);
+    best.combo = Math.max(best.combo, state.bestStreak);
+    saveBest(best);
+  }
 
   $('#over-badge').textContent = newRecord ? '🏆 新紀錄！' : '遊戲結束';
   $('#over-score').textContent = state.score;
@@ -554,6 +599,7 @@ function gameOver() {
   }
   missedBox.hidden = state.missed.length === 0;
 
+  renderVsResult();
   refreshBestDisplay();
 }
 
@@ -593,11 +639,194 @@ function refreshBestDisplay() {
   $('#best-combo').textContent = best.combo;
 }
 
+/* ─────────────── 多人競賽 ─────────────── */
+
+const BOARD_KEY = 'bpmf-lyrics:board:';
+
+const playerName = () => ($('#vs-name').value || '').trim().slice(0, 20) || '匿名';
+
+function showVsPanel(which) {
+  const host = which === 'host';
+  $('#panel-host').hidden = !host;
+  $('#panel-join').hidden = host;
+  $('#tab-host').classList.toggle('is-on', host);
+  $('#tab-join').classList.toggle('is-on', !host);
+  $('#tab-host').setAttribute('aria-selected', String(host));
+  $('#tab-join').setAttribute('aria-selected', String(!host));
+}
+
+/** 用首頁目前的設定 ＋ 一個新種子，做出一組比賽代碼 */
+function makeChallenge() {
+  const eras = checkedEras();
+  if (!eras.length) {
+    alert('先在首頁選好年代再建立比賽');
+    return;
+  }
+  const settings = {
+    seed: Challenge.randomSeed(),
+    mode: document.querySelector('input[name="mode"]:checked').value,
+    level: document.querySelector('input[name="level"]:checked').value,
+    eras: eras.map((e) => e.id),
+    rounds: Number(document.querySelector('input[name="vs-rounds"]:checked').value),
+  };
+
+  // 先確認這組設定真的抽得到題目，不然朋友點進來才發現是空的
+  if (!filterBank(state.allQuestions, settings.mode, eras).length) {
+    alert('這個題型加上這些年代沒有題目，換一個再建立');
+    return;
+  }
+
+  const code = Challenge.encodeChallenge(settings);
+  state.pendingChallenge = { ...settings, code };
+
+  $('#vs-code').textContent = code;
+  $('#vs-code-box').hidden = false;
+}
+
+function challengeLink(code) {
+  const url = new URL(location.href);
+  url.hash = '';
+  url.search = `?c=${encodeURIComponent(code)}`;
+  return url.toString();
+}
+
+async function copyText(text, btn) {
+  const done = (ok) => {
+    const original = btn.dataset.label || btn.textContent;
+    btn.dataset.label = original;
+    btn.textContent = ok ? '已複製 ✓' : '複製失敗';
+    setTimeout(() => { btn.textContent = original; }, 1500);
+  };
+  try {
+    await navigator.clipboard.writeText(text);
+    done(true);
+  } catch {
+    done(false);
+  }
+}
+
+/** 把代碼變成一場比賽並開打 */
+function startChallenge(settings) {
+  const eras = ERAS.filter((e) => settings.eras.includes(e.id));
+  const bank = filterBank(state.allQuestions, settings.mode, eras);
+  if (!bank.length) {
+    alert('這組代碼的設定目前沒有題目');
+    return false;
+  }
+  state.bank = bank;
+  beginRun(settings);
+  return true;
+}
+
+function joinChallenge() {
+  const err = $('#vs-join-error');
+  const settings = Challenge.decodeChallenge($('#vs-code-input').value);
+  if (!settings) {
+    err.textContent = '代碼看不懂，再確認一次（長得像 3F2K9Z-1A9）';
+    err.hidden = false;
+    return;
+  }
+  err.hidden = true;
+  startChallenge(settings);
+}
+
+/* ── 排行榜（存在自己的瀏覽器，沒有伺服器） ── */
+
+function loadBoard(code) {
+  try {
+    const raw = localStorage.getItem(BOARD_KEY + code);
+    const list = raw ? JSON.parse(raw) : [];
+    return Array.isArray(list) ? list : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveBoard(code, list) {
+  try { localStorage.setItem(BOARD_KEY + code, JSON.stringify(list)); } catch { /* 無痕就算了 */ }
+}
+
+/** 同一個人重複貼就取比較高的那筆 */
+function mergeResult(list, r) {
+  const out = list.filter((x) => x.name !== r.name);
+  const previous = list.find((x) => x.name === r.name);
+  out.push(previous && previous.score > r.score ? previous : r);
+  return Challenge.rank(out);
+}
+
+function renderBoard(code) {
+  const list = Challenge.rank(loadBoard(code));
+  const table = $('#vs-board');
+  const body = $('#vs-board-body');
+  body.innerHTML = '';
+  table.hidden = list.length === 0;
+
+  list.forEach((r, i) => {
+    const tr = document.createElement('tr');
+    for (const text of [`${i + 1}`, r.name, `${r.score}`, `${r.correct}/${r.asked}`]) {
+      const td = document.createElement('td');
+      td.textContent = text;
+      tr.appendChild(td);
+    }
+    body.appendChild(tr);
+  });
+}
+
+function addPastedResult() {
+  const err = $('#vs-paste-error');
+  const code = state.challenge?.code ?? state.lastChallengeCode;
+  const r = Challenge.decodeResult($('#vs-paste').value);
+
+  if (!r) {
+    err.textContent = '成績碼看不懂，請對方整段重貼一次';
+    err.hidden = false;
+    return;
+  }
+  if (r.code !== code) {
+    err.textContent = '這是別場比賽的成績碼';
+    err.hidden = false;
+    return;
+  }
+  err.hidden = true;
+  $('#vs-paste').value = '';
+  saveBoard(code, mergeResult(loadBoard(code), r));
+  renderBoard(code);
+}
+
+/** 結算畫面的競賽區塊 */
+function renderVsResult() {
+  const box = $('#vs-result');
+  const challenge = state.challenge;
+  box.hidden = !challenge;
+  if (!challenge) return;
+
+  const code = challenge.code;
+  state.lastChallengeCode = code;
+
+  const mine = {
+    code,
+    name: playerName(),
+    score: state.score,
+    correct: state.correct,
+    asked: state.asked,
+    combo: state.bestStreak,
+  };
+
+  $('#vs-result-code').textContent = code;
+  $('#vs-my-result').textContent = Challenge.encodeResult(mine);
+
+  saveBoard(code, mergeResult(loadBoard(code), mine));
+  renderBoard(code);
+}
+
 /* ─────────────── 事件綁定 ─────────────── */
 
 function bindEvents() {
   $('#btn-start').addEventListener('click', startGame);
-  $('#btn-again').addEventListener('click', startGame);
+  $('#btn-again').addEventListener('click', () => {
+    if (state.challenge) beginRun(state.challenge);
+    else startGame();
+  });
   $('#btn-home').addEventListener('click', () => showScreen('screen-start'));
   $('#btn-hint').addEventListener('click', useHint);
   $('#btn-skip').addEventListener('click', skipQuestion);
@@ -644,11 +873,52 @@ function bindEvents() {
   });
 
   // 深色模式
+  $('#btn-vs').addEventListener('click', () => {
+    showVsPanel('host');
+    showScreen('screen-vs');
+  });
+  $('#btn-vs-back').addEventListener('click', () => showScreen('screen-start'));
+  $('#tab-host').addEventListener('click', () => showVsPanel('host'));
+  $('#tab-join').addEventListener('click', () => showVsPanel('join'));
+  $('#btn-make-code').addEventListener('click', makeChallenge);
+  $('#btn-join').addEventListener('click', joinChallenge);
+  $('#btn-host-play').addEventListener('click', () => {
+    if (state.pendingChallenge) startChallenge(state.pendingChallenge);
+  });
+  $('#btn-copy-code').addEventListener('click', (e) =>
+    copyText(state.pendingChallenge.code, e.currentTarget));
+  $('#btn-copy-link').addEventListener('click', (e) =>
+    copyText(challengeLink(state.pendingChallenge.code), e.currentTarget));
+  $('#btn-copy-result').addEventListener('click', (e) =>
+    copyText($('#vs-my-result').textContent, e.currentTarget));
+  $('#btn-add-result').addEventListener('click', addPastedResult);
+  $('#btn-clear-board').addEventListener('click', () => {
+    const code = state.challenge?.code ?? state.lastChallengeCode;
+    if (code) { saveBoard(code, []); renderBoard(code); }
+  });
+
+  $('#vs-code-input').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); joinChallenge(); }
+  });
+  $('#vs-paste').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') { e.preventDefault(); addPastedResult(); }
+  });
+
   $('#theme-toggle').addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
     try { localStorage.setItem('bpmf-theme', next); } catch { /* ignore */ }
   });
+}
+
+/** 有人是點邀請連結進來的：直接跳到加入畫面並把代碼填好 */
+function openInvite() {
+  const code = new URLSearchParams(location.search).get('c');
+  if (!code) return;
+  if (!Challenge.decodeChallenge(code)) return;
+  $('#vs-code-input').value = code.toUpperCase();
+  showVsPanel('join');
+  showScreen('screen-vs');
 }
 
 /* ─────────────── 啟動 ─────────────── */
@@ -669,6 +939,7 @@ async function main() {
     $('#footer-count').textContent = questions.length;
     startBtn.disabled = false;
     startBtn.textContent = '開始遊戲';
+    openInvite();
   } catch (err) {
     console.error(err);
     $('#bank-size').textContent = '載入失敗';

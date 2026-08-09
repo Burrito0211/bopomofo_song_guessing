@@ -81,6 +81,7 @@
       </fieldset>
 
       <button id="btn-start" class="btn btn-primary btn-lg" type="button">開始遊戲</button>
+      <button id="btn-vs" class="btn btn-ghost btn-lg" type="button">👥 多人競賽</button>
 
       <dl class="best-row">
         <div><dt>最高分</dt><dd id="best-score">0</dd></div>
@@ -102,6 +103,67 @@
     </details>
   </section>
 
+  <!-- ─────────── 多人競賽大廳 ─────────── -->
+  <section id="screen-vs" class="screen">
+    <div class="card">
+      <p class="eyebrow">多人競賽</p>
+      <h2 class="vs-title">同一份考卷，比誰分數高</h2>
+      <p class="vs-lead">
+        主持人建立比賽會拿到一組代碼。拿到代碼的人，抽到的題目、順序、
+        開場送的字全都一模一樣，所以比得出高下。各玩各的，不用同時上線。
+      </p>
+
+      <div class="vs-tabs" role="tablist">
+        <button id="tab-host" class="vs-tab is-on" type="button" role="tab" aria-selected="true">我是主持人</button>
+        <button id="tab-join" class="vs-tab" type="button" role="tab" aria-selected="false">我要挑戰</button>
+      </div>
+
+      <!-- 主持人：出題 -->
+      <div id="panel-host" class="vs-panel">
+        <fieldset class="field">
+          <legend>題數</legend>
+          <div class="chips" role="radiogroup" aria-label="題數">
+            <label class="chip"><input type="radio" name="vs-rounds" value="5"><span>5 題</span></label>
+            <label class="chip"><input type="radio" name="vs-rounds" value="10" checked><span>10 題</span></label>
+            <label class="chip"><input type="radio" name="vs-rounds" value="20"><span>20 題</span></label>
+          </div>
+        </fieldset>
+        <p class="vs-note">題型、年代、難度沿用上面首頁的設定。</p>
+        <button id="btn-make-code" class="btn btn-primary btn-lg" type="button">建立比賽</button>
+
+        <div id="vs-code-box" class="vs-code-box" hidden>
+          <p class="vs-code-label">比賽代碼</p>
+          <p id="vs-code" class="vs-code"></p>
+          <div class="actions actions-center">
+            <button id="btn-copy-code" class="btn btn-ghost" type="button">複製代碼</button>
+            <button id="btn-copy-link" class="btn btn-ghost" type="button">複製邀請連結</button>
+          </div>
+          <p class="vs-note">把代碼或連結傳給朋友，然後自己也按下面開始比。</p>
+          <button id="btn-host-play" class="btn btn-primary btn-lg" type="button">我先開始</button>
+        </div>
+      </div>
+
+      <!-- 挑戰者：輸入代碼 -->
+      <div id="panel-join" class="vs-panel" hidden>
+        <label class="vs-field">
+          <span>比賽代碼</span>
+          <input id="vs-code-input" class="answer-input" type="text" placeholder="例如 3F2K9Z-1A9"
+                 autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false">
+        </label>
+        <p id="vs-join-error" class="vs-error" hidden></p>
+        <button id="btn-join" class="btn btn-primary btn-lg" type="button">加入比賽</button>
+      </div>
+
+      <label class="vs-field">
+        <span>你的名字（顯示在排行榜上）</span>
+        <input id="vs-name" class="answer-input" type="text" placeholder="匿名" maxlength="20"
+               autocomplete="off" spellcheck="false">
+      </label>
+
+      <button id="btn-vs-back" class="btn btn-ghost btn-quiet" type="button">回首頁</button>
+    </div>
+  </section>
+
   <!-- ─────────── 遊戲畫面 ─────────── -->
   <section id="screen-game" class="screen">
     <div class="hud">
@@ -113,7 +175,7 @@
         <span class="hud-label">連擊</span>
         <strong id="hud-combo" class="hud-value combo">×1.0</strong>
       </div>
-      <div class="hud-item">
+      <div class="hud-item" id="hud-lives-box">
         <span class="hud-label">愛心</span>
         <strong id="hud-lives" class="hud-value lives" aria-label="剩餘愛心"></strong>
       </div>
@@ -181,6 +243,31 @@
         <ul id="over-missed-list"></ul>
       </div>
 
+      <div id="vs-result" class="vs-result" hidden>
+        <h3>比賽成績</h3>
+        <p class="vs-note">代碼 <span id="vs-result-code" class="vs-code-inline"></span></p>
+
+        <p class="vs-code-label">你的成績碼（傳給主持人）</p>
+        <p id="vs-my-result" class="vs-result-code"></p>
+        <button id="btn-copy-result" class="btn btn-ghost" type="button">複製成績碼</button>
+
+        <table id="vs-board" class="vs-board" hidden>
+          <thead><tr><th>#</th><th>玩家</th><th>分數</th><th>答對</th></tr></thead>
+          <tbody id="vs-board-body"></tbody>
+        </table>
+
+        <label class="vs-field">
+          <span>貼上別人的成績碼，加進排行榜</span>
+          <input id="vs-paste" class="answer-input" type="text" placeholder="貼上成績碼…"
+                 autocomplete="off" spellcheck="false">
+        </label>
+        <p id="vs-paste-error" class="vs-error" hidden></p>
+        <div class="actions actions-center">
+          <button id="btn-add-result" class="btn btn-ghost" type="button">加入排行榜</button>
+          <button id="btn-clear-board" class="btn btn-ghost btn-quiet" type="button">清空排行榜</button>
+        </div>
+      </div>
+
       <div class="actions actions-center">
         <button id="btn-again" class="btn btn-primary btn-lg" type="button">再玩一次</button>
         <button id="btn-home" class="btn btn-ghost" type="button">回首頁</button>
@@ -196,6 +283,7 @@
 
 <!-- 題庫（自動產生）。用一般 script 載入，這樣 file:// 直接開也能玩。 -->
 <script src="data/questions.js"></script>
+<script defer src="assets/challenge.js"></script>
 <script defer src="assets/data.js"></script>
 <script defer src="assets/app.js"></script>
 </body>

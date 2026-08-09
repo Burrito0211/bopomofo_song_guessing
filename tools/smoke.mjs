@@ -55,7 +55,7 @@ const stub = (id) => {
 };
 const el = stub;
 
-const checked = { mode: 'mixed', level: 'normal' };
+const checked = { mode: 'mixed', level: 'normal', 'vs-rounds': '10' };
 // 年代改成複選，用陣列表示目前勾了哪幾個
 let checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
 
@@ -63,7 +63,7 @@ const document = {
   documentElement: makeEl('html'),
   querySelector(sel) {
     if (sel.startsWith('#')) return el(sel.slice(1));
-    const m = sel.match(/input\[name="(\w+)"\]:checked/);
+    const m = sel.match(/input\[name="([\w-]+)"\]:checked/);
     if (m) return { value: checked[m[1]] };
     return stub(`sel:${sel}`);
   },
@@ -79,6 +79,10 @@ const document = {
   createElement: () => makeEl(),
   addEventListener: (t, fn) => (document._handlers ??= {})[t] = fn,
 };
+
+const challengeHost = { btoa, atob, crypto };
+new Function('window', read('assets/challenge.js'))(challengeHost);
+const Challenge = challengeHost.Challenge;
 
 const store = new Map();
 const window = {
@@ -107,10 +111,17 @@ const src = read('assets/app.js')
   .replace("(function () {\n'use strict';", '')
   .replace(/main\(\);\s*\}\)\(\);\s*$/, '');
 
+const location = { href: 'https://example.com/', search: '', hash: '' };
+const navigator = { clipboard: { writeText: async () => {} } };
+
 const app = new Function(
   'document', 'window', 'localStorage', 'setInterval', 'clearInterval', 'performance', 'alert',
-  `${src}\nreturn { main, startGame, nextQuestion, resolveQuestion, proceed, useHint, skipQuestion, updateBankSummary, state, judge };`
-)(document, window, localStorage, setInterval, clearInterval, performance, () => {});
+  'Challenge', 'location', 'navigator', 'setTimeout', 'URLSearchParams',
+  `${src}\nreturn { main, startGame, beginRun, startChallenge, nextQuestion, resolveQuestion, proceed, useHint, skipQuestion, updateBankSummary, renderVsResult, state, judge };`
+)(
+  document, window, localStorage, setInterval, clearInterval, performance, () => {},
+  Challenge, location, navigator, (fn) => fn, URLSearchParams
+);
 
 let failures = 0;
 const test = (name, fn) => {
@@ -328,6 +339,99 @@ test('沒填 youtube 欄位就退成搜尋，歌名有英文也不會壞掉', ()
   }
   checked.mode = 'mixed';
   app.startGame();
+});
+
+/* ── 多人競賽 ── */
+
+const allEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
+const makeCode = (over = {}) =>
+  Challenge.decodeChallenge(
+    Challenge.encodeChallenge({
+      seed: 20260810, mode: 'mixed', level: 'normal', eras: allEras, rounds: 6, ...over,
+    })
+  );
+
+/** 照著代碼跑完一整場，回傳每一題的「題目 id ＋ 送了哪幾個字」 */
+function playChallenge(settings, { useHintOnFirst = false } = {}) {
+  app.startChallenge(settings);
+  const seen = [];
+  for (let i = 0; i < settings.rounds; i++) {
+    seen.push(`${app.state.current.id}|${[...app.state.given].sort((a, b) => a - b).join(',')}`);
+    if (useHintOnFirst && i === 0) { app.useHint(); app.useHint(); }
+    app.resolveQuestion('correct', 'exact');
+    app.proceed();
+  }
+  return seen;
+}
+
+test('同一組代碼，兩個人拿到的題目與送字完全一樣', () => {
+  const settings = makeCode();
+  const playerA = playChallenge(settings);
+  const playerB = playChallenge(settings);
+  assert.deepEqual(playerB, playerA, '同一組代碼卻抽到不一樣的題目，比賽就不公平了');
+  assert.equal(playerA.length, 6);
+});
+
+test('有人買提示也不會害後面的題目跟別人不同步', () => {
+  const settings = makeCode();
+  const noHint = playChallenge(settings);
+  const withHint = playChallenge(settings, { useHintOnFirst: true });
+  assert.deepEqual(withHint, noHint, '買了提示之後題目就跟別人不一樣了');
+});
+
+test('換一組代碼就換一份考卷', () => {
+  const a = playChallenge(makeCode({ seed: 111 }));
+  const b = playChallenge(makeCode({ seed: 222 }));
+  assert.notDeepEqual(b, a);
+});
+
+test('競賽是固定題數，答錯不扣愛心也不會提早結束', () => {
+  const settings = makeCode({ rounds: 6 });
+  app.startChallenge(settings);
+  for (let i = 0; i < 5; i++) {
+    app.resolveQuestion('wrong');
+    assert.equal(app.state.lives, 3, `第 ${i + 1} 題被扣愛心了`);
+    app.proceed();
+    assert.equal(
+      el('screen-over')._classes.has('is-active'), false,
+      `第 ${i + 1} 題就提早結束了`
+    );
+  }
+  app.resolveQuestion('wrong');
+  app.proceed();
+  assert.equal(app.state.asked, 6);
+  assert.equal(el('screen-over')._classes.has('is-active'), true, '第 6 題後沒有進結算');
+});
+
+test('競賽結束會產生成績碼，解回來的內容跟實際成績相符', () => {
+  const settings = makeCode({ rounds: 5 });
+  app.startChallenge(settings);
+  for (let i = 0; i < 5; i++) { app.resolveQuestion('correct', 'exact'); app.proceed(); }
+
+  const decoded = Challenge.decodeResult(el('vs-my-result').textContent);
+  assert.ok(decoded, '沒有產生成績碼');
+  assert.equal(decoded.code, settings.code);
+  assert.equal(decoded.score, app.state.score);
+  assert.equal(decoded.correct, 5);
+  assert.equal(decoded.asked, 5);
+  assert.equal(el('vs-result').hidden, false, '競賽結算區塊沒顯示');
+});
+
+test('一般模式不會跑出競賽的排行榜區塊', () => {
+  app.startGame();
+  app.state.lives = 1;
+  app.resolveQuestion('wrong');
+  app.proceed();
+  assert.equal(el('vs-result').hidden, true, '單人模式不該出現競賽區塊');
+});
+
+test('競賽成績不會汙染單人模式的最高分紀錄', () => {
+  store.delete('bpmf-lyrics:v1');
+  const settings = makeCode({ rounds: 5 });
+  app.startChallenge(settings);
+  for (let i = 0; i < 5; i++) { app.resolveQuestion('correct', 'exact'); app.proceed(); }
+  const best = JSON.parse(store.get('bpmf-lyrics:v1') ?? '{"score":0}');
+  assert.equal(best.score ?? 0, 0, '競賽分數被寫進單人最高分了');
 });
 
 test('題庫用完會自動重洗，連續 300 題不出錯', () => {

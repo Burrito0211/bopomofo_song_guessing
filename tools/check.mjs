@@ -28,6 +28,11 @@ function test(name, fn) {
 const html = read('index.html');
 const appSrc = read('assets/app.js');
 
+// challenge.js 是個 IIFE，把它掛到一個假的 window 上就能單獨測
+const challengeHost = { btoa, atob, crypto };
+new Function('window', read('assets/challenge.js'))(challengeHost);
+const Challenge = challengeHost.Challenge;
+
 /* ── 1. HTML 裡的 id 是否涵蓋 app.js 用到的所有 $('#…') ── */
 console.log('DOM 對照');
 const htmlIds = new Set([...html.matchAll(/id="([^"]+)"/g)].map((m) => m[1]));
@@ -292,6 +297,107 @@ test('每個磚塊都轉得出注音，沒有問號', () => {
   assert.deepEqual([...new Set(unknown)], []);
 });
 
+console.log('\n多人競賽');
+
+test('比賽代碼編碼解碼可以來回', () => {
+  const settings = {
+    seed: 3735928559,
+    mode: 'lyric',
+    level: 'hard',
+    eras: ['classic', 'y2020s'],
+    rounds: 20,
+  };
+  const back = Challenge.decodeChallenge(Challenge.encodeChallenge(settings));
+  assert.equal(back.seed, settings.seed);
+  assert.equal(back.mode, settings.mode);
+  assert.equal(back.level, settings.level);
+  assert.deepEqual(back.eras, settings.eras);
+  assert.equal(back.rounds, settings.rounds);
+});
+
+test('代碼大小寫、空白都不影響，看不懂的回 null', () => {
+  const code = Challenge.encodeChallenge({
+    seed: 42, mode: 'mixed', level: 'normal', eras: ['y2000s'], rounds: 10,
+  });
+  assert.deepEqual(
+    Challenge.decodeChallenge(code.toLowerCase()),
+    Challenge.decodeChallenge(` ${code} `)
+  );
+  for (const bad of ['', 'ABC', '$$$-$$$', 'ZZZ', null, undefined, '1-2']) {
+    assert.equal(Challenge.decodeChallenge(bad), null, `${bad} 應該解不出來`);
+  }
+});
+
+test('一個年代都沒選就編不出代碼', () => {
+  assert.throws(() =>
+    Challenge.encodeChallenge({ seed: 1, mode: 'mixed', level: 'normal', eras: [], rounds: 10 })
+  );
+});
+
+test('題數會被夾在合理範圍內', () => {
+  assert.equal(Challenge.clampRounds(0), Challenge.MIN_ROUNDS);
+  assert.equal(Challenge.clampRounds(9999), Challenge.MAX_ROUNDS);
+  assert.equal(Challenge.clampRounds(12), 12);
+});
+
+test('challenge.js 的年代順序跟 app.js 的 ERAS 一致', () => {
+  // 代碼把年代存成位元遮罩，兩邊順序一旦不同，舊代碼就會解出錯的年代
+  assert.deepEqual(Challenge.ERA_IDS, exposed.ERAS.map((e) => e.id));
+});
+
+test('同一個種子抽出來的題目順序完全一樣', () => {
+  const seed = 20260810;
+  const a = spreadBySong(bank.questions, Challenge.makeRng(seed)).map((q) => q.id);
+  const b = spreadBySong(bank.questions, Challenge.makeRng(seed)).map((q) => q.id);
+  assert.deepEqual(a, b, '同種子卻抽到不一樣的順序，比賽就不公平了');
+});
+
+test('不同種子會抽到不一樣的順序', () => {
+  const a = spreadBySong(bank.questions, Challenge.makeRng(1)).map((q) => q.id);
+  const b = spreadBySong(bank.questions, Challenge.makeRng(2)).map((q) => q.id);
+  assert.notDeepEqual(a, b);
+});
+
+test('同一個種子，每一題送的字也一樣', () => {
+  const seed = 555;
+  for (let i = 0; i < 20; i++) {
+    const q = bank.questions[i * 7];
+    const pick = () =>
+      [...pickFreebies(q, LEVELS.normal.reveal, Challenge.makeRng(Challenge.mixSeed(seed, i)))]
+        .sort((x, y) => x - y);
+    assert.deepEqual(pick(), pick(), `第 ${i} 題送的字不穩定`);
+  }
+});
+
+test('每一題的亂數各自獨立，買提示不會害後面的題目跟別人不同步', () => {
+  // 送字的種子只跟「代碼種子＋題號」有關，跟前面消耗掉多少亂數無關
+  const seed = 777;
+  const forIndex = (i) => Challenge.mixSeed(seed, i);
+  assert.equal(forIndex(3), forIndex(3), 'mixSeed 應該是純函式');
+  const seen = new Set([0, 1, 2, 3, 4, 5, 6, 7].map(forIndex));
+  assert.equal(seen.size, 8, '不同題號應該推出不同的種子');
+});
+
+test('成績碼編碼解碼可以來回，中文名字也不會壞', () => {
+  const r = { code: 'ABC-123', name: '小明', score: 2340, correct: 8, asked: 10, combo: 5 };
+  assert.deepEqual(Challenge.decodeResult(Challenge.encodeResult(r)), r);
+});
+
+test('壞掉的成績碼回 null，不會把排行榜弄爛', () => {
+  for (const bad of ['', 'not-base64!!', Buffer.from('{}').toString('base64'), '@@@']) {
+    assert.equal(Challenge.decodeResult(bad), null, `${bad} 應該解不出來`);
+  }
+});
+
+test('排名依分數高低，同分再比答對題數', () => {
+  const ranked = Challenge.rank([
+    { name: 'a', score: 100, correct: 3 },
+    { name: 'b', score: 300, correct: 5 },
+    { name: 'c', score: 300, correct: 9 },
+  ]);
+  assert.deepEqual(ranked.map((r) => r.name), ['c', 'b', 'a']);
+});
+
 console.log('\n年代分組');
 const { ERAS } = exposed;
 const buckets = ERAS;
@@ -364,6 +470,7 @@ test('網站真正需要的檔案都還在', () => {
   for (const f of [
     'index.html',
     'assets/app.js',
+    'assets/challenge.js',
     'assets/data.js',
     'assets/styles.css',
     'data/questions.js',
