@@ -27,6 +27,7 @@ export function pinyinToInitial(raw) {
     if (p.startsWith(pre)) return zh;
   }
   if (p.startsWith('yu') || p.startsWith('ü')) return 'ㄩ'; // 月 元 雲 魚
+  if (p.startsWith('yong')) return 'ㄩ';                     // 永 用 擁 勇 湧 → ㄩㄥ
   if (p.startsWith('y')) return 'ㄧ';                        // 一 有 要
   if (p.startsWith('w')) return 'ㄨ';                        // 我 五 忘
   for (const [pre, zh] of RIMES) {

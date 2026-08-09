@@ -4,6 +4,7 @@ import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import assert from 'node:assert/strict';
+import { pinyinToInitial } from './zhuyin.mjs';
 
 const CR = String.fromCharCode(13);
 const NL = String.fromCharCode(10);
@@ -213,6 +214,39 @@ test('題目順序不會讓同一首歌連在一起', () => {
     if (ordered[i].songId === ordered[i - 1].songId) adjacent++;
   }
   assert.ok(adjacent === 0, `還有 ${adjacent} 處相鄰同歌`);
+});
+
+/* ── 零聲母的字最容易出錯：拼音的 y/w 跟注音的 ㄧ/ㄨ/ㄩ 不是一對一 ── */
+console.log('\n注音首符');
+
+test('零聲母音節都對應到正確的注音首符', () => {
+  const table = {
+    // y 開頭大多是 ㄧ
+    ya: 'ㄧ', ye: 'ㄧ', yao: 'ㄧ', you: 'ㄧ', yan: 'ㄧ', yin: 'ㄧ',
+    yang: 'ㄧ', ying: 'ㄧ', yi: 'ㄧ', yo: 'ㄧ',
+    // 但 yu- 與 yong 是 ㄩ（yong＝ㄩㄥ，永用擁勇湧）
+    yu: 'ㄩ', yue: 'ㄩ', yuan: 'ㄩ', yun: 'ㄩ', yong: 'ㄩ',
+    // w 開頭都是 ㄨ
+    wa: 'ㄨ', wo: 'ㄨ', wai: 'ㄨ', wei: 'ㄨ', wan: 'ㄨ',
+    wen: 'ㄨ', wang: 'ㄨ', weng: 'ㄨ', wu: 'ㄨ',
+    // 純韻母
+    a: 'ㄚ', o: 'ㄛ', e: 'ㄜ', ai: 'ㄞ', ei: 'ㄟ', ao: 'ㄠ', ou: 'ㄡ',
+    an: 'ㄢ', en: 'ㄣ', ang: 'ㄤ', eng: 'ㄥ', er: 'ㄦ',
+  };
+  const wrong = Object.entries(table)
+    .map(([py, want]) => [py, want, pinyinToInitial(py)])
+    .filter(([, want, got]) => want !== got);
+  assert.deepEqual(
+    wrong.map(([py, want, got]) => `${py} 應該是 ${want}，卻得到 ${got}`),
+    []
+  );
+});
+
+test('有聲母的字取聲母，不會被零聲母規則搶走', () => {
+  assert.equal(pinyinToInitial('zhong'), 'ㄓ');   // 中
+  assert.equal(pinyinToInitial('xiong'), 'ㄒ');   // 兄
+  assert.equal(pinyinToInitial('yun'), 'ㄩ');     // 雲
+  assert.equal(pinyinToInitial('jun'), 'ㄐ');     // 軍
 });
 
 console.log('\n年代分組');
