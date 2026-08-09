@@ -1,0 +1,187 @@
+{
+  "$comment": "題庫原始檔。只需填中文歌詞，注音聲母由 npm run build:questions 自動產生。多音字可用 { text, initials } 手動覆寫。",
+  "songs": [
+    {
+      "id": "jay-qingtian",
+      "title": "晴天",
+      "artist": "周杰倫",
+      "year": 2003,
+      "lines": ["故事的小黃花", "從那年蟬鳴的夏天"]
+    },
+    {
+      "id": "jay-qinghuaci",
+      "title": "青花瓷",
+      "artist": "周杰倫",
+      "year": 2007,
+      "lines": ["天青色等煙雨", "而我在等你"]
+    },
+    {
+      "id": "jay-daoxiang",
+      "title": "稻香",
+      "artist": "周杰倫",
+      "year": 2008,
+      "lines": ["還記得你說家是唯一的城堡"]
+    },
+    {
+      "id": "jay-qilixiang",
+      "title": "七里香",
+      "artist": "周杰倫",
+      "year": 2004,
+      "lines": ["窗外的麻雀", "在電線桿上多嘴"]
+    },
+    {
+      "id": "jay-jiandanai",
+      "title": "簡單愛",
+      "artist": "周杰倫",
+      "year": 2001,
+      "lines": ["說不上為什麼", "我變得很主動"]
+    },
+    {
+      "id": "jay-gaobaiqiqiu",
+      "title": "告白氣球",
+      "artist": "周杰倫",
+      "year": 2016,
+      "lines": ["親愛的愛上你", "從那天起"]
+    },
+    {
+      "id": "mayday-turan",
+      "title": "突然好想你",
+      "artist": "五月天",
+      "year": 2008,
+      "lines": ["突然好想你", "你會在哪裡"]
+    },
+    {
+      "id": "mayday-juejiang",
+      "title": "倔強",
+      "artist": "五月天",
+      "year": 2004,
+      "lines": ["當我和世界不一樣", "那就讓我不一樣"]
+    },
+    {
+      "id": "mayday-wenrou",
+      "title": "溫柔",
+      "artist": "五月天",
+      "year": 2000,
+      "lines": ["走在風中", "今天陽光突然好溫柔"]
+    },
+    {
+      "id": "mayday-zhizu",
+      "title": "知足",
+      "artist": "五月天",
+      "year": 2005,
+      "lines": ["如果我愛上你的笑容"]
+    },
+    {
+      "id": "sunyanzi-yujian",
+      "title": "遇見",
+      "artist": "孫燕姿",
+      "year": 2004,
+      "lines": ["聽見冬天的離開", "我在某年某月醒過來"]
+    },
+    {
+      "id": "sunyanzi-wohuainiande",
+      "title": "我懷念的",
+      "artist": "孫燕姿",
+      "year": 2007,
+      "lines": ["我懷念的是無話不說", "我懷念的是一起做夢"]
+    },
+    {
+      "id": "hebe-xiaoxingyun",
+      "title": "小幸運",
+      "artist": "田馥甄",
+      "year": 2015,
+      "lines": ["我聽見雨滴落在青青草地", "我聽見遠方下課鐘聲響起"]
+    },
+    {
+      "id": "gem-paomo",
+      "title": "泡沫",
+      "artist": "鄧紫棋",
+      "year": 2012,
+      "lines": ["陽光下的泡沫", "是彩色的"]
+    },
+    {
+      "id": "jj-jiangnan",
+      "title": "江南",
+      "artist": "林俊傑",
+      "year": 2004,
+      "lines": ["圈圈圓圓圈圈", "天天年年天天的我"]
+    },
+    {
+      "id": "amei-tinghai",
+      "title": "聽海",
+      "artist": "張惠妹",
+      "year": 1997,
+      "lines": ["聽海哭的聲音", "嘆息著誰又被傷了心"]
+    },
+    {
+      "id": "fish-yongqi",
+      "title": "勇氣",
+      "artist": "梁靜茹",
+      "year": 2000,
+      "lines": ["愛真的需要勇氣", "來面對流言蜚語"]
+    },
+    {
+      "id": "eason-shinian",
+      "title": "十年",
+      "artist": "陳奕迅",
+      "year": 2003,
+      "lines": ["十年之前", "我不認識你"]
+    },
+    {
+      "id": "rene-houlai",
+      "title": "後來",
+      "artist": "劉若英",
+      "year": 1999,
+      "lines": ["後來我總算學會了如何去愛"]
+    },
+    {
+      "id": "jacky-wenbie",
+      "title": "吻別",
+      "artist": "張學友",
+      "year": 1993,
+      "lines": ["我和你吻別", "在無人的街"]
+    },
+    {
+      "id": "leehom-nibuzhidaodeshi",
+      "title": "你不知道的事",
+      "artist": "王力宏",
+      "year": 2010,
+      "lines": ["蝴蝶眨幾次眼睛", "才學會飛行"]
+    },
+    {
+      "id": "sodagreen-xiaoqingge",
+      "title": "小情歌",
+      "artist": "蘇打綠",
+      "year": 2006,
+      "lines": ["這是一首簡單的小情歌", "唱著人們心腸的曲折"]
+    },
+    {
+      "id": "teresa-yueliang",
+      "title": "月亮代表我的心",
+      "artist": "鄧麗君",
+      "year": 1977,
+      "lines": ["你問我愛你有多深", "我愛你有幾分"]
+    },
+    {
+      "id": "lala-shenqibaima",
+      "title": "身騎白馬",
+      "artist": "徐佳瑩",
+      "year": 2009,
+      "lines": ["我身騎白馬走三關", "我改換素衣回中原"]
+    },
+    {
+      "id": "crowd-yihoubiezuopengyou",
+      "title": "以後別做朋友",
+      "artist": "周興哲",
+      "year": 2014,
+      "lines": ["以後別做朋友", "朋友不能牽手"]
+    },
+    {
+      "id": "crowdlu-kezai",
+      "title": "刻在我心底的名字",
+      "artist": "盧廣仲",
+      "year": 2020,
+      "lines": ["刻在我心底的名字", "你藏在塵封的位置"]
+    }
+  ]
+}

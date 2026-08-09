@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ㄅㄆㄇ猜歌 — 注音聲母猜歌詞</title>
+<meta name="description" content="只給注音聲母，你猜得出是哪首歌、哪句歌詞嗎？無盡挑戰模式，比分數、拚連擊。">
+<meta name="theme-color" content="#f7f7fb">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎵</text></svg>">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+  // 在畫面繪製前決定主題，避免深色使用者先閃一下白底
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('bpmf-theme'); } catch (e) {}
+    var dark = saved ? saved === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  })();
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳到主要內容</a>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">ㄅ</span>
+    <span class="brand-text">ㄅㄆㄇ猜歌</span>
+  </div>
+  <button id="theme-toggle" class="icon-btn" type="button" aria-label="切換深色模式" title="切換深色模式">
+    <span class="theme-icon" aria-hidden="true"></span>
+  </button>
+</header>
+
+<main id="main">
+
+  <!-- ─────────── 開始畫面 ─────────── -->
+  <section id="screen-start" class="screen is-active">
+    <div class="hero">
+      <p class="eyebrow">注音聲母 · 無盡挑戰</p>
+      <h1 class="hero-title">只看<span class="hl">聲母</span>，猜出這首歌</h1>
+      <p class="hero-sub">歌詞只留下每個字的注音第一個符號。<br>你的腦袋能自動補完嗎？</p>
+
+      <div class="sample" aria-hidden="true">
+        <div class="tile-row">
+          <span class="tile pop is-given">天</span><span class="tile pop">ㄑ</span><span class="tile pop">ㄙ</span>
+          <span class="tile pop is-given">等</span><span class="tile pop">ㄧ</span><span class="tile pop">ㄩ</span>
+        </div>
+        <p class="sample-hint">＝「天青色等煙雨」　·　虛線格是直接送你的字</p>
+      </div>
+    </div>
+
+    <div class="setup card">
+      <fieldset class="field">
+        <legend>題型</legend>
+        <div class="chips" role="radiogroup" aria-label="題型">
+          <label class="chip"><input type="radio" name="mode" value="mixed" checked><span>混合</span></label>
+          <label class="chip"><input type="radio" name="mode" value="title"><span>猜歌名</span></label>
+          <label class="chip"><input type="radio" name="mode" value="lyric"><span>猜歌詞</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
+        <legend>難度（時間長短 · 開場送幾個字）</legend>
+        <div class="chips" role="radiogroup" aria-label="難度">
+          <label class="chip"><input type="radio" name="level" value="chill"><span>悠閒 60秒 · 送最多字</span></label>
+          <label class="chip"><input type="radio" name="level" value="normal" checked><span>正常 30秒</span></label>
+          <label class="chip"><input type="radio" name="level" value="hard"><span>刺激 15秒 · 送最少字</span></label>
+        </div>
+      </fieldset>
+
+      <button id="btn-start" class="btn btn-primary btn-lg" type="button">開始遊戲</button>
+
+      <dl class="best-row">
+        <div><dt>最高分</dt><dd id="best-score">0</dd></div>
+        <div><dt>最長連擊</dt><dd id="best-combo">0</dd></div>
+        <div><dt>題庫</dt><dd id="bank-size">—</dd></div>
+      </dl>
+    </div>
+
+    <details class="rules card">
+      <summary>玩法說明</summary>
+      <ul>
+        <li>每題會亮出一句歌詞的<strong>注音聲母</strong>，例如「我」只露出 <code>ㄨ</code>、「愛」只露出 <code>ㄞ</code>。</li>
+        <li><strong>猜歌名</strong>：打出這句歌詞是哪首歌。<strong>猜歌詞</strong>：給你歌名，打出完整那句歌詞。</li>
+        <li>每題都會先<strong>直接送你幾個字</strong>（虛線格），猜歌名時還會固定送出這句的開頭，好讓你有個線索起頭。送幾個字由難度決定。</li>
+        <li>答對可累積<strong>連擊倍率</strong>，剩餘時間也會換成分數。答錯或超時扣一顆愛心，三顆用完就結束。</li>
+        <li>卡住時可以用<strong>提示</strong>（會扣該題分數）或<strong>跳過</strong>（連擊歸零，每局限三次）。</li>
+      </ul>
+    </details>
+  </section>
+
+  <!-- ─────────── 遊戲畫面 ─────────── -->
+  <section id="screen-game" class="screen">
+    <div class="hud">
+      <div class="hud-item">
+        <span class="hud-label">分數</span>
+        <strong id="hud-score" class="hud-value">0</strong>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">連擊</span>
+        <strong id="hud-combo" class="hud-value combo">×1.0</strong>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">愛心</span>
+        <strong id="hud-lives" class="hud-value lives" aria-label="剩餘愛心"></strong>
+      </div>
+      <div class="hud-item">
+        <span class="hud-label">第</span>
+        <strong id="hud-index" class="hud-value">1</strong>
+      </div>
+    </div>
+
+    <div class="card question-card">
+      <div class="timer" role="timer" aria-label="剩餘時間">
+        <div id="timer-fill" class="timer-fill"></div>
+      </div>
+
+      <p id="q-prompt" class="q-prompt">這句歌詞出自哪首歌？</p>
+
+      <div id="q-tiles" class="tile-row tile-row-lg" aria-label="歌詞的注音聲母"></div>
+
+      <p id="q-meta" class="q-meta"></p>
+
+      <form id="answer-form" class="answer-form" autocomplete="off">
+        <input id="answer-input" class="answer-input" type="text" inputmode="text"
+               placeholder="輸入答案…" aria-label="你的答案" autocomplete="off"
+               autocorrect="off" autocapitalize="off" spellcheck="false">
+        <button class="btn btn-primary" type="submit">送出</button>
+      </form>
+
+      <div class="actions">
+        <button id="btn-hint" class="btn btn-ghost" type="button">💡 提示 <span class="cost">−50</span></button>
+        <button id="btn-skip" class="btn btn-ghost" type="button">跳過 <span id="skip-left" class="cost">3</span></button>
+        <button id="btn-quit" class="btn btn-ghost btn-quiet" type="button">結束</button>
+      </div>
+
+      <p id="hint-box" class="hint-box" hidden></p>
+    </div>
+
+    <!-- 答題結果 -->
+    <div id="feedback" class="feedback" hidden>
+      <div class="feedback-inner card">
+        <p id="fb-verdict" class="fb-verdict"></p>
+        <p id="fb-answer" class="fb-answer"></p>
+        <p id="fb-song" class="fb-song"></p>
+        <p id="fb-points" class="fb-points"></p>
+        <button id="btn-next" class="btn btn-primary btn-lg" type="button">下一題 <kbd>Enter</kbd></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────── 結算畫面 ─────────── -->
+  <section id="screen-over" class="screen">
+    <div class="card over-card">
+      <p id="over-badge" class="eyebrow">遊戲結束</p>
+      <p class="over-score" id="over-score">0</p>
+      <p class="over-sub" id="over-sub"></p>
+
+      <dl class="stat-grid">
+        <div><dt>答對</dt><dd id="over-correct">0</dd></div>
+        <div><dt>作答</dt><dd id="over-total">0</dd></div>
+        <div><dt>正確率</dt><dd id="over-rate">0%</dd></div>
+        <div><dt>最長連擊</dt><dd id="over-combo">0</dd></div>
+      </dl>
+
+      <div id="over-missed" class="missed" hidden>
+        <h3>沒答出來的題目</h3>
+        <ul id="over-missed-list"></ul>
+      </div>
+
+      <div class="actions actions-center">
+        <button id="btn-again" class="btn btn-primary btn-lg" type="button">再玩一次</button>
+        <button id="btn-home" class="btn btn-ghost" type="button">回首頁</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>題庫共 <span id="footer-count">—</span> 題 · 歌詞片段僅作猜謎用途，版權屬原作者。</p>
+</footer>
+
+<!-- 題庫（自動產生）。用一般 script 載入，這樣 file:// 直接開也能玩。 -->
+<script src="data/questions.js"></script>
+<script defer src="assets/data.js"></script>
+<script defer src="assets/app.js"></script>
+</body>
+</html>
