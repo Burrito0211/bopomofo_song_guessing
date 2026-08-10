@@ -156,6 +156,19 @@ test('短答案不做模糊比對，免得亂猜也中', () => {
   assert.equal(r.correct, false);
 });
 
+test('同音字在即時搶答一樣算對', () => {
+  const room = createRoom({ code: '7K2P', rounds: 3, hostId: 'host', now: 0 });
+  join(room, { id: 'host', name: 'host', now: 0 });
+  join(room, { id: 'a', name: 'a', now: 0 });
+  startRound(room, {
+    question: { ...QUESTION, line: '他說了所有的謊', answer: '他說了所有的謊', accept: ['他說了所有的謊'] },
+    seconds: 30, now: 1000, byId: 'host',
+  });
+  const r = answer(room, 'a', '她說了所有的謊', 2000);
+  assert.equal(r.correct, true, '伺服器端也要吃同音字容忍');
+  assert.equal(r.verdict, 'exact', '同音字應該算完全正確，不是差一個字');
+});
+
 test('標點與空白不算錯', () => {
   const room = roomInPlay();
   const r = answer(room, 'a', '　天青色，等煙雨！', 2000);

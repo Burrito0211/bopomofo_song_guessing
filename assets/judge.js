@@ -19,6 +19,56 @@ function normalize(str) {
     .trim();
 }
 
+/**
+ * 同音字與異體字容忍。
+ *
+ * 玩家是「聽過這首歌」在回想歌詞，不是在默寫課文——聽到 tā 的時候，
+ * 你不知道歌詞裡寫的是他還是她；的得地、在再、那哪也一樣。這些字唸起來一樣，
+ * 注音聲母當然也一樣，所以放寬不會讓題目變簡單，只是不再因為選錯字而被判死。
+ *
+ * 每一組的第一個字當代表，比對前全部換成代表字。兩邊都換，所以本來就對的答案
+ * 一定還是對的，只會多接受一些寫法，不會少接受。
+ */
+const SAME_SOUND = [
+  '他她牠它祂',   // tā
+  '你妳',         // nǐ
+  '的得地',       // de
+  '在再',         // zài
+  '那哪',         // nà / nǎ
+  '做作',         // zuò
+  '里裡裏',       // lǐ，裡裏是異體
+  '台臺檯',       // tái
+  '麼么',
+  '啊阿呀',       // 語助詞，寫法很隨意
+  '喔噢哦',
+  '唸念',
+  '佈布',
+  '著着',
+  '份分',
+  '蹟跡',
+  '為爲',
+  '嗎嘛',
+  '祕秘',
+  '癡痴',
+  '污汙',
+  '遊游',
+  '卷捲',
+  '雕彫',
+  '豔艷',
+];
+
+const FOLD = new Map();
+for (const group of SAME_SOUND) {
+  for (const ch of group) FOLD.set(ch, group[0]);
+}
+
+/** 把同音／異體字換成該組的代表字 */
+function fold(str) {
+  let out = '';
+  for (const ch of str) out += FOLD.get(ch) ?? ch;
+  return out;
+}
+
 /** 編輯距離，用來容忍一個錯字 */
 function editDistance(a, b) {
   if (a === b) return 0;
@@ -44,11 +94,11 @@ function editDistance(a, b) {
  * 六個字以下不做模糊比對，不然「晴天／晴大」也會被算對。
  */
 function judge(input, acceptList) {
-  const guess = normalize(input);
+  const guess = fold(normalize(input));
   if (!guess) return 'wrong';
   let best = 'wrong';
   for (const candidate of acceptList) {
-    const target = normalize(candidate);
+    const target = fold(normalize(candidate));
     if (!target) continue;
     if (guess === target) return 'exact';
     if (target.length >= 6 && editDistance(guess, target) <= 1) best = 'close';
@@ -58,6 +108,6 @@ function judge(input, acceptList) {
 
 const isCorrect = (verdict) => verdict === 'exact' || verdict === 'close';
 
-global.Judge = { normalize, editDistance, judge, isCorrect };
+global.Judge = { normalize, fold, editDistance, judge, isCorrect, SAME_SOUND };
 
 })(typeof window !== 'undefined' ? window : globalThis);

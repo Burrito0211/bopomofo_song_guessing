@@ -146,6 +146,55 @@ test('完全不對 → wrong', () => {
   assert.equal(judge('', ['晴天']), 'wrong');
 });
 
+test('同音字不算錯：他／她、啊／阿', () => {
+  assert.equal(judge('她', ['他']), 'exact');
+  assert.equal(judge('他', ['她']), 'exact');
+  assert.equal(judge('阿', ['啊']), 'exact');
+  assert.equal(judge('妳', ['你']), 'exact');
+});
+
+test('的得地、在再、那哪這種最常寫錯的也放過', () => {
+  assert.equal(judge('我得愛', ['我的愛']), 'exact');
+  assert.equal(judge('現再', ['現在']), 'exact');
+  assert.equal(judge('哪一天', ['那一天']), 'exact');
+  assert.equal(judge('做夢', ['作夢']), 'exact');
+});
+
+test('異體字也算對：裡／裏、台／臺、著／着', () => {
+  assert.equal(judge('心裏', ['心裡']), 'exact');
+  assert.equal(judge('臺北', ['台北']), 'exact');
+  assert.equal(judge('唱着', ['唱著']), 'exact');
+});
+
+test('不同音的字還是算錯，沒有放寬過頭', () => {
+  assert.equal(judge('晴大', ['晴天']), 'wrong');
+  assert.equal(judge('稻香', ['晴天']), 'wrong');
+  assert.equal(judge('我的貓', ['我的狗']), 'wrong');
+});
+
+test('同音容忍跟錯字容忍可以疊加', () => {
+  // 她→他 是同音，最後一個字才是真的打錯，長句仍算 close
+  assert.equal(judge('她說了所有的謊', ['他說了所有的話']), 'close');
+});
+
+test('每組同音字都以第一個字為代表，不會互相打架', () => {
+  const { fold, SAME_SOUND } = judgeHost.Judge;
+  for (const group of SAME_SOUND) {
+    const rep = [...group][0];
+    for (const ch of group) {
+      assert.equal(fold(ch), rep, `${ch} 應該被換成 ${rep}`);
+    }
+  }
+  // 一個字不能同時出現在兩組裡，不然代表字會不穩定
+  const seen = new Map();
+  for (const group of SAME_SOUND) {
+    for (const ch of group) {
+      assert.equal(seen.has(ch), false, `${ch} 同時出現在「${seen.get(ch)}」與「${group}」`);
+      seen.set(ch, group);
+    }
+  }
+});
+
 test('別名也接受', () => {
   assert.equal(judge('我怀念的', ['我懷念的', '我怀念的']), 'exact');
 });
@@ -198,6 +247,13 @@ test('難度越低送越多字', () => {
 });
 
 console.log('\n題目資料');
+
+test('放寬只會多接受，不會把本來對的變成錯的', () => {
+  // 兩邊都做同樣的代換，所以原本 exact 的一定還是 exact
+  for (const q of bank.questions) {
+    assert.equal(judge(q.answer, q.accept), 'exact', `${q.id} 原本的答案被判錯了`);
+  }
+});
 
 test('每題都有答案、磚塊、難度', () => {
   for (const q of bank.questions) {
