@@ -114,12 +114,51 @@
       </p>
 
       <div class="vs-tabs" role="tablist">
-        <button id="tab-host" class="vs-tab is-on" type="button" role="tab" aria-selected="true">我是主持人</button>
-        <button id="tab-join" class="vs-tab" type="button" role="tab" aria-selected="false">我要挑戰</button>
+        <button id="tab-live" class="vs-tab is-on" type="button" role="tab" aria-selected="true">即時搶答</button>
+        <button id="tab-host" class="vs-tab" type="button" role="tab" aria-selected="false">出考卷</button>
+        <button id="tab-join" class="vs-tab" type="button" role="tab" aria-selected="false">貼代碼</button>
       </div>
 
-      <!-- 主持人：出題 -->
-      <div id="panel-host" class="vs-panel">
+      <!-- 即時搶答：開房等人進來，每題最快答對的人拿分 -->
+      <div id="panel-live" class="vs-panel">
+        <p class="vs-note">
+          主持人開房，大家用房號進來，人到齊了主持人按開始。
+          每一題<strong>只有第一個答對的人拿分</strong>，答錯不扣分，可以一直猜到有人搶到。
+          錯字容忍照舊：六個字以上差一個字仍算對（分數打八折）。
+        </p>
+
+        <fieldset class="field">
+          <legend>題數（開房的人決定）</legend>
+          <div class="chips" role="radiogroup" aria-label="題數">
+            <label class="chip"><input type="radio" name="live-rounds" value="5"><span>5 題</span></label>
+            <label class="chip"><input type="radio" name="live-rounds" value="10" checked><span>10 題</span></label>
+            <label class="chip"><input type="radio" name="live-rounds" value="20"><span>20 題</span></label>
+          </div>
+        </fieldset>
+
+        <label class="vs-field">
+          <span>你的名字</span>
+          <input id="live-name" class="answer-input" type="text" placeholder="玩家" maxlength="12"
+                 autocomplete="off" spellcheck="false">
+        </label>
+
+        <button id="btn-live-host" class="btn btn-primary btn-lg" type="button">開一間房</button>
+
+        <label class="vs-field">
+          <span>或是輸入朋友給你的房號</span>
+          <input id="live-code-input" class="answer-input" type="text" placeholder="例如 7K2P" maxlength="4"
+                 autocomplete="off" autocapitalize="characters" spellcheck="false">
+        </label>
+        <button id="btn-live-join" class="btn btn-ghost btn-lg" type="button">加入房間</button>
+
+        <p class="vs-note">
+          即時搶答需要伺服器排先後順序，所以要先部署 Worker（<code>npx wrangler deploy</code>）。
+          直接用 <code>file://</code> 打開或還沒部署的話，這裡會連不上——下面兩個分頁不用伺服器。
+        </p>
+      </div>
+
+      <!-- 主持人：出題（非即時，各玩各的） -->
+      <div id="panel-host" class="vs-panel" hidden>
         <fieldset class="field">
           <legend>題數</legend>
           <div class="chips" role="radiogroup" aria-label="題數">
@@ -162,6 +201,63 @@
       </label>
 
       <button id="btn-vs-back" class="btn btn-ghost btn-quiet" type="button">回首頁</button>
+    </div>
+  </section>
+
+  <!-- ─────────── 即時搶答 ─────────── -->
+  <section id="screen-live" class="screen">
+    <div class="card">
+      <div class="live-top">
+        <div>
+          <p class="vs-code-label">房號</p>
+          <p id="live-code" class="vs-code"></p>
+        </div>
+        <div class="live-round-box">
+          <span id="live-round" class="live-round"></span>
+        </div>
+      </div>
+
+      <p id="live-status" class="vs-error" hidden></p>
+
+      <ol id="live-players" class="live-players"></ol>
+
+      <div id="live-waiting" class="live-waiting" hidden>
+        <p class="vs-note">把房號告訴朋友，人到了就可以開始。</p>
+        <p id="live-host-hint" class="vs-note" hidden>等主持人按開始…</p>
+      </div>
+
+      <button id="btn-live-start" class="btn btn-primary btn-lg" type="button" hidden>開始比賽</button>
+
+      <div id="live-question" class="live-question" hidden>
+        <div class="timer" role="timer" aria-label="剩餘時間">
+          <div id="live-timer-fill" class="timer-fill"></div>
+        </div>
+
+        <p id="live-prompt" class="q-prompt"></p>
+        <div id="live-tiles" class="tile-row tile-row-lg" aria-label="歌詞的注音聲母"></div>
+
+        <form id="live-answer-form" class="answer-form" autocomplete="off">
+          <input id="live-answer" class="answer-input" type="text" placeholder="搶答…"
+                 aria-label="你的答案" autocomplete="off" autocorrect="off"
+                 autocapitalize="off" spellcheck="false">
+          <button class="btn btn-primary" type="submit">搶答</button>
+        </form>
+
+        <p id="live-judged" class="live-judged" hidden></p>
+
+        <div id="live-reveal" class="live-reveal" hidden>
+          <p id="live-winner" class="live-winner"></p>
+          <p id="live-answer-text" class="fb-answer"></p>
+          <p id="live-song" class="fb-song"></p>
+        </div>
+      </div>
+
+      <div id="live-over" class="live-over" hidden>
+        <p class="eyebrow">比賽結束</p>
+        <p class="vs-note">上面就是最終排名。</p>
+      </div>
+
+      <button id="btn-live-leave" class="btn btn-ghost btn-quiet" type="button">離開房間</button>
     </div>
   </section>
 
@@ -296,7 +392,9 @@
 
 <!-- 題庫（自動產生）。用一般 script 載入，這樣 file:// 直接開也能玩。 -->
 <script src="data/questions.js"></script>
+<script defer src="assets/judge.js"></script>
 <script defer src="assets/challenge.js"></script>
+<script defer src="assets/live.js"></script>
 <script defer src="assets/data.js"></script>
 <script defer src="assets/app.js"></script>
 </body>

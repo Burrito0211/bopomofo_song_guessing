@@ -15,7 +15,8 @@
 ```bash
 npm install          # 兩個開發用套件（pinyin-pro、opencc-js），網站本身不依賴它們
 npm run dev          # http://localhost:5173
-npm test             # 跑檢查 + 整局流程煙霧測試
+npm test             # 跑檢查 + 房間狀態機 + 整局流程煙霧測試
+npm run check:room   # 只跑即時競賽的房間邏輯
 ```
 
 想直接玩也可以：**雙擊 `index.html`**。題庫是用一般 `<script>` 掛上去的，
@@ -29,7 +30,12 @@ npm test             # 跑檢查 + 整局流程煙霧測試
 index.html                  介面
 assets/styles.css           樣式（含深色模式）
 assets/app.js               遊戲邏輯
-assets/challenge.js         多人競賽的純邏輯（種子亂數、比賽代碼、成績碼）
+assets/judge.js             ★ 答案判定 — 瀏覽器與 Worker 共用同一份
+assets/challenge.js         出考卷模式的純邏輯（種子亂數、比賽代碼、成績碼）
+assets/live.js              即時搶答的前端（WebSocket）
+worker/index.js             Worker 進入點：/api/room/<房號>/ws → Durable Object
+worker/room.js              一間房：WebSocket 收送、計時、挑題
+worker/room-logic.js        ★ 房間狀態機（純函式，tools/check-room.mjs 有測）
 assets/data.js              ★ 題庫存取層 — 之後要換 Supabase 只改這一個檔
 data/songs.source.json      ★ 你要維護的檔案：歌名 + 歌詞
 data/questions.json         自動產生的題庫
@@ -140,7 +146,37 @@ npm run audit -- --all # 連只有一種聲母的多音字也列出來
 
 ## 多人競賽
 
-沒有後端也能比賽：**同一組代碼＝同一份考卷**。
+兩種玩法：**即時搶答**要部署 Worker，**出考卷**不用後端。
+
+### 即時搶答（主持人開房，最快答對的拿分）
+
+```
+主持人  開一間房 → 拿到房號 7K2P → 等人進來 → 按開始
+挑戰者  輸入房號進房 → 名字出現在名單上 → 等主持人開始
+每一題  大家同時看到同一題 → 誰先答對誰拿分 → 公布答案 → 下一題
+```
+
+- **只有第一個答對的人拿分**，答越快分數越高（基本 100 ＋ 最多 60 的速度分）。
+- 答錯不扣分，也不會被鎖住，可以一直猜到有人搶到或時間到。
+- **錯字容忍照舊**：六個字以上差一個字仍算對，但分數打八折。
+- 判定由**伺服器**做。搶答期間答案根本不會傳到瀏覽器，所以開 devtools 也看不到——
+  這順便解決了單人模式那個「答案都在前端」的問題。
+
+#### 要先部署
+
+即時搶答需要有人排先後順序，這件事只有伺服器做得到，所以多了一支 Worker
+（`worker/`）跟一個 Durable Object（一間房一個實例，用房號當 id）。
+
+```bash
+npx wrangler deploy
+```
+
+沒部署、或直接用 `file://` 打開的話，這個分頁會連不上——下面那個玩法不用伺服器。
+Durable Objects 需要 Workers 付費方案；只想玩下面那種就不用管。
+
+### 出考卷（不用後端）
+
+**同一組代碼＝同一份考卷**，各玩各的再比分數。
 
 ```
 主持人  選好題型/年代/難度/題數 → 建立比賽 → 拿到 4 碼代碼 7K2P

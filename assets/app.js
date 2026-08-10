@@ -47,50 +47,9 @@ const STORE_KEY = 'bpmf-lyrics:v1';
 
 const $ = (sel) => document.querySelector(sel);
 
-/** 比對答案前先洗掉標點、空白、全形、大小寫的差異 */
-function normalize(str) {
-  return String(str)
-    .normalize('NFKC')          // 全形英數 → 半形
-    .toLowerCase()
-    .replace(/[\s\p{P}\p{S}]/gu, '')
-    .trim();
-}
-
-/** 編輯距離，用來容忍一個錯字 */
-function editDistance(a, b) {
-  if (a === b) return 0;
-  if (!a.length || !b.length) return Math.max(a.length, b.length);
-  let prev = Array.from({ length: b.length + 1 }, (_, i) => i);
-  for (let i = 1; i <= a.length; i++) {
-    const curr = [i];
-    for (let j = 1; j <= b.length; j++) {
-      curr[j] = Math.min(
-        prev[j] + 1,
-        curr[j - 1] + 1,
-        prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
-      );
-    }
-    prev = curr;
-  }
-  return prev[b.length];
-}
-
-/**
- * 判斷答案。回傳 'exact' | 'close' | 'wrong'。
- * 'close' 是差一個字，照樣算對，但會提醒正確寫法。
- */
-function judge(input, acceptList) {
-  const guess = normalize(input);
-  if (!guess) return 'wrong';
-  let best = 'wrong';
-  for (const candidate of acceptList) {
-    const target = normalize(candidate);
-    if (!target) continue;
-    if (guess === target) return 'exact';
-    if (target.length >= 6 && editDistance(guess, target) <= 1) best = 'close';
-  }
-  return best;
-}
+// 答案判定跟伺服器端共用同一份實作（assets/judge.js）。即時競賽必須由伺服器
+// 判定誰先答對，兩邊規則不一致的話就會出現「我明明打對了卻沒拿到分」。
+const { normalize, editDistance, judge } = window.Judge;
 
 // 平常用 Math.random，競賽時換成由代碼種子推出來的亂數，
 // 這樣同一組代碼的每個人抽到的題目與送字才會一模一樣。
@@ -724,14 +683,16 @@ const BOARD_KEY = 'bpmf-lyrics:board:';
 
 const playerName = () => ($('#vs-name').value || '').trim().slice(0, 20) || '匿名';
 
+const VS_TABS = ['live', 'host', 'join'];
+
 function showVsPanel(which) {
-  const host = which === 'host';
-  $('#panel-host').hidden = !host;
-  $('#panel-join').hidden = host;
-  $('#tab-host').classList.toggle('is-on', host);
-  $('#tab-join').classList.toggle('is-on', !host);
-  $('#tab-host').setAttribute('aria-selected', String(host));
-  $('#tab-join').setAttribute('aria-selected', String(!host));
+  const active = VS_TABS.includes(which) ? which : 'live';
+  for (const name of VS_TABS) {
+    const on = name === active;
+    $(`#panel-${name}`).hidden = !on;
+    $(`#tab-${name}`).classList.toggle('is-on', on);
+    $(`#tab-${name}`).setAttribute('aria-selected', String(on));
+  }
 }
 
 /** 用首頁目前的設定 ＋ 一個新種子，做出一組比賽代碼 */
@@ -954,12 +915,14 @@ function bindEvents() {
 
   // 深色模式
   $('#btn-vs').addEventListener('click', () => {
-    showVsPanel('host');
+    showVsPanel('live');
     showScreen('screen-vs');
   });
   $('#btn-vs-back').addEventListener('click', () => showScreen('screen-start'));
+  $('#tab-live').addEventListener('click', () => showVsPanel('live'));
   $('#tab-host').addEventListener('click', () => showVsPanel('host'));
   $('#tab-join').addEventListener('click', () => showVsPanel('join'));
+  if (window.Live) window.Live.bind();
   $('#btn-make-code').addEventListener('click', makeChallenge);
   $('#btn-join').addEventListener('click', joinChallenge);
   $('#btn-host-play').addEventListener('click', () => {

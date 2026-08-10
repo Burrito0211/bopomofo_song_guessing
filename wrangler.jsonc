@@ -1,9 +1,22 @@
 {
-  // 純靜態網站：只有 assets，沒有伺服器端程式碼，所以不需要 "main"。
-  // 要排除哪些檔案不上傳，見同目錄的 .assetsignore。
+  // 網站本體還是靜態檔案；多出來的 Worker 只為了即時競賽。
+  // 「第一個答對的人拿分」需要有人排先後順序，那件事只有伺服器做得到。
   "name": "guess-the-lyrics-by-initial-consonant",
   "compatibility_date": "2026-08-07",
+  "main": "worker/index.js",
   "assets": {
-    "directory": "."
-  }
+    "directory": ".",
+    "binding": "ASSETS"
+  },
+  "durable_objects": {
+    "bindings": [
+      { "name": "ROOM", "class_name": "Room" }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["Room"]
+    }
+  ]
 }

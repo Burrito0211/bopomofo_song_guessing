@@ -670,6 +670,44 @@ kbd {
 .vs-board td:nth-child(4) { font-variant-numeric: tabular-nums; }
 .vs-board tbody tr:first-child td { font-weight: 800; color: var(--accent); }
 
+/* ── 即時搶答 ── */
+.live-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.live-round-box { text-align: right; }
+.live-round { font-size: .85rem; font-weight: 700; color: var(--ink-3); }
+
+.live-players { list-style: none; margin: 1rem 0; padding: 0; display: grid; gap: .3rem; }
+.live-player {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: .75rem;
+  padding: .45rem .7rem;
+  border-radius: var(--r-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  font-size: .9rem;
+}
+.live-player-name { font-weight: 700; }
+.live-player-score { font-variant-numeric: tabular-nums; font-weight: 800; color: var(--accent); }
+.live-player.is-off { opacity: .45; }
+.live-player.is-winner { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+.live-players li:first-child .live-player-score { font-size: 1.05rem; }
+
+.live-waiting { text-align: center; }
+.live-question { margin-top: .5rem; }
+.live-judged {
+  text-align: center;
+  font-weight: 800;
+  margin: .6rem 0 0;
+  font-size: .95rem;
+}
+.live-judged.good { color: var(--accent); }
+.live-judged.bad { color: #d64550; }
+
+.live-reveal { text-align: center; margin-top: .8rem; }
+.live-winner { font-weight: 800; font-size: 1rem; margin-bottom: .3rem; }
+.live-over { text-align: center; margin: 1rem 0; }
+
 /* ── 頁尾 ── */
 .footer {
   text-align: center;

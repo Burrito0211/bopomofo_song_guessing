@@ -111,9 +111,13 @@ const inner = appSrc
   .replace(/main\(\);\s*\}\)\(\);\s*$/, '')
   .replace("const loadQuestions = () => window.GameData.loadQuestions();", '');
 
+const judgeHost = {};
+new Function('window', read('assets/judge.js'))(judgeHost);
+
 const exposed = new Function(
+  'window',
   `${inner}\nreturn { normalize, judge, editDistance, hanChars, spreadBySong, pickFreebies, matchedPairs, LEVELS, ERAS };`
-)();
+)(judgeHost);
 
 console.log('\n答案判定');
 const { normalize, judge, hanChars, spreadBySong } = exposed;
@@ -570,6 +574,11 @@ function walk(dir, base = '') {
 
 const uploaded = walk('');
 
+test('worker 原始碼不會被當成網頁上傳', () => {
+  const leaked = uploaded.filter((f) => f.startsWith('worker/'));
+  assert.deepEqual(leaked, [], 'worker/ 由 wrangler 打包成 Worker，不該再當靜態檔案上傳一份');
+});
+
 test('node_modules 不會被上傳（就是它害部署失敗的）', () => {
   const leaked = uploaded.filter((f) => f.startsWith('node_modules/'));
   assert.equal(leaked.length, 0, `還會上傳 ${leaked.length} 個 node_modules 檔案`);
@@ -586,7 +595,9 @@ test('網站真正需要的檔案都還在', () => {
   for (const f of [
     'index.html',
     'assets/app.js',
+    'assets/judge.js',
     'assets/challenge.js',
+    'assets/live.js',
     'assets/data.js',
     'assets/styles.css',
     'data/questions.js',

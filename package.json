@@ -8,10 +8,11 @@
     "build:questions": "node tools/build-questions.mjs",
     "dev": "node tools/serve.mjs",
     "check": "node tools/check.mjs",
+    "check:room": "node tools/check-room.mjs",
     "audit": "node tools/audit-polyphones.mjs",
     "export:supabase": "node tools/export-to-supabase.mjs",
     "smoke": "node tools/smoke.mjs",
-    "test": "node tools/check.mjs && node tools/smoke.mjs"
+    "test": "node tools/check.mjs && node tools/check-room.mjs && node tools/smoke.mjs"
   },
   "devDependencies": {
     "opencc-js": "^1.4.1",

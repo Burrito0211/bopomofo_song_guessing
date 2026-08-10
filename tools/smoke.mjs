@@ -91,8 +91,12 @@ const challengeHost = { btoa, atob, crypto };
 new Function('window', read('assets/challenge.js'))(challengeHost);
 const Challenge = challengeHost.Challenge;
 
+const judgeHost = {};
+new Function('window', read('assets/judge.js'))(judgeHost);
+
 const store = new Map();
 const window = {
+  Judge: judgeHost.Judge,
   GameData: {
     loadQuestions: async () => {
       const raw = JSON.parse(read('data/questions.json'));

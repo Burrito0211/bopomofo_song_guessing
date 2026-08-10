@@ -9,6 +9,9 @@ node_modules
 .git
 .github
 
+# 伺服器端程式碼：由 wrangler 打包成 Worker，不是要給人下載的網頁
+worker
+
 # 開發與建置工具，上線不需要
 tools
 supabase
