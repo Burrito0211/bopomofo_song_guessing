@@ -121,7 +121,7 @@ test('用 hidden 控制的元素不會被 class 的 display 蓋掉', () => {
 const inner = appSrc
   .replace("(function () {\n'use strict';", '')
   .replace(/main\(\);\s*\}\)\(\);\s*$/, '')
-  .replace("const loadQuestions = () => window.GameData.loadQuestions();", '');
+  .replace('const loadQuestions = (lang) => window.GameData.loadQuestions(lang);', '');
 
 const judgeHost = {};
 new Function('window', read('assets/judge.js'))(judgeHost);

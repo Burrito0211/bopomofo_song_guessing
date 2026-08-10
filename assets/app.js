@@ -1,6 +1,7 @@
 (function () {
 'use strict';
-const loadQuestions = () => window.GameData.loadQuestions();
+// 記得把語言傳下去——少了這個參數，換語言會安靜地一直載中文題庫
+const loadQuestions = (lang) => window.GameData.loadQuestions(lang);
 
 /* ─────────────── 設定 ─────────────── */
 

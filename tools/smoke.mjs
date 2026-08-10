@@ -99,8 +99,10 @@ const store = new Map();
 const window = {
   Judge: judgeHost.Judge,
   GameData: {
-    loadQuestions: async () => {
-      const raw = JSON.parse(read('data/questions.json'));
+    loadQuestions: async (lang = 'zh') => {
+      const raw = JSON.parse(
+        read(lang === 'ja' ? 'data/questions.ja.json' : 'data/questions.json')
+      );
       return { questions: raw.questions, songCount: raw.songCount };
     },
   },
@@ -129,7 +131,7 @@ const navigator = { clipboard: { writeText: async () => {} } };
 const app = new Function(
   'document', 'window', 'localStorage', 'setInterval', 'clearInterval', 'performance', 'alert',
   'Challenge', 'location', 'navigator', 'setTimeout', 'URLSearchParams',
-  `${src}\nreturn { main, startGame, beginRun, startChallenge, nextQuestion, resolveQuestion, proceed, useHint, skipQuestion, updateBankSummary, renderVsResult, state, judge, normalize };`
+  `${src}\nreturn { main, startGame, beginRun, startChallenge, nextQuestion, resolveQuestion, proceed, useHint, skipQuestion, updateBankSummary, renderVsResult, switchLanguage, state, judge, normalize };`
 )(
   document, window, localStorage, setInterval, clearInterval, performance, () => {},
   Challenge, location, navigator, (fn) => fn, URLSearchParams
@@ -138,6 +140,11 @@ const app = new Function(
 let failures = 0;
 const test = (name, fn) => {
   try { fn(); console.log(`  ✓ ${name}`); }
+  catch (e) { failures++; console.log(`  ✗ ${name}\n      ${e.message}`); }
+};
+
+const testAsync = async (name, fn) => {
+  try { await fn(); console.log(`  ✓ ${name}`); }
   catch (e) { failures++; console.log(`  ✗ ${name}\n      ${e.message}`); }
 };
 
@@ -551,6 +558,47 @@ test('計時器歸零會判超時', () => {
   clock = 999999;             // 時間快轉
   tick();
   assert.equal(app.state.lives, 2, '超時沒扣命');
+});
+
+/* ── 換語言 ── */
+
+await testAsync('切換語言會把整份題庫換掉', async () => {
+  checked.lang = 'zh';
+  await app.switchLanguage('zh');
+  const zh = app.state.allQuestions;
+  assert.ok(zh.length > 0, '中文題庫是空的');
+  assert.ok(zh.every((q) => q.lang !== 'ja'), '中文題庫混進日文題');
+
+  checked.lang = 'ja';
+  await app.switchLanguage('ja');
+  const ja = app.state.allQuestions;
+  assert.ok(ja.length > 0, '日文題庫是空的');
+  assert.ok(ja.every((q) => q.lang === 'ja'), '切成日文之後拿到的還是中文題');
+  assert.notEqual(ja.length, zh.length, '兩份題庫題數一樣，八成根本沒換');
+
+  checked.lang = 'zh';
+  await app.switchLanguage('zh');
+  assert.ok(app.state.allQuestions.every((q) => q.lang !== 'ja'), '切不回中文');
+});
+
+await testAsync('日文題目真的用詞磚，而且開得起來', async () => {
+  checked.lang = 'ja';
+  await app.switchLanguage('ja');
+  app.startGame();
+
+  const q = app.state.current;
+  assert.equal(q.lang, 'ja');
+  const words = q.tiles.filter((t) => t.k === 'word');
+  assert.ok(words.length > 0, '日文題應該是詞磚');
+  assert.ok(words.every((t) => t.w), '詞磚要帶原本的詞');
+
+  // 送字與提示都要照「詞」來算，不能還在數漢字
+  assert.ok(app.state.given.size < words.length, '不能整句送完');
+  assert.ok(el('q-tiles').children.length > 0, '磚塊沒畫出來');
+
+  checked.lang = 'zh';
+  await app.switchLanguage('zh');
+  app.startGame();
 });
 
 console.log(failures ? `\n✗ ${failures} 項失敗` : '\n✅ 全部通過');
