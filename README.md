@@ -37,7 +37,10 @@ worker/index.js             Worker 進入點：/api/room/<房號>/ws → Durable
 worker/room.js              一間房：WebSocket 收送、計時、挑題
 worker/room-logic.js        ★ 房間狀態機（純函式，tools/check-room.mjs 有測）
 assets/data.js              ★ 題庫存取層 — 之後要換 Supabase 只改這一個檔
-data/songs.source.json      ★ 你要維護的檔案：歌名 + 歌詞
+data/songs.source.json      ★ 你要維護的檔案：歌名 + 歌詞（中文）
+data/songs.ja.json          ★ 日文題庫來源：歌詞 + 人工標注的讀音
+tools/build-ja.mjs          日文：斷詞 + 讀音 → 假名首音
+tools/check-ja.mjs          日文題庫的檢查（npm run check:ja）
 data/questions.json         自動產生的題庫
 data/questions.js           同上，包成 <script> 版本（給 file:// 用）
 tools/build-questions.mjs   歌詞 → 注音聲母的編譯器
@@ -66,7 +69,8 @@ supabase/schema.sql         Supabase 資料表 + RLS
 然後跑：
 
 ```bash
-npm run build:questions
+npm run build:questions   # 中文
+npm run build:ja          # 日文
 ```
 
 一首歌的每一句會產生兩題：**看歌詞猜歌名**、**給歌名猜歌詞**。
@@ -217,6 +221,49 @@ Durable Objects 需要 Workers 付費方案；只想玩下面那種就不用管�
 - 成績碼只是方便貼來貼去，**不防作弊**——想改分數的人改得掉。朋友間玩夠用。
 - 題庫連答案都在前端，開 devtools 就看得到。要辦真的有獎競賽，答案得放伺服器端，
   也就是下面說的 Supabase 那條路。
+
+## 日文版
+
+首頁的「語言」可以切成日本語，整份題庫換成日文歌。玩法一樣，只是每一格
+從「一個漢字的注音聲母」變成「一個詞的第一個假名」：
+
+```
+ゆ  な  ど  よ  で     →  夢ならばどれほどよかったでしょう
+```
+
+### 為什麼日文要人工標讀音
+
+中文可以靠 pinyin-pro 自動轉，日文不行，卡在兩件事：
+
+1. **日文不寫空格**，得先斷詞才知道一格是什麼。自動斷詞要帶 kuromoji 那種
+   好幾 MB 的辭典，這個專案沒有 build step，也希望 `file://` 打開就能玩。
+2. **漢字讀音比中文多音字更難猜**：生＝せい／しょう／なま／い／う…，
+   沒有上下文分析選不對。中文那招「先轉簡體再查詞庫」在日文沒有對應解法。
+
+所以 `data/songs.ja.json` 要求歌詞與讀音**都用空白斷詞，而且詞數一樣**：
+
+```json
+{
+  "id": "yonezu-lemon",
+  "title": "Lemon",
+  "artist": "米津玄師",
+  "year": 2018,
+  "lines": [
+    { "text": "夢 ならば どれほど よかった でしょう",
+      "kana": "ゆめ ならば どれほど よかった でしょう" }
+  ]
+}
+```
+
+跑 `npm run build:ja`，詞數對不上或讀音取不出首音都會警告。
+`npm run check:ja` 會再檢查一次，順便確認磚塊拼回去等於原句。
+拗音・促音（ゃゅょっ）開頭會還原成大字，長音符號 ー 不會被當成首音。
+
+### 老實說
+
+日文歌詞與讀音是憑印象寫的，**沒有對過原始出處**。機器只能檢查結構
+（詞數對不對得上、拼不拼得回原句），沒辦法檢查歌詞本身對不對。
+要正式用的話請自己核對一遍。
 
 ## 遊戲設計
 
