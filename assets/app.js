@@ -41,7 +41,22 @@ function filterBank(all, mode, eras) {
 // 這些字給出來只是幫忙讀順，不太會直接洩漏答案，優先送
 const GLUE = new Set([...'的了是不在有就都和也很到我你他她們一個這那要會來去上下中又再為之以把被給對從而但還沒過只才更最每些麼呢吧啊嗎與或且因所卻讓使將']);
 
+// 日文的助詞與常見綴詞，跟中文的虛詞一樣：送出來幫忙讀順，不太會洩漏答案
+const GLUE_JA = new Set([
+  'の', 'に', 'を', 'は', 'が', 'と', 'で', 'も', 'か', 'ね', 'よ', 'な', 'や',
+  'から', 'まで', 'ように', 'よう', 'って', 'だ', 'です', 'ます', 'でも',
+  'そして', 'けど', 'のに', 'こと', 'して', 'いる', 'ない',
+]);
+
+const isGlue = (unit) => GLUE.has(unit) || GLUE_JA.has(unit);
+
 const STORE_KEY = 'bpmf-lyrics:v1';
+const LANG_KEY = 'bpmf-lyrics:lang';
+
+const currentLang = () => {
+  const el = document.querySelector('input[name="lang"]:checked');
+  return el ? el.value : 'zh';
+};
 
 /* ─────────────── 小工具 ─────────────── */
 
@@ -80,13 +95,29 @@ function spreadBySong(list, rng = nativeRng) {
 
 const hanChars = (s) => [...s].filter((c) => /\p{Script=Han}/u.test(c));
 
+// 「可以猜的一格」：中文是一個漢字（han），日文是一個詞（word）。
+// 兩種磚塊在畫面上都是一格、都能被送字或提示揭開，所以一起處理。
+const GUESSABLE = new Set(['han', 'word']);
+
+/** 這一題每一格底下真正的字（揭開時要顯示的東西） */
+function unitTexts(q) {
+  const han = hanChars(q.line);
+  let hi = 0;
+  return q.tiles
+    .filter((t) => GUESSABLE.has(t.k))
+    .map((t) => (t.k === 'han' ? han[hi++] : t.w));
+}
+
+/** 答案有幾個字：日文直接數字元，中文只數漢字 */
+const answerChars = (q) => (q.lang === 'ja' ? [...q.answer] : hanChars(q.answer));
+
 /**
  * 開場就直接送給玩家的字（顯示原字而不是聲母）。
  * 猜歌名時一定先給開頭兩個字，讀起來像半句話比較好聯想；
  * 其餘名額優先給虛字，最後一定留至少兩個字要猜。
  */
 function pickFreebies(q, ratio, rng = nativeRng) {
-  const chars = hanChars(q.line);
+  const chars = unitTexts(q);
   const n = chars.length;
   if (n <= 2) return new Set();
 
@@ -99,8 +130,8 @@ function pickFreebies(q, ratio, rng = nativeRng) {
 
   const quota = Math.min(maxReveal, Math.max(picked.size, 1, Math.round(n * ratio)));
   const rest = chars.map((_, i) => i).filter((i) => !picked.has(i));
-  const glue = shuffle(rest.filter((i) => GLUE.has(chars[i])), rng);
-  const other = shuffle(rest.filter((i) => !GLUE.has(chars[i])), rng);
+  const glue = shuffle(rest.filter((i) => isGlue(chars[i])), rng);
+  const other = shuffle(rest.filter((i) => !isGlue(chars[i])), rng);
 
   for (const i of [...glue, ...other]) {
     if (picked.size >= quota) break;
@@ -175,22 +206,23 @@ function renderQuestionTiles() {
   const container = $('#q-tiles');
   container.innerHTML = '';
 
-  const lineHan = hanChars(q.line);
-  let hanIndex = -1;
+  const units = unitTexts(q);
+  let unitIndex = -1;
 
   q.tiles.forEach((tile, i) => {
     const el = document.createElement('span');
     el.className = 'tile pop';
     el.style.animationDelay = `${Math.min(i * 28, 600)}ms`;
 
-    if (tile.k === 'han') {
-      hanIndex++;
-      if (state.revealed.has(hanIndex)) {
+    if (GUESSABLE.has(tile.k)) {
+      unitIndex++;
+      if (tile.k === 'word') el.classList.add('is-word');
+      if (state.revealed.has(unitIndex)) {
         el.classList.add('is-revealed');
-        el.textContent = lineHan[hanIndex];
-      } else if (state.given.has(hanIndex)) {
+        el.textContent = units[unitIndex];
+      } else if (state.given.has(unitIndex)) {
         el.classList.add('is-given');
-        el.textContent = lineHan[hanIndex];
+        el.textContent = units[unitIndex];
       } else {
         el.textContent = tile.t;
       }
@@ -253,8 +285,8 @@ function buildHints(q) {
   const hints = [];
   if (q.mode === 'title') {
     hints.push(`演唱者：${q.artist}${q.year ? `（${q.year}）` : ''}`);
-    hints.push(`歌名共 ${hanChars(q.answer).length} 個字，第一個字是「${hanChars(q.answer)[0]}」`);
-    const chars = hanChars(q.answer);
+    const chars = answerChars(q);
+    hints.push(`歌名共 ${chars.length} 個字，第一個字是「${chars[0]}」`);
     if (chars.length > 2) hints.push(`最後一個字是「${chars[chars.length - 1]}」`);
   } else {
     hints.push(`演唱者：${q.artist}${q.year ? `（${q.year}）` : ''}`);
@@ -293,10 +325,11 @@ function nextQuestion() {
   const q = state.current;
   renderPrompt(q);
 
+  const answerLen = answerChars(q).length;
   $('#q-meta').textContent =
     q.mode === 'title'
-      ? `答案是歌名，共 ${hanChars(q.answer).length} 個字`
-      : `這句共 ${hanChars(q.answer).length} 個字`;
+      ? `答案是歌名，共 ${answerLen} 個字`
+      : `這句共 ${answerLen} 個字`;
 
   const hintBox = $('#hint-box');
   hintBox.hidden = true;
@@ -362,7 +395,7 @@ function useHint() {
 
   const box = $('#hint-box');
   if (hint === '__reveal__') {
-    const chars = hanChars(state.current.line);
+    const chars = unitTexts(state.current);
     const candidates = chars
       .map((_, i) => i)
       .filter((i) => !state.revealed.has(i) && !state.given.has(i));
@@ -876,6 +909,10 @@ function bindEvents() {
     el.addEventListener('change', updateBankSummary);
   }
 
+  for (const el of document.querySelectorAll('input[name="lang"]')) {
+    el.addEventListener('change', () => switchLanguage(el.value));
+  }
+
   $('#btn-quit').addEventListener('click', () => {
     stopTimer();
     $('#feedback').hidden = true;
@@ -964,6 +1001,29 @@ function openInvite() {
   showScreen('screen-vs');
 }
 
+/** 換語言：整份題庫換掉，設定與紀錄不動 */
+async function switchLanguage(lang) {
+  const startBtn = $('#btn-start');
+  startBtn.disabled = true;
+  startBtn.textContent = '載入題庫中…';
+  try {
+    localStorage.setItem(LANG_KEY, lang);
+  } catch { /* 無痕模式就算了 */ }
+
+  try {
+    const { questions } = await loadQuestions(lang);
+    state.allQuestions = questions;
+    renderEraCounts();
+    updateBankSummary();
+    $('#footer-count').textContent = questions.length;
+    startBtn.disabled = false;
+    startBtn.textContent = '開始遊戲';
+  } catch (err) {
+    console.error(err);
+    startBtn.textContent = '題庫載入失敗';
+  }
+}
+
 /* ─────────────── 啟動 ─────────────── */
 
 async function main() {
@@ -974,8 +1034,13 @@ async function main() {
   startBtn.disabled = true;
   startBtn.textContent = '載入題庫中…';
 
+  let saved = 'zh';
+  try { saved = localStorage.getItem(LANG_KEY) || 'zh'; } catch { /* ignore */ }
+  const radio = document.querySelector(`input[name="lang"][value="${saved}"]`);
+  if (radio) radio.checked = true;
+
   try {
-    const { questions } = await loadQuestions();
+    const { questions } = await loadQuestions(currentLang());
     state.allQuestions = questions;
     renderEraCounts();
     updateBankSummary();

@@ -219,6 +219,13 @@ main {
 .tile.is-space { min-width: .8rem; }
 .tile.is-latin { color: var(--accent); }
 
+/* 日文一格是一個「詞」，字數不定，不能鎖死寬度 */
+.tile.is-word {
+  min-width: 2.1em;
+  width: auto;
+  padding-inline: .35em;
+}
+
 /* 開場就送你的字：看起來像已經填好的格子 */
 .tile.is-given {
   background: var(--surface-2);

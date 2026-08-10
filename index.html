@@ -53,6 +53,14 @@
 
     <div class="setup card">
       <fieldset class="field">
+        <legend>語言</legend>
+        <div class="chips" role="radiogroup" aria-label="語言">
+          <label class="chip" data-lang="zh"><input type="radio" name="lang" value="zh" checked><span>中文<small class="chip-count"></small></span></label>
+          <label class="chip" data-lang="ja"><input type="radio" name="lang" value="ja"><span>日本語<small class="chip-count"></small></span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="field">
         <legend>題型</legend>
         <div class="chips" role="radiogroup" aria-label="題型">
           <label class="chip"><input type="radio" name="mode" value="mixed" checked><span>混合</span></label>
@@ -392,6 +400,7 @@
 
 <!-- 題庫（自動產生）。用一般 script 載入，這樣 file:// 直接開也能玩。 -->
 <script src="data/questions.js"></script>
+<script src="data/questions.ja.js"></script>
 <script defer src="assets/judge.js"></script>
 <script defer src="assets/challenge.js"></script>
 <script defer src="assets/live.js"></script>

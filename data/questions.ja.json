@@ -1,0 +1,4564 @@
+{
+  "version": 1,
+  "lang": "ja",
+  "generatedAt": "2026-08-10T00:58:20.785Z",
+  "songCount": 17,
+  "questions": [
+    {
+      "lang": "ja",
+      "songId": "utada-firstlove",
+      "title": "First Love",
+      "artist": "宇多田ヒカル",
+      "year": 1999,
+      "line": "最後のキスはタバコのflavorがした",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "さ",
+          "w": "最後"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "キス"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "た",
+          "w": "タバコ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "フ",
+          "w": "flavor"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "がした"
+        }
+      ],
+      "id": "utada-firstlove:0:title",
+      "mode": "title",
+      "answer": "First Love",
+      "accept": [
+        "First Love"
+      ],
+      "units": 10,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "utada-firstlove",
+      "title": "First Love",
+      "artist": "宇多田ヒカル",
+      "year": 1999,
+      "line": "最後のキスはタバコのflavorがした",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "さ",
+          "w": "最後"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "キス"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "た",
+          "w": "タバコ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "フ",
+          "w": "flavor"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "がした"
+        }
+      ],
+      "id": "utada-firstlove:0:lyric",
+      "mode": "lyric",
+      "answer": "最後のキスはタバコのflavorがした",
+      "accept": [
+        "最後のキスはタバコのflavorがした"
+      ],
+      "units": 8,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "utada-firstlove",
+      "title": "First Love",
+      "artist": "宇多田ヒカル",
+      "year": 1999,
+      "line": "苦くて切ない香り",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "に",
+          "w": "苦くて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "せ",
+          "w": "切ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "香り"
+        }
+      ],
+      "id": "utada-firstlove:1:title",
+      "mode": "title",
+      "answer": "First Love",
+      "accept": [
+        "First Love"
+      ],
+      "units": 10,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "utada-firstlove",
+      "title": "First Love",
+      "artist": "宇多田ヒカル",
+      "year": 1999,
+      "line": "苦くて切ない香り",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "に",
+          "w": "苦くて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "せ",
+          "w": "切ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "香り"
+        }
+      ],
+      "id": "utada-firstlove:1:lyric",
+      "mode": "lyric",
+      "answer": "苦くて切ない香り",
+      "accept": [
+        "苦くて切ない香り"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "nakashima-yukinohana",
+      "title": "雪の華",
+      "artist": "中島美嘉",
+      "year": 2003,
+      "line": "のびた人陰を舗道に並べ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "の",
+          "w": "のびた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "人"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "陰"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ほ",
+          "w": "舗道"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "並べ"
+        }
+      ],
+      "id": "nakashima-yukinohana:0:title",
+      "mode": "title",
+      "answer": "雪の華",
+      "accept": [
+        "雪の華"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "nakashima-yukinohana",
+      "title": "雪の華",
+      "artist": "中島美嘉",
+      "year": 2003,
+      "line": "のびた人陰を舗道に並べ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "の",
+          "w": "のびた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "人"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "陰"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ほ",
+          "w": "舗道"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "並べ"
+        }
+      ],
+      "id": "nakashima-yukinohana:0:lyric",
+      "mode": "lyric",
+      "answer": "のびた人陰を舗道に並べ",
+      "accept": [
+        "のびた人陰を舗道に並べ"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "nakashima-yukinohana",
+      "title": "雪の華",
+      "artist": "中島美嘉",
+      "year": 2003,
+      "line": "夕闇のなかを君と歩いてる",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "夕闇"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "なか"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "と"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "歩いてる"
+        }
+      ],
+      "id": "nakashima-yukinohana:1:title",
+      "mode": "title",
+      "answer": "雪の華",
+      "accept": [
+        "雪の華"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "nakashima-yukinohana",
+      "title": "雪の華",
+      "artist": "中島美嘉",
+      "year": 2003,
+      "line": "夕闇のなかを君と歩いてる",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "夕闇"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "なか"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "と"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "歩いてる"
+        }
+      ],
+      "id": "nakashima-yukinohana:1:lyric",
+      "mode": "lyric",
+      "answer": "夕闇のなかを君と歩いてる",
+      "accept": [
+        "夕闇のなかを君と歩いてる"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "hitoto-hanamizuki",
+      "title": "ハナミズキ",
+      "artist": "一青窈",
+      "year": 2004,
+      "line": "君と好きな人が百年続きますように",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "と"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "す",
+          "w": "好き"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "な"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "人"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "百年"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "続き"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "ます"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "ように"
+        }
+      ],
+      "id": "hitoto-hanamizuki:0:title",
+      "mode": "title",
+      "answer": "ハナミズキ",
+      "accept": [
+        "ハナミズキ"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "hitoto-hanamizuki",
+      "title": "ハナミズキ",
+      "artist": "一青窈",
+      "year": 2004,
+      "line": "君と好きな人が百年続きますように",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "と"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "す",
+          "w": "好き"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "な"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "人"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "百年"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "続き"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "ます"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "ように"
+        }
+      ],
+      "id": "hitoto-hanamizuki:0:lyric",
+      "mode": "lyric",
+      "answer": "君と好きな人が百年続きますように",
+      "accept": [
+        "君と好きな人が百年続きますように"
+      ],
+      "units": 10,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "hitoto-hanamizuki",
+      "title": "ハナミズキ",
+      "artist": "一青窈",
+      "year": 2004,
+      "line": "空を押し上げて手を伸ばす君五月のこと",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "お",
+          "w": "押し上げて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "て",
+          "w": "手"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "伸ばす"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ご",
+          "w": "五月"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "こと"
+        }
+      ],
+      "id": "hitoto-hanamizuki:1:title",
+      "mode": "title",
+      "answer": "ハナミズキ",
+      "accept": [
+        "ハナミズキ"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "hitoto-hanamizuki",
+      "title": "ハナミズキ",
+      "artist": "一青窈",
+      "year": 2004,
+      "line": "空を押し上げて手を伸ばす君五月のこと",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "お",
+          "w": "押し上げて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "て",
+          "w": "手"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "伸ばす"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ご",
+          "w": "五月"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "こと"
+        }
+      ],
+      "id": "hitoto-hanamizuki:1:lyric",
+      "mode": "lyric",
+      "answer": "空を押し上げて手を伸ばす君五月のこと",
+      "accept": [
+        "空を押し上げて手を伸ばす君五月のこと"
+      ],
+      "units": 10,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "remioromen-konayuki",
+      "title": "粉雪",
+      "artist": "レミオロメン",
+      "year": 2005,
+      "line": "粉雪舞う季節はいつもすれ違い",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "粉雪"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "舞う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "季節"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "い",
+          "w": "いつも"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "す",
+          "w": "すれ違い"
+        }
+      ],
+      "id": "remioromen-konayuki:0:title",
+      "mode": "title",
+      "answer": "粉雪",
+      "accept": [
+        "粉雪"
+      ],
+      "units": 2,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "remioromen-konayuki",
+      "title": "粉雪",
+      "artist": "レミオロメン",
+      "year": 2005,
+      "line": "粉雪舞う季節はいつもすれ違い",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "粉雪"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "舞う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "季節"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "い",
+          "w": "いつも"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "す",
+          "w": "すれ違い"
+        }
+      ],
+      "id": "remioromen-konayuki:0:lyric",
+      "mode": "lyric",
+      "answer": "粉雪舞う季節はいつもすれ違い",
+      "accept": [
+        "粉雪舞う季節はいつもすれ違い"
+      ],
+      "units": 6,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "remioromen-konayuki",
+      "title": "粉雪",
+      "artist": "レミオロメン",
+      "year": 2005,
+      "line": "人ごみに紛れても同じ空見てるのに",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "人ごみ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "紛れて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "も",
+          "w": "も"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "お",
+          "w": "同じ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "み",
+          "w": "見てる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "のに"
+        }
+      ],
+      "id": "remioromen-konayuki:1:title",
+      "mode": "title",
+      "answer": "粉雪",
+      "accept": [
+        "粉雪"
+      ],
+      "units": 2,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "remioromen-konayuki",
+      "title": "粉雪",
+      "artist": "レミオロメン",
+      "year": 2005,
+      "line": "人ごみに紛れても同じ空見てるのに",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "人ごみ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "紛れて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "も",
+          "w": "も"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "お",
+          "w": "同じ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "み",
+          "w": "見てる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "のに"
+        }
+      ],
+      "id": "remioromen-konayuki:1:lyric",
+      "mode": "lyric",
+      "answer": "人ごみに紛れても同じ空見てるのに",
+      "accept": [
+        "人ごみに紛れても同じ空見てるのに"
+      ],
+      "units": 8,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "ayaka-mikazuki",
+      "title": "三日月",
+      "artist": "絢香",
+      "year": 2006,
+      "line": "ずっとずっと会いたくて",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ず",
+          "w": "ずっと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ず",
+          "w": "ずっと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "会いたくて"
+        }
+      ],
+      "id": "ayaka-mikazuki:0:title",
+      "mode": "title",
+      "answer": "三日月",
+      "accept": [
+        "三日月"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "ayaka-mikazuki",
+      "title": "三日月",
+      "artist": "絢香",
+      "year": 2006,
+      "line": "ずっとずっと会いたくて",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ず",
+          "w": "ずっと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ず",
+          "w": "ずっと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "会いたくて"
+        }
+      ],
+      "id": "ayaka-mikazuki:0:lyric",
+      "mode": "lyric",
+      "answer": "ずっとずっと会いたくて",
+      "accept": [
+        "ずっとずっと会いたくて"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "ayaka-mikazuki",
+      "title": "三日月",
+      "artist": "絢香",
+      "year": 2006,
+      "line": "同じ空見てる気がした",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "お",
+          "w": "同じ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "み",
+          "w": "見てる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "気"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "し",
+          "w": "した"
+        }
+      ],
+      "id": "ayaka-mikazuki:1:title",
+      "mode": "title",
+      "answer": "三日月",
+      "accept": [
+        "三日月"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "ayaka-mikazuki",
+      "title": "三日月",
+      "artist": "絢香",
+      "year": 2006,
+      "line": "同じ空見てる気がした",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "お",
+          "w": "同じ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "み",
+          "w": "見てる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "気"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "し",
+          "w": "した"
+        }
+      ],
+      "id": "ayaka-mikazuki:1:lyric",
+      "mode": "lyric",
+      "answer": "同じ空見てる気がした",
+      "accept": [
+        "同じ空見てる気がした"
+      ],
+      "units": 6,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "kobukuro-tsubomi",
+      "title": "蕾",
+      "artist": "コブクロ",
+      "year": 2007,
+      "line": "涙の数だけ強くなれるよ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "な",
+          "w": "涙"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "数"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "だ",
+          "w": "だけ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "強く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "なれる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よ"
+        }
+      ],
+      "id": "kobukuro-tsubomi:0:title",
+      "mode": "title",
+      "answer": "蕾",
+      "accept": [
+        "蕾"
+      ],
+      "units": 1,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "kobukuro-tsubomi",
+      "title": "蕾",
+      "artist": "コブクロ",
+      "year": 2007,
+      "line": "涙の数だけ強くなれるよ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "な",
+          "w": "涙"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "数"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "だ",
+          "w": "だけ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "強く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "なれる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よ"
+        }
+      ],
+      "id": "kobukuro-tsubomi:0:lyric",
+      "mode": "lyric",
+      "answer": "涙の数だけ強くなれるよ",
+      "accept": [
+        "涙の数だけ強くなれるよ"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "kobukuro-tsubomi",
+      "title": "蕾",
+      "artist": "コブクロ",
+      "year": 2007,
+      "line": "アスファルトに咲く花のように",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "アスファルト"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "さ",
+          "w": "咲く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "花"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よう"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        }
+      ],
+      "id": "kobukuro-tsubomi:1:title",
+      "mode": "title",
+      "answer": "蕾",
+      "accept": [
+        "蕾"
+      ],
+      "units": 1,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "kobukuro-tsubomi",
+      "title": "蕾",
+      "artist": "コブクロ",
+      "year": 2007,
+      "line": "アスファルトに咲く花のように",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "アスファルト"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "さ",
+          "w": "咲く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "花"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よう"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        }
+      ],
+      "id": "kobukuro-tsubomi:1:lyric",
+      "mode": "lyric",
+      "answer": "アスファルトに咲く花のように",
+      "accept": [
+        "アスファルトに咲く花のように"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "greeeen-kiseki",
+      "title": "キセキ",
+      "artist": "GReeeeN",
+      "year": 2008,
+      "line": "明日いつもの様に君と会える保証なんてどこにもないけど",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "明日"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "い",
+          "w": "いつも"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "様"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "と"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "会える"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ほ",
+          "w": "保証"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "なんて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ど",
+          "w": "どこ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "も",
+          "w": "も"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "け",
+          "w": "けど"
+        }
+      ],
+      "id": "greeeen-kiseki:0:title",
+      "mode": "title",
+      "answer": "キセキ",
+      "accept": [
+        "キセキ"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "greeeen-kiseki",
+      "title": "キセキ",
+      "artist": "GReeeeN",
+      "year": 2008,
+      "line": "明日いつもの様に君と会える保証なんてどこにもないけど",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "明日"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "い",
+          "w": "いつも"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "様"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "と"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "会える"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ほ",
+          "w": "保証"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "なんて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ど",
+          "w": "どこ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "も",
+          "w": "も"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "け",
+          "w": "けど"
+        }
+      ],
+      "id": "greeeen-kiseki:0:lyric",
+      "mode": "lyric",
+      "answer": "明日いつもの様に君と会える保証なんてどこにもないけど",
+      "accept": [
+        "明日いつもの様に君と会える保証なんてどこにもないけど"
+      ],
+      "units": 15,
+      "difficulty": 4
+    },
+    {
+      "lang": "ja",
+      "songId": "greeeen-kiseki",
+      "title": "キセキ",
+      "artist": "GReeeeN",
+      "year": 2008,
+      "line": "永遠の愛を誓うよ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "え",
+          "w": "永遠"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "愛"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ち",
+          "w": "誓う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よ"
+        }
+      ],
+      "id": "greeeen-kiseki:1:title",
+      "mode": "title",
+      "answer": "キセキ",
+      "accept": [
+        "キセキ"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "greeeen-kiseki",
+      "title": "キセキ",
+      "artist": "GReeeeN",
+      "year": 2008,
+      "line": "永遠の愛を誓うよ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "え",
+          "w": "永遠"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "愛"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ち",
+          "w": "誓う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よ"
+        }
+      ],
+      "id": "greeeen-kiseki:1:lyric",
+      "mode": "lyric",
+      "answer": "永遠の愛を誓うよ",
+      "accept": [
+        "永遠の愛を誓うよ"
+      ],
+      "units": 6,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "ikimono-arigatou",
+      "title": "ありがとう",
+      "artist": "いきものがかり",
+      "year": 2010,
+      "line": "ありがとうって伝えたくて",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "ありがとう"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "って"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "伝えたくて"
+        }
+      ],
+      "id": "ikimono-arigatou:0:title",
+      "mode": "title",
+      "answer": "ありがとう",
+      "accept": [
+        "ありがとう"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "ikimono-arigatou",
+      "title": "ありがとう",
+      "artist": "いきものがかり",
+      "year": 2010,
+      "line": "ありがとうって伝えたくて",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "ありがとう"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "って"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "伝えたくて"
+        }
+      ],
+      "id": "ikimono-arigatou:0:lyric",
+      "mode": "lyric",
+      "answer": "ありがとうって伝えたくて",
+      "accept": [
+        "ありがとうって伝えたくて"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "ikimono-arigatou",
+      "title": "ありがとう",
+      "artist": "いきものがかり",
+      "year": 2010,
+      "line": "あなたを見つめるけど",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "あなた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "み",
+          "w": "見つめる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "け",
+          "w": "けど"
+        }
+      ],
+      "id": "ikimono-arigatou:1:title",
+      "mode": "title",
+      "answer": "ありがとう",
+      "accept": [
+        "ありがとう"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "ikimono-arigatou",
+      "title": "ありがとう",
+      "artist": "いきものがかり",
+      "year": 2010,
+      "line": "あなたを見つめるけど",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "あなた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "み",
+          "w": "見つめる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "け",
+          "w": "けど"
+        }
+      ],
+      "id": "ikimono-arigatou:1:lyric",
+      "mode": "lyric",
+      "answer": "あなたを見つめるけど",
+      "accept": [
+        "あなたを見つめるけど"
+      ],
+      "units": 4,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "sekaowa-rpg",
+      "title": "RPG",
+      "artist": "SEKAI NO OWARI",
+      "year": 2013,
+      "line": "空は青く澄み渡り",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "青く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "す",
+          "w": "澄み渡り"
+        }
+      ],
+      "id": "sekaowa-rpg:0:title",
+      "mode": "title",
+      "answer": "RPG",
+      "accept": [
+        "RPG"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "sekaowa-rpg",
+      "title": "RPG",
+      "artist": "SEKAI NO OWARI",
+      "year": 2013,
+      "line": "空は青く澄み渡り",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "青く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "す",
+          "w": "澄み渡り"
+        }
+      ],
+      "id": "sekaowa-rpg:0:lyric",
+      "mode": "lyric",
+      "answer": "空は青く澄み渡り",
+      "accept": [
+        "空は青く澄み渡り"
+      ],
+      "units": 4,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "sekaowa-rpg",
+      "title": "RPG",
+      "artist": "SEKAI NO OWARI",
+      "year": 2013,
+      "line": "海を目指して歩く",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "う",
+          "w": "海"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "め",
+          "w": "目指して"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "歩く"
+        }
+      ],
+      "id": "sekaowa-rpg:1:title",
+      "mode": "title",
+      "answer": "RPG",
+      "accept": [
+        "RPG"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "sekaowa-rpg",
+      "title": "RPG",
+      "artist": "SEKAI NO OWARI",
+      "year": 2013,
+      "line": "海を目指して歩く",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "う",
+          "w": "海"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "め",
+          "w": "目指して"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "歩く"
+        }
+      ],
+      "id": "sekaowa-rpg:1:lyric",
+      "mode": "lyric",
+      "answer": "海を目指して歩く",
+      "accept": [
+        "海を目指して歩く"
+      ],
+      "units": 4,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "akb-koisurufortune",
+      "title": "恋するフォーチュンクッキー",
+      "artist": "AKB48",
+      "year": 2013,
+      "line": "恋するフォーチュンクッキー",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "恋する"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ふ",
+          "w": "フォーチュンクッキー"
+        }
+      ],
+      "id": "akb-koisurufortune:0:title",
+      "mode": "title",
+      "answer": "恋するフォーチュンクッキー",
+      "accept": [
+        "恋するフォーチュンクッキー"
+      ],
+      "units": 13,
+      "difficulty": 4
+    },
+    {
+      "lang": "ja",
+      "songId": "akb-koisurufortune",
+      "title": "恋するフォーチュンクッキー",
+      "artist": "AKB48",
+      "year": 2013,
+      "line": "恋するフォーチュンクッキー",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "恋する"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ふ",
+          "w": "フォーチュンクッキー"
+        }
+      ],
+      "id": "akb-koisurufortune:0:lyric",
+      "mode": "lyric",
+      "answer": "恋するフォーチュンクッキー",
+      "accept": [
+        "恋するフォーチュンクッキー"
+      ],
+      "units": 2,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "akb-koisurufortune",
+      "title": "恋するフォーチュンクッキー",
+      "artist": "AKB48",
+      "year": 2013,
+      "line": "未来はそんな悪くないよ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "み",
+          "w": "未来"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "そんな"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "わ",
+          "w": "悪く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よ"
+        }
+      ],
+      "id": "akb-koisurufortune:1:title",
+      "mode": "title",
+      "answer": "恋するフォーチュンクッキー",
+      "accept": [
+        "恋するフォーチュンクッキー"
+      ],
+      "units": 13,
+      "difficulty": 4
+    },
+    {
+      "lang": "ja",
+      "songId": "akb-koisurufortune",
+      "title": "恋するフォーチュンクッキー",
+      "artist": "AKB48",
+      "year": 2013,
+      "line": "未来はそんな悪くないよ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "み",
+          "w": "未来"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "そんな"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "わ",
+          "w": "悪く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よ"
+        }
+      ],
+      "id": "akb-koisurufortune:1:lyric",
+      "mode": "lyric",
+      "answer": "未来はそんな悪くないよ",
+      "accept": [
+        "未来はそんな悪くないよ"
+      ],
+      "units": 6,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "hata-himawari",
+      "title": "ひまわりの約束",
+      "artist": "秦基博",
+      "year": 2014,
+      "line": "どうして君が泣くの",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ど",
+          "w": "どうして"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "泣く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        }
+      ],
+      "id": "hata-himawari:0:title",
+      "mode": "title",
+      "answer": "ひまわりの約束",
+      "accept": [
+        "ひまわりの約束"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "hata-himawari",
+      "title": "ひまわりの約束",
+      "artist": "秦基博",
+      "year": 2014,
+      "line": "どうして君が泣くの",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ど",
+          "w": "どうして"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "泣く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        }
+      ],
+      "id": "hata-himawari:0:lyric",
+      "mode": "lyric",
+      "answer": "どうして君が泣くの",
+      "accept": [
+        "どうして君が泣くの"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "hata-himawari",
+      "title": "ひまわりの約束",
+      "artist": "秦基博",
+      "year": 2014,
+      "line": "まだ僕も泣いていないのに",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "まだ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "僕"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "も",
+          "w": "も"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "泣いて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "い",
+          "w": "い"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "のに"
+        }
+      ],
+      "id": "hata-himawari:1:title",
+      "mode": "title",
+      "answer": "ひまわりの約束",
+      "accept": [
+        "ひまわりの約束"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "hata-himawari",
+      "title": "ひまわりの約束",
+      "artist": "秦基博",
+      "year": 2014,
+      "line": "まだ僕も泣いていないのに",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "まだ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "僕"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "も",
+          "w": "も"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "泣いて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "い",
+          "w": "い"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "のに"
+        }
+      ],
+      "id": "hata-himawari:1:lyric",
+      "mode": "lyric",
+      "answer": "まだ僕も泣いていないのに",
+      "accept": [
+        "まだ僕も泣いていないのに"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "radwimps-zenzenzense",
+      "title": "前前前世",
+      "artist": "RADWIMPS",
+      "year": 2016,
+      "line": "君の前前前世から僕は君を探しはじめたよ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぜ",
+          "w": "前"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぜ",
+          "w": "前"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぜ",
+          "w": "前世"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "から"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "僕"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "さ",
+          "w": "探し"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "はじめた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よ"
+        }
+      ],
+      "id": "radwimps-zenzenzense:0:title",
+      "mode": "title",
+      "answer": "前前前世",
+      "accept": [
+        "前前前世"
+      ],
+      "units": 4,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "radwimps-zenzenzense",
+      "title": "前前前世",
+      "artist": "RADWIMPS",
+      "year": 2016,
+      "line": "君の前前前世から僕は君を探しはじめたよ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぜ",
+          "w": "前"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぜ",
+          "w": "前"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぜ",
+          "w": "前世"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "から"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "僕"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "さ",
+          "w": "探し"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "はじめた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よ"
+        }
+      ],
+      "id": "radwimps-zenzenzense:0:lyric",
+      "mode": "lyric",
+      "answer": "君の前前前世から僕は君を探しはじめたよ",
+      "accept": [
+        "君の前前前世から僕は君を探しはじめたよ"
+      ],
+      "units": 13,
+      "difficulty": 4
+    },
+    {
+      "lang": "ja",
+      "songId": "radwimps-zenzenzense",
+      "title": "前前前世",
+      "artist": "RADWIMPS",
+      "year": 2016,
+      "line": "そのぐらいの事じゃ驚かないけど",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "そのぐらい"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "事"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "じ",
+          "w": "じゃ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "お",
+          "w": "驚か"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "け",
+          "w": "けど"
+        }
+      ],
+      "id": "radwimps-zenzenzense:1:title",
+      "mode": "title",
+      "answer": "前前前世",
+      "accept": [
+        "前前前世"
+      ],
+      "units": 4,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "radwimps-zenzenzense",
+      "title": "前前前世",
+      "artist": "RADWIMPS",
+      "year": 2016,
+      "line": "そのぐらいの事じゃ驚かないけど",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "そのぐらい"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "事"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "じ",
+          "w": "じゃ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "お",
+          "w": "驚か"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ない"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "け",
+          "w": "けど"
+        }
+      ],
+      "id": "radwimps-zenzenzense:1:lyric",
+      "mode": "lyric",
+      "answer": "そのぐらいの事じゃ驚かないけど",
+      "accept": [
+        "そのぐらいの事じゃ驚かないけど"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "yonezu-lemon",
+      "title": "Lemon",
+      "artist": "米津玄師",
+      "year": 2018,
+      "line": "夢ならばどれほどよかったでしょう",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "夢"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ならば"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ど",
+          "w": "どれほど"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よかった"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "で",
+          "w": "でしょう"
+        }
+      ],
+      "id": "yonezu-lemon:0:title",
+      "mode": "title",
+      "answer": "Lemon",
+      "accept": [
+        "Lemon"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "yonezu-lemon",
+      "title": "Lemon",
+      "artist": "米津玄師",
+      "year": 2018,
+      "line": "夢ならばどれほどよかったでしょう",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "夢"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "ならば"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ど",
+          "w": "どれほど"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よかった"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "で",
+          "w": "でしょう"
+        }
+      ],
+      "id": "yonezu-lemon:0:lyric",
+      "mode": "lyric",
+      "answer": "夢ならばどれほどよかったでしょう",
+      "accept": [
+        "夢ならばどれほどよかったでしょう"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "yonezu-lemon",
+      "title": "Lemon",
+      "artist": "米津玄師",
+      "year": 2018,
+      "line": "未だにあなたのことを夢にみる",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "い",
+          "w": "未だに"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "あなた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "こと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "夢"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "み",
+          "w": "みる"
+        }
+      ],
+      "id": "yonezu-lemon:1:title",
+      "mode": "title",
+      "answer": "Lemon",
+      "accept": [
+        "Lemon"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "yonezu-lemon",
+      "title": "Lemon",
+      "artist": "米津玄師",
+      "year": 2018,
+      "line": "未だにあなたのことを夢にみる",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "い",
+          "w": "未だに"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "あ",
+          "w": "あなた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "こ",
+          "w": "こと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "夢"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "み",
+          "w": "みる"
+        }
+      ],
+      "id": "yonezu-lemon:1:lyric",
+      "mode": "lyric",
+      "answer": "未だにあなたのことを夢にみる",
+      "accept": [
+        "未だにあなたのことを夢にみる"
+      ],
+      "units": 8,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "aimyon-marigold",
+      "title": "マリーゴールド",
+      "artist": "あいみょん",
+      "year": 2018,
+      "line": "麦わらの帽子の君が",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "む",
+          "w": "麦わら"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "帽子"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        }
+      ],
+      "id": "aimyon-marigold:0:title",
+      "mode": "title",
+      "answer": "マリーゴールド",
+      "accept": [
+        "マリーゴールド"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "aimyon-marigold",
+      "title": "マリーゴールド",
+      "artist": "あいみょん",
+      "year": 2018,
+      "line": "麦わらの帽子の君が",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "む",
+          "w": "麦わら"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "帽子"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        }
+      ],
+      "id": "aimyon-marigold:0:lyric",
+      "mode": "lyric",
+      "answer": "麦わらの帽子の君が",
+      "accept": [
+        "麦わらの帽子の君が"
+      ],
+      "units": 6,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "aimyon-marigold",
+      "title": "マリーゴールド",
+      "artist": "あいみょん",
+      "year": 2018,
+      "line": "揺れたマリーゴールドに似てる",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "揺れた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "マリーゴールド"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "似てる"
+        }
+      ],
+      "id": "aimyon-marigold:1:title",
+      "mode": "title",
+      "answer": "マリーゴールド",
+      "accept": [
+        "マリーゴールド"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "aimyon-marigold",
+      "title": "マリーゴールド",
+      "artist": "あいみょん",
+      "year": 2018,
+      "line": "揺れたマリーゴールドに似てる",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "揺れた"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ま",
+          "w": "マリーゴールド"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "似てる"
+        }
+      ],
+      "id": "aimyon-marigold:1:lyric",
+      "mode": "lyric",
+      "answer": "揺れたマリーゴールドに似てる",
+      "accept": [
+        "揺れたマリーゴールドに似てる"
+      ],
+      "units": 4,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "higedan-pretender",
+      "title": "Pretender",
+      "artist": "Official髭男dism",
+      "year": 2019,
+      "line": "君と僕はそれぞれ違う人間だ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "と"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "僕"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "それぞれ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ち",
+          "w": "違う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "人間"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "だ",
+          "w": "だ"
+        }
+      ],
+      "id": "higedan-pretender:0:title",
+      "mode": "title",
+      "answer": "Pretender",
+      "accept": [
+        "Pretender"
+      ],
+      "units": 9,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "higedan-pretender",
+      "title": "Pretender",
+      "artist": "Official髭男dism",
+      "year": 2019,
+      "line": "君と僕はそれぞれ違う人間だ",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "き",
+          "w": "君"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "と"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "僕"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "は",
+          "w": "は"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "それぞれ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ち",
+          "w": "違う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "人間"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "だ",
+          "w": "だ"
+        }
+      ],
+      "id": "higedan-pretender:0:lyric",
+      "mode": "lyric",
+      "answer": "君と僕はそれぞれ違う人間だ",
+      "accept": [
+        "君と僕はそれぞれ違う人間だ"
+      ],
+      "units": 8,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "higedan-pretender",
+      "title": "Pretender",
+      "artist": "Official髭男dism",
+      "year": 2019,
+      "line": "もっと違う設定でもっと違う関係で",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "も",
+          "w": "もっと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ち",
+          "w": "違う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "せ",
+          "w": "設定"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "で",
+          "w": "で"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "も",
+          "w": "もっと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ち",
+          "w": "違う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "関係"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "で",
+          "w": "で"
+        }
+      ],
+      "id": "higedan-pretender:1:title",
+      "mode": "title",
+      "answer": "Pretender",
+      "accept": [
+        "Pretender"
+      ],
+      "units": 9,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "higedan-pretender",
+      "title": "Pretender",
+      "artist": "Official髭男dism",
+      "year": 2019,
+      "line": "もっと違う設定でもっと違う関係で",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "も",
+          "w": "もっと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ち",
+          "w": "違う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "せ",
+          "w": "設定"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "で",
+          "w": "で"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "も",
+          "w": "もっと"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ち",
+          "w": "違う"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "か",
+          "w": "関係"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "で",
+          "w": "で"
+        }
+      ],
+      "id": "higedan-pretender:1:lyric",
+      "mode": "lyric",
+      "answer": "もっと違う設定でもっと違う関係で",
+      "accept": [
+        "もっと違う設定でもっと違う関係で"
+      ],
+      "units": 8,
+      "difficulty": 3
+    },
+    {
+      "lang": "ja",
+      "songId": "lisa-gurenge",
+      "title": "紅蓮華",
+      "artist": "LiSA",
+      "year": 2019,
+      "line": "強くなれる理由を知った",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "強く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "なれる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "り",
+          "w": "理由"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "し",
+          "w": "知った"
+        }
+      ],
+      "id": "lisa-gurenge:0:title",
+      "mode": "title",
+      "answer": "紅蓮華",
+      "accept": [
+        "紅蓮華"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "lisa-gurenge",
+      "title": "紅蓮華",
+      "artist": "LiSA",
+      "year": 2019,
+      "line": "強くなれる理由を知った",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "強く"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "な",
+          "w": "なれる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "り",
+          "w": "理由"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "し",
+          "w": "知った"
+        }
+      ],
+      "id": "lisa-gurenge:0:lyric",
+      "mode": "lyric",
+      "answer": "強くなれる理由を知った",
+      "accept": [
+        "強くなれる理由を知った"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "lisa-gurenge",
+      "title": "紅蓮華",
+      "artist": "LiSA",
+      "year": 2019,
+      "line": "僕を連れて進め",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "僕"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "連れて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "す",
+          "w": "進め"
+        }
+      ],
+      "id": "lisa-gurenge:1:title",
+      "mode": "title",
+      "answer": "紅蓮華",
+      "accept": [
+        "紅蓮華"
+      ],
+      "units": 3,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "lisa-gurenge",
+      "title": "紅蓮華",
+      "artist": "LiSA",
+      "year": 2019,
+      "line": "僕を連れて進め",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ぼ",
+          "w": "僕"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "を",
+          "w": "を"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "つ",
+          "w": "連れて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "す",
+          "w": "進め"
+        }
+      ],
+      "id": "lisa-gurenge:1:lyric",
+      "mode": "lyric",
+      "answer": "僕を連れて進め",
+      "accept": [
+        "僕を連れて進め"
+      ],
+      "units": 4,
+      "difficulty": 1
+    },
+    {
+      "lang": "ja",
+      "songId": "yoasobi-yoruniikeru",
+      "title": "夜に駆ける",
+      "artist": "YOASOBI",
+      "year": 2019,
+      "line": "沈むように溶けてゆくように",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "し",
+          "w": "沈む"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よう"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "溶けて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "ゆく"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よう"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        }
+      ],
+      "id": "yoasobi-yoruniikeru:0:title",
+      "mode": "title",
+      "answer": "夜に駆ける",
+      "accept": [
+        "夜に駆ける"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "yoasobi-yoruniikeru",
+      "title": "夜に駆ける",
+      "artist": "YOASOBI",
+      "year": 2019,
+      "line": "沈むように溶けてゆくように",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "し",
+          "w": "沈む"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よう"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "と",
+          "w": "溶けて"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ゆ",
+          "w": "ゆく"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "よう"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        }
+      ],
+      "id": "yoasobi-yoruniikeru:0:lyric",
+      "mode": "lyric",
+      "answer": "沈むように溶けてゆくように",
+      "accept": [
+        "沈むように溶けてゆくように"
+      ],
+      "units": 7,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "yoasobi-yoruniikeru",
+      "title": "夜に駆ける",
+      "artist": "YOASOBI",
+      "year": 2019,
+      "line": "二人だけの空が広がる夜に",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ふ",
+          "w": "二人"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "だ",
+          "w": "だけ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "広がる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "夜"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        }
+      ],
+      "id": "yoasobi-yoruniikeru:1:title",
+      "mode": "title",
+      "answer": "夜に駆ける",
+      "accept": [
+        "夜に駆ける"
+      ],
+      "units": 5,
+      "difficulty": 2
+    },
+    {
+      "lang": "ja",
+      "songId": "yoasobi-yoruniikeru",
+      "title": "夜に駆ける",
+      "artist": "YOASOBI",
+      "year": 2019,
+      "line": "二人だけの空が広がる夜に",
+      "tiles": [
+        {
+          "k": "word",
+          "t": "ふ",
+          "w": "二人"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "だ",
+          "w": "だけ"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "の",
+          "w": "の"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "そ",
+          "w": "空"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "が",
+          "w": "が"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "ひ",
+          "w": "広がる"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "よ",
+          "w": "夜"
+        },
+        {
+          "k": "space"
+        },
+        {
+          "k": "word",
+          "t": "に",
+          "w": "に"
+        }
+      ],
+      "id": "yoasobi-yoruniikeru:1:lyric",
+      "mode": "lyric",
+      "answer": "二人だけの空が広がる夜に",
+      "accept": [
+        "二人だけの空が広がる夜に"
+      ],
+      "units": 8,
+      "difficulty": 3
+    }
+  ]
+}

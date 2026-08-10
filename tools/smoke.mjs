@@ -62,7 +62,7 @@ const stub = (id) => {
 };
 const el = stub;
 
-const checked = { mode: 'mixed', level: 'normal', 'vs-rounds': '10' };
+const checked = { mode: 'mixed', level: 'normal', 'vs-rounds': '10', lang: 'zh' };
 // 年代改成複選，用陣列表示目前勾了哪幾個
 let checkedEras = ['classic', 'y2000s', 'y2010s', 'y2020s'];
 
@@ -75,6 +75,7 @@ const document = {
     return stub(`sel:${sel}`);
   },
   querySelectorAll(sel) {
+    if (sel === 'input[name="lang"]') return [{ value: 'zh', addEventListener() {} }];
     if (sel === '.screen') {
       return ['screen-start', 'screen-game', 'screen-over'].map(el);
     }

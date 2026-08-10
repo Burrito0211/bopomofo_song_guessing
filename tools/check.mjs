@@ -70,6 +70,18 @@ test('年代是複選（checkbox），而且預設全部勾起來', () => {
   );
 });
 
+test('語言選項都有對應的題庫檔', () => {
+  const offered = [...html.matchAll(/name="lang" value="(\w+)"/g)].map((m) => m[1]);
+  assert.ok(offered.length >= 2, '至少要有中文與日文');
+
+  const dataSrc = read('assets/data.js');
+  for (const lang of offered) {
+    assert.match(dataSrc, new RegExp(`\\b${lang}:\\s*\\{`), `data.js 沒有 ${lang} 的題庫設定`);
+  }
+  // 掛在 index.html 上的題庫 script 也要在
+  assert.ok(html.includes('data/questions.ja.js'), '缺少日文題庫');
+});
+
 test('index.html 有載入 data.js 與 app.js', () => {
   assert.ok(html.includes('assets/data.js'), '缺少 data.js');
   assert.ok(html.includes('assets/app.js'), '缺少 app.js');

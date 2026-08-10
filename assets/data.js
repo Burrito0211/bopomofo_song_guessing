@@ -15,14 +15,21 @@
  * 取得整份題庫。
  * @returns {Promise<{questions: Array, songCount: number}>}
  */
-async function loadQuestions() {
-  // 1) 直接用 <script src="data/questions.js"> 掛上來的資料（file:// 也能用）
-  if (typeof window !== 'undefined' && window.__QUESTIONS__) {
-    return normalize(window.__QUESTIONS__);
+const BANKS = {
+  zh: { global: '__QUESTIONS__', file: 'data/questions.json' },
+  ja: { global: '__QUESTIONS_JA__', file: 'data/questions.ja.json' },
+};
+
+async function loadQuestions(lang = 'zh') {
+  const bank = BANKS[lang] ?? BANKS.zh;
+
+  // 1) 直接用 <script src="data/questions*.js"> 掛上來的資料（file:// 也能用）
+  if (typeof window !== 'undefined' && window[bank.global]) {
+    return normalize(window[bank.global]);
   }
 
   // 2) 退而求其次：從 JSON 抓（需要用 http 伺服器打開，例如 npm run dev）
-  const res = await fetch('data/questions.json', { cache: 'no-cache' });
+  const res = await fetch(bank.file, { cache: 'no-cache' });
   if (!res.ok) throw new Error(`題庫載入失敗（HTTP ${res.status}）`);
   return normalize(await res.json());
 }
